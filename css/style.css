@@ -51,3 +51,18 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 0;
+  width: 1400px;
+}
+
+
+/* footer */
+
+footer {
+  color: #BDBDBD;
+  
+  background-color: #333333;
+}
