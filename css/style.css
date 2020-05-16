@@ -58,6 +58,37 @@ img {
   width: 1400px;
 }
 
+.headingMS1 {
+  font-family: "SF Display", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  color: #040404;
+}
+
+.headingMS2 {
+  font-family: "SF Display", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #040404;
+}
+
+.headingMS3 {
+  font-family: "SF Display", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #040404;
+}
+
+/* header */
+
+
 
 /* footer */
 
@@ -65,4 +96,21 @@ footer {
   color: #BDBDBD;
   
   background-color: #333333;
+}
+
+
+/* main */
+
+.features {
+  color: #828282;
+  
+  background: #333333;
+}
+
+.features__list {
+  list-style: none;
+}
+
+.feature__title {
+  color: #FFFFFF;
 }
