@@ -41,6 +41,10 @@ img {
   box-sizing: inherit;
 }
 
+a {
+  color: inherit;
+}
+
 .visuallyhidden {
   position: absolute;
   width: 1px;
@@ -96,6 +100,7 @@ footer {
   color: #BDBDBD;
   
   background-color: #333333;
+  opacity: 0.9;
 }
 
 
@@ -112,5 +117,18 @@ footer {
 }
 
 .feature__title {
+  color: #FFFFFF;
+}
+
+.ourSpecialists {
+  background: #F2F2F2;
+}
+
+.bottom {
+  background: #333333;
+}
+
+.bottom .title-container,
+.bottom__text {
   color: #FFFFFF;
 }
