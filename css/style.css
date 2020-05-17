@@ -95,7 +95,13 @@ a {
 
 /* header */
 
+.header .wrapper {
+  display: flex;
+}
 
+.site-nav__list {
+  display: flex;
+}
 
 /* footer */
 
