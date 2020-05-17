@@ -89,6 +89,10 @@ a {
   color: #040404;
 }
 
+.ms-logo {
+  mix-blend-mode: multiply;
+}
+
 /* header */
 
 
