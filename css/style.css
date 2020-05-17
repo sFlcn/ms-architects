@@ -106,6 +106,13 @@ footer {
 
 /* main */
 
+.top-image {
+  width: 967px;
+  height: 628px;
+  
+  margin-left: auto;
+}
+
 .features {
   color: #828282;
   
