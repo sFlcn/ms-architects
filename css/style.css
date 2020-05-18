@@ -97,11 +97,52 @@ a {
 
 .header .wrapper {
   display: flex;
+  padding-top: 56px;
+  
+}
+
+.header__logo {
+  display: inline-block;
+  padding: 8px 59px 0 108px;
+  width: 423px;
+  height: 96px;
+}
+
+.header__nav {
+  flex-grow: 1;
 }
 
 .site-nav__list {
   display: flex;
+  padding: 0;
+  margin: 0;
+  
+  list-style: none;
 }
+
+.site-nav__item {
+  display: flex;
+  
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site-nav__item--current {
+  font-weight: bold;
+}
+
+.site-nav a {
+  padding: 10px;
+  margin: 7px 51px 7px 0px;
+  
+  color: inherit;
+  text-decoration: none;
+}
+
 
 /* footer */
 
