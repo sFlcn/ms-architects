@@ -98,12 +98,12 @@ a {
 .header .wrapper {
   display: flex;
   padding-top: 56px;
-  
 }
 
 .header__logo {
   display: inline-block;
-  padding: 8px 59px 0 108px;
+  padding-top: 8px;
+  padding-left: 110px;
   width: 423px;
   height: 96px;
 }
@@ -146,11 +146,14 @@ a {
 
 /* footer */
 
-footer {
+.footer {
   color: #BDBDBD;
   
-  background-color: #333333;
-  opacity: 0.9;
+  background-color: #484848;
+}
+
+.footer .wrapper {
+  display: flex;
 }
 
 
