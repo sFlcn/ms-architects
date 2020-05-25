@@ -61,8 +61,7 @@ a {
   width: 1400px;
 }
 
-.headingMS1 {
-  font-family: "SF Display", Arial, sans-serif;
+.title2 {
   font-style: normal;
   font-weight: bold;
   font-size: 27px;
@@ -71,8 +70,7 @@ a {
   color: #040404;
 }
 
-.headingMS2 {
-  font-family: "SF Display", Arial, sans-serif;
+.title3 {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -80,13 +78,92 @@ a {
   color: #040404;
 }
 
-.headingMS3 {
-  font-family: "SF Display", Arial, sans-serif;
+.title4 {
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   color: #040404;
+}
+
+.mintext {
+  font-family: "SF Display", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4F4F4F;
+}
+
+.cta-text {
+  font-family: "SF Display", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.extra-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.feedback-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.feedback-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.menu-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.menu-text--active {
+  font-weight: bold;
+}
+
+.menu-text:hover span {
+  padding-bottom: 4px;
+  border-bottom: 1px solid currentColor;
+}
+
+.links-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #FF8D31;
+}
+
+.button-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  align-items: center;
+  color: #000000;
 }
 
 .ms-logo {
@@ -122,21 +199,10 @@ a {
 
 .site-nav__item {
   display: flex;
-  
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.site-nav__item--current {
-  font-weight: bold;
 }
 
 .site-nav a {
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
   margin: 7px 51px 7px 0px;
   
   color: inherit;
@@ -188,7 +254,7 @@ a {
   background: #333333;
 }
 
-.bottom .title-container,
+.bottom .section__title,
 .bottom__text {
   color: #FFFFFF;
 }
