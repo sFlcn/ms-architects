@@ -222,6 +222,52 @@ a {
   display: flex;
 }
 
+.socials__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 188px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0;
+
+  text-align: center;
+  list-style: none;
+}
+
+.socials__item {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+
+  text-decoration: none;
+
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.socials__link--vk {
+  background-image: url("../img/icon-vk.svg");
+}
+
+.socials__link--fb {
+  background-image: url("../img/icon-fb2.svg");
+}
+
+.socials__link--insta {
+  background-image: url("../img/icon-insta.svg");
+}
+
+.socials__item:hover,
+.socials__item:focus,
+.socials__item:active {
+  background-color: #333333;
+}
 
 /* main */
 
