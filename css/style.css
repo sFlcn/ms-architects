@@ -86,7 +86,7 @@ a {
   color: #040404;
 }
 
-.mintext {
+.main-text {
   font-family: "SF Display", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -109,14 +109,6 @@ a {
   font-weight: normal;
   font-size: 12px;
   line-height: 17px;
-  color: #000000;
-}
-
-.feedback-text {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 30px;
   color: #000000;
 }
 
@@ -220,6 +212,9 @@ a {
 
 .footer .wrapper {
   display: flex;
+  
+  padding-top: 50px;
+  padding-bottom: 36px;
 }
 
 .socials__list {
