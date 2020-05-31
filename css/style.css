@@ -101,6 +101,7 @@ a {
   font-weight: normal;
   font-size: 16px;
   line-height: 21px;
+  letter-spacing: -0.01em;
   color: #000000;
 }
 
@@ -140,18 +141,29 @@ a {
   color: #FF8D31;
 }
 
-.button-text {
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  min-width: 130px;
+  min-height: 38px;
+  border: 0.5px solid #FFFFFF;
+  box-sizing: border-box;
+  
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
-  align-items: center;
+  letter-spacing: -0.02em;
+  text-decoration: none;
   color: #000000;
 }
 
 .ms-logo {
   mix-blend-mode: multiply;
 }
+
 
 /* header */
 
@@ -369,6 +381,7 @@ a {
   color: #828282;
 }
 
+
 /* main */
 
 .top-image {
@@ -376,6 +389,18 @@ a {
   height: 628px;
   
   margin-left: auto;
+}
+
+.title-container {
+  flex-shrink: 0;
+  
+  min-width: 323px;
+  max-width: 400px;
+  padding-right: 10px;
+}
+
+.section__title {
+  letter-spacing: -0.01em;
 }
 
 .features {
@@ -392,15 +417,49 @@ a {
   color: #FFFFFF;
 }
 
-.ourSpecialists {
+.our-specialists {
   background: #F2F2F2;
 }
 
+
+/* bottom */
+
+.bottom .wrapper{
+  display: flex;
+  
+  padding: 120px 110px 102px 110px;
+}
+
 .bottom {
+  color: #FFFFFF;
+  
   background: #333333;
 }
 
-.bottom .section__title,
+.bottom .section__title {
+  margin: 0;
+  
+  color: inherit;
+}
+
 .bottom__text {
-  color: #FFFFFF;
+  max-width: 520px;
+  margin: 0;
+  padding-right: 10px;
+  
+  color: inherit;
+}
+
+.button--bottom {
+  align-self: flex-start;
+  
+  margin-left: auto;
+  margin-right: 137px;
+  
+  color: inherit;
+}
+
+.button--bottom:hover {
+  background-color: #2e2e2e;
+  
 }
