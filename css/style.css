@@ -89,6 +89,7 @@ a {
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
+  letter-spacing: -0.015em;
   color: #040404;
 }
 
@@ -468,11 +469,39 @@ a {
 }
 
 .features__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  margin: 0 0 0 322px;
+  padding: 112px 0 60px 0;
+  
   list-style: none;
+}
+
+.features__item {
+  margin-bottom: 80px;
+  padding-right: 5px;
+}
+
+.features__item:nth-child(3n+1) {
+  width: 314px;
+}
+
+.features__item:nth-child(3n+2) {
+  width: 272px;
+}
+
+.features__item:nth-child(3n+3) {
+  width: 282px;
 }
 
 .feature__title {
   color: #FFFFFF;
+}
+
+.feature__description {
+  color: #828282;
 }
 
 /* our-specialists */
