@@ -418,6 +418,27 @@ a {
   margin-bottom: 24px;
 }
 
+.orange-numbers {
+  font-size: 14px;
+  line-height: 21px;
+  color: #FF8D31;
+}
+
+.orange-numbers p {
+  margin: 0;
+}
+
+.orange-numbers p:first-child {  
+  font-size: 70px;
+  line-height: 85px;
+}
+
+.about__company-area p:not(:first-child) {
+  padding-left: 5px;
+}
+
+/* about */
+
 .about .wrapper {
   display: flex;
   align-items: flex-start;
@@ -438,24 +459,7 @@ a {
   margin: 127px 0 57px 324px;
 }
 
-.orange-numbers {
-  font-size: 14px;
-  line-height: 21px;
-  color: #FF8D31;
-}
-
-.orange-numbers p {
-  margin: 0;
-}
-
-.orange-numbers p:first-child {  
-  font-size: 70px;
-  line-height: 85px;
-}
-
-.about__company-area p:not(:first-child) {
-  padding-left: 5px;
-}
+/* features */
 
 .features {
   color: #828282;
@@ -470,6 +474,8 @@ a {
 .feature__title {
   color: #FFFFFF;
 }
+
+/* our-specialists */
 
 .our-specialists {
   background: #F2F2F2;
