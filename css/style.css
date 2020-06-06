@@ -573,3 +573,51 @@ a {
   background-color: #2e2e2e;
   
 }
+
+/* sliders */
+
+.photo-slider {
+  position: relative;
+}
+
+.photo-slider__list {
+  list-style: none;
+  padding: 0;
+}
+
+.photo-slider__button {
+  position: absolute;
+  top: 0;
+  
+  width: 70px;
+  height: 51px;
+    
+  border: 0;
+  background-origin: content-box;
+  background-color: rgba(242, 242, 242, 0.9);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  cursor: pointer;
+}
+
+.photo-slider__button--next {
+  right: 0;
+  
+  padding: 0 15px 0 18px;
+  background-image: url(../img/arrow-2.svg);
+}
+
+.photo-slider__button--previous {
+  right: 70px;
+  
+  padding: 0 14px 1px 19px;
+  background-image: url(../img/arrow-2.svg);
+  
+  -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+       -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
