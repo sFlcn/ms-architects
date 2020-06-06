@@ -166,6 +166,12 @@ a {
   letter-spacing: -0.02em;
   text-decoration: none;
   color: #000000;
+  
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
 }
 
 .ms-logo {
