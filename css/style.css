@@ -79,6 +79,7 @@ a {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
+  letter-spacing: -0.015em;
   color: #040404;
 }
 
@@ -522,6 +523,88 @@ a {
 
 .feature__description {
   color: #828282;
+}
+
+/* projects */
+
+.projects .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  
+  padding-top: 102px;
+}
+
+.projects__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  
+  width: 311px;
+  margin: 4px 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.proj-nav__item {
+  padding-right: 1px;
+  
+  font-size: 14px;
+  line-height: 24px;
+  color: #bdbdbd;
+}
+
+.proj-nav__item--current {
+  color: #000000;
+}
+
+.proj-nav__item::after {
+  content: "/";
+  padding: 0 4px;
+}
+
+.proj-nav__item:last-child::after {
+  content: "";
+}
+
+.proj-nav__item a {
+  padding: 4px 1px;
+  text-decoration: none;
+}
+
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  
+  margin: 123px 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.projects__item {
+  margin-bottom: 150px;
+}
+
+.projects__item:nth-child(odd) {
+  margin-left: 323px;
+}
+
+.project__photo {
+  margin-bottom: 22px;
+}
+
+.project-title {
+  margin: 14px 0;
+}
+
+.project-description {
+  margin: 0;
+}
+
+.projects .section__link {
+  margin-right: 500px;
 }
 
 /* our-specialists */
