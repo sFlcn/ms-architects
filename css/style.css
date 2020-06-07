@@ -199,7 +199,8 @@ a {
   font-weight: bold;
 }
 
-.site-nav__item:hover span {
+.site-nav__item a:hover span,
+.site-nav__item a:focus span {
   padding-bottom: 4px;
   border-bottom: 1px solid currentColor;
 }
@@ -424,6 +425,11 @@ a {
 .page__title {
   margin-top: 10px;
   margin-bottom: 24px;
+}
+
+.title-container .button:hover,
+.title-container .button:focus {
+  background-color: #f7f7f7;
 }
 
 .orange-numbers {
@@ -652,9 +658,9 @@ a {
   color: inherit;
 }
 
-.button--bottom:hover {
+.button--bottom:hover,
+.button--bottom:focus {
   background-color: #2e2e2e;
-  
 }
 
 /* sliders */
