@@ -737,3 +737,65 @@ a {
 .photo-slider:focus .photo-slider__button {
   opacity: 1;
 }
+
+.employee__list {
+  display: flex;
+  justify-content: flex-end;
+  
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.employee a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  max-width: 221px;
+  margin-left: 116px;
+  
+  text-decoration: none;
+}
+
+.employee__photo {
+  order: -1;
+  
+  margin-bottom: 17px;
+  
+  -webkit-filter: grayscale(1);
+          filter: gray;
+          filter: grayscale(1);
+}
+
+.employee__name {
+  margin: 16px 0;
+  
+  color: #000000;
+}
+
+.employee__position {
+  margin: 4px 0;
+  
+  color: #828282;
+}
+
+.employee__link {
+  margin-top: 6px;
+  padding: 6px 0;
+  
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.employee:hover .employee__photo,
+.employee:focus .employee__photo {
+  -webkit-filter: grayscale(0);
+          filter: gra(0);
+          filter: grayscale(0);
+}
+
+.employee:hover .employee__link,
+.employee:focus .employee__link {
+  border-bottom: 1px solid currentColor;
+}
