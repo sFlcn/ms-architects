@@ -688,6 +688,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   
+  opacity: 0.05;
   cursor: pointer;
 }
 
@@ -709,4 +710,9 @@ a {
       -ms-transform: rotate(180deg);
        -o-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.photo-slider:hover .photo-slider__button,
+.photo-slider:focus .photo-slider__button {
+  opacity: 1;
 }
