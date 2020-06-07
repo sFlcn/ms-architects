@@ -145,7 +145,6 @@ a {
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  letter-spacing: 0.02em;
   text-decoration: none;
   color: #FF8D31;
 }
@@ -551,30 +550,35 @@ a {
   list-style: none;
 }
 
-.proj-nav__item {
-  padding-right: 1px;
+.proj-nav__item a {
+  margin-right: 4px;
+  padding: 3.5px 0;
   
   font-size: 14px;
   line-height: 24px;
+  letter-spacing: -0.02em;
+  text-decoration: none;
   color: #bdbdbd;
 }
 
-.proj-nav__item--current {
+.proj-nav__item--current a {
+  border-bottom: 0.5px solid #000000;
   color: #000000;
+}
+
+.proj-nav__item a:hover,
+.proj-nav__item a:focus {
+  border-bottom: 0.5px solid;
 }
 
 .proj-nav__item::after {
   content: "/";
   padding: 0 4px;
+  color: #bdbdbd;
 }
 
 .proj-nav__item:last-child::after {
   content: "";
-}
-
-.proj-nav__item a {
-  padding: 4px 1px;
-  text-decoration: none;
 }
 
 .projects__list {
@@ -583,7 +587,7 @@ a {
   flex-wrap: wrap;
   align-items: flex-start;
   
-  margin: 123px 0;
+  margin: 123px 0 75px 0;
   padding: 0;
   
   list-style: none;
@@ -591,6 +595,10 @@ a {
 
 .projects__item {
   margin-bottom: 150px;
+}
+
+.projects__item:last-child {
+  margin-bottom: 10px;
 }
 
 .projects__item:nth-child(odd) {
@@ -611,6 +619,19 @@ a {
 
 .projects .section__link {
   margin-right: 500px;
+  margin-bottom: 77px;
+  padding: 5px 50px 5px 0;
+  
+  background-repeat: no-repeat;
+  background-size: 30px 8px;
+  background-position: center right 8px;
+  background-image: url(../img/arrow-2-orange.svg);
+}
+
+.projects .section__link:hover,
+.projects .section__link:focus {
+  background-size: 34px 12px;
+  background-position: center right;
 }
 
 /* our-specialists */
