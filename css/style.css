@@ -44,6 +44,10 @@ a {
   color: inherit;
 }
 
+.noa {
+  cursor: not-allowed;
+}
+
 .visuallyhidden {
   position: absolute;
   width: 1px;
