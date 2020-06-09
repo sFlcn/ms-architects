@@ -648,7 +648,7 @@ a {
 }
 
 .our-specialists__slider {
-  margin: 146px 72px 32px 0;
+  margin: 146px 72px 31px 0;
 }
 
 .our-specialists .section__link {
@@ -814,6 +814,8 @@ a {
   
   font-size: 12px;
   line-height: 14px;
+  
+  border-bottom: 1px solid transparent;
 }
 
 .employee:hover .employee__photo,
