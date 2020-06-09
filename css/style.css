@@ -763,6 +763,7 @@ a {
 .photo-slider:hover .photo-slider__button,
 .photo-slider:focus .photo-slider__button {
   opacity: 1;
+  cursor: not-allowed;
 }
 
 .employee__list {
