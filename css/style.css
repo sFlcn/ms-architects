@@ -235,21 +235,24 @@ a {
 }
 
 .site-nav__sub-list {
+  position: absolute;
+  top: 37px;
+  left: 10px;
+  
   display: none;
   flex-direction: column;
-    
-  position: absolute;
-  top: 44px;
-  left: 0px;
+  min-width: 250px;
   padding: 5px 10px;
   margin: 0;
   
   list-style: none;
   
-  background-color: rgba(242, 242, 242, 0.75);
+  background-color: rgba(242, 242, 242, 0.85);
+  box-shadow: 1px 2px 5px currentColor;
 }
 
-.site-nav__item:hover .site-nav__sub-list {
+.site-nav__item:hover .site-nav__sub-list,
+.site-nav__item:focus-within .site-nav__sub-list {
   display: flex;
 }
 
@@ -263,6 +266,13 @@ a {
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
+}
+
+.site-nav__sub-item > a:hover,
+.site-nav__sub-item > a:focus {
+  font-weight: bold;
+  letter-spacing: -0.04em;
+  color: #FF8D31;
 }
 
 
