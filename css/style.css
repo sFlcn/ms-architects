@@ -759,6 +759,20 @@ a {
   background-color: #2e2e2e;
 }
 
+/* company-theses */
+
+/* .company-theses .wrapper {
+  display: flex;
+  flex-direction: row;
+} */
+
+.theses__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
 /* sliders */
 
 .photo-slider {
