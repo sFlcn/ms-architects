@@ -715,6 +715,52 @@ a {
   background-position: center right;
 }
 
+/* company-theses */
+
+/* .company-theses .wrapper {
+  display: flex;
+  flex-direction: row;
+} */
+
+.theses__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* clients */
+
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  
+  list-style: none;
+}
+
+.clients__item a {
+  display: block;
+  width: 150px;
+  height: 70px;
+  
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.clients__item--sok a {
+  background-image: url(../img/logo_sok.svg);
+  background-size: 77px 32px;
+}
+
+.clients__item--stroitransgaz a {
+  background-image: url(../img/logo_stroitransgaz.png);
+  background-size: 110px 39px;
+}
+
+.clients__item--ikea a {
+  background-image: url(../img/logo_ikea.svg);
+  background-size: 77px 32px;
+}
 
 /* bottom */
 
@@ -757,19 +803,6 @@ a {
 .button--bottom:hover,
 .button--bottom:focus {
   background-color: #2e2e2e;
-}
-
-/* company-theses */
-
-/* .company-theses .wrapper {
-  display: flex;
-  flex-direction: row;
-} */
-
-.theses__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 
