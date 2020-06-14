@@ -762,6 +762,46 @@ a {
   background-size: 77px 32px;
 }
 
+.clients__item--accenture a {
+  background-image: url(../img/logo_accenture.svg);
+  background-size: 103px 27px;
+}
+
+.clients__item--alium a {
+  background-image: url(../img/logo_alium.png);
+  background-size: 109px 32px;
+}
+
+.clients__item--mtsbank a {
+  background-image: url(../img/logo_mts-bank.png);
+  background-size: 76px 29px;
+}
+
+.clients__item--nornickel a {
+  background-image: url(../img/logo_nornickel.svg);
+  background-size: 59px 34px;
+}
+
+.clients__item--otkrytie a {
+  background-image: url(../img/logo_otkrytie.svg);
+  background-size: 111px 26px;
+}
+
+.clients__item--sberbank a {
+  background-image: url(../img/logo_sberbank2009.svg);
+  background-size: 127px 25px;
+}
+
+.clients__item--gazprommedia a {
+  background-image: url(../img/logo_gazprommedia.png);
+  background-size: 61px 34px;
+}
+
+.clients__item--huawei a {
+  background-image: url(../img/logo_huawei.svg);
+  background-size: 37px 37px;
+}
+
 /* bottom */
 
 .bottom .wrapper{
