@@ -728,6 +728,60 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
+
+.company-theses__video-button {
+  position: absolute;
+  top: 37px;
+  left: 38px;
+  
+  width: 41px;
+  height: 41px;
+}
+
+.video-button__base {
+  position: relative;
+  
+  width: 100%;
+  height: 100%;
+  
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+.video-button__image {
+  position: absolute;
+  margin-top: 42%;
+  margin-left: 42%;
+}
+
+.video-button__image polygon {
+  fill: black;
+}
+
+.company-theses__video:hover .company-theses__video-button,
+.company-theses__video:focus .company-theses__video-button {
+  top: 38px;
+  left: 39px;
+  width: 38px;
+  height: 38px;
+}
+
+.company-theses__video:hover .video-button__base,
+.company-theses__video:focus .video-button__base {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.company-theses__video:hover .video-button__image,
+.company-theses__video:focus .video-button__image {
+  width: 40%;
+  height: 40%;
+  margin-top: 32%;
+  margin-left: 33%;
+}
+
+.company-theses__video:hover .video-button__image polygon,
+.company-theses__video:focus .video-button__image polygon {
+  fill: Crimson;
 }
 
 /* clients */
