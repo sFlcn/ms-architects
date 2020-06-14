@@ -719,15 +719,46 @@ a {
 
 /* company-theses */
 
-/* .company-theses .wrapper {
+.company-theses .wrapper {
   display: flex;
   flex-direction: row;
-} */
+  flex-wrap: wrap;
+}
 
 .theses__list {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+  max-height: 680px;
   margin: 0;
-  padding: 0;
+  padding: 42px 0;
+  
+  list-style: none;
+}
+
+.theses__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+  width: 290px;
+  margin: 25px 157px 25px 0;
+}
+
+.theses__item:first-child {
+  margin-top: 147px;
+}
+
+.theses__text {
+  margin: 21px 0;
+}
+
+.company-theses__video {
+  position: relative;
+  
+  margin: 29px auto 39px 323px;
+}
 
 .company-theses__video-button {
   position: absolute;
@@ -782,6 +813,23 @@ a {
 .company-theses__video:hover .video-button__image polygon,
 .company-theses__video:focus .video-button__image polygon {
   fill: Crimson;
+}
+
+.company-theses__company-numbers {
+    display: flex;
+    margin: 127px 0 57px 322px;
+}
+
+.company-theses .orange-numbers:nth-child(3n+1) {
+  width: 264px;
+}
+
+.company-theses .orange-numbers:nth-child(3n+2) {
+  width: 195px;
+}
+
+.company-theses .orange-numbers:nth-child(3n+3) {
+  width: 282px;
 }
 
 /* clients */
