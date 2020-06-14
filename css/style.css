@@ -28,6 +28,8 @@ body {
           font-kerning: none;
 
   background-color: #ffffff;
+  
+  cursor: default;
 }
 
 img {
