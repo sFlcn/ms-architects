@@ -802,6 +802,26 @@ a {
   background-size: 37px 37px;
 }
 
+.clients__item--simple a {
+  background-image: url(../img/logo_simple.png);
+  background-size: 87px 33px;
+}
+
+.clients__item--jll a {
+  background-image: url(../img/logo_jll.svg);
+  background-size: 78px 35px;
+}
+
+.clients__item--oknastolicy a {
+  background-image: url(../img/logo_oknastolicy.png);
+  background-size: 94px 33px;
+}
+
+.clients__item--rostelecom a {
+  background-image: url(../img/logo_rostelecom.svg);
+  background-size: 107px 39px;
+}
+
 /* bottom */
 
 .bottom .wrapper{
