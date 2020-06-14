@@ -677,7 +677,7 @@ a {
   background-repeat: no-repeat;
   background-size: 30px 8px;
   background-position: center right 8px;
-  background-image: url(../img/arrow-2-orange.svg);
+  background-image: url("../img/arrow-2-orange.svg");
 }
 
 .projects .section__link:hover,
@@ -706,7 +706,7 @@ a {
   background-repeat: no-repeat;
   background-size: 30px 8px;
   background-position: center right 8px;
-  background-image: url(../img/arrow-2-orange.svg);
+  background-image: url("../img/arrow-2-orange.svg");
 }
 
 .our-specialists .section__link:hover,
@@ -748,77 +748,77 @@ a {
 }
 
 .clients__item--sok a {
-  background-image: url(../img/logo_sok.svg);
+  background-image: url("../img/logo_sok.svg");
   background-size: 77px 32px;
 }
 
 .clients__item--stroitransgaz a {
-  background-image: url(../img/logo_stroitransgaz.png);
+  background-image: url("../img/logo_stroitransgaz.png");
   background-size: 110px 39px;
 }
 
 .clients__item--ikea a {
-  background-image: url(../img/logo_ikea.svg);
+  background-image: url("../img/logo_ikea.svg");
   background-size: 77px 32px;
 }
 
 .clients__item--accenture a {
-  background-image: url(../img/logo_accenture.svg);
+  background-image: url("../img/logo_accenture.svg");
   background-size: 103px 27px;
 }
 
 .clients__item--alium a {
-  background-image: url(../img/logo_alium.png);
+  background-image: url("../img/logo_alium.png");
   background-size: 109px 32px;
 }
 
 .clients__item--mtsbank a {
-  background-image: url(../img/logo_mts-bank.png);
+  background-image: url("../img/logo_mts-bank.png");
   background-size: 76px 29px;
 }
 
 .clients__item--nornickel a {
-  background-image: url(../img/logo_nornickel.svg);
+  background-image: url("../img/logo_nornickel.svg");
   background-size: 59px 34px;
 }
 
 .clients__item--otkrytie a {
-  background-image: url(../img/logo_otkrytie.svg);
+  background-image: url("../img/logo_otkrytie.svg");
   background-size: 111px 26px;
 }
 
 .clients__item--sberbank a {
-  background-image: url(../img/logo_sberbank2009.svg);
+  background-image: url("../img/logo_sberbank2009.svg");
   background-size: 127px 25px;
 }
 
 .clients__item--gazprommedia a {
-  background-image: url(../img/logo_gazprommedia.png);
+  background-image: url("../img/logo_gazprommedia.png");
   background-size: 61px 34px;
 }
 
 .clients__item--huawei a {
-  background-image: url(../img/logo_huawei.svg);
+  background-image: url("../img/logo_huawei.svg");
   background-size: 37px 37px;
 }
 
 .clients__item--simple a {
-  background-image: url(../img/logo_simple.png);
+  background-image: url("../img/logo_simple.png");
   background-size: 87px 33px;
 }
 
 .clients__item--jll a {
-  background-image: url(../img/logo_jll.svg);
+  background-image: url("../img/logo_jll.svg");
   background-size: 78px 35px;
 }
 
 .clients__item--oknastolicy a {
-  background-image: url(../img/logo_oknastolicy.png);
+  background-image: url("../img/logo_oknastolicy.png");
   background-size: 94px 33px;
 }
 
 .clients__item--rostelecom a {
-  background-image: url(../img/logo_rostelecom.svg);
+  background-image: url("../img/logo_rostelecom.svg");
   background-size: 107px 39px;
 }
 
@@ -899,14 +899,14 @@ a {
   right: 0;
   
   padding: 0 15px 0 18px;
-  background-image: url(../img/arrow-2.svg);
+  background-image: url("../img/arrow-2.svg");
 }
 
 .photo-slider__button--previous {
   right: 70px;
   
   padding: 0 14px 1px 19px;
-  background-image: url(../img/arrow-2.svg);
+  background-image: url("../img/arrow-2.svg");
   
   -webkit-transform: rotate(180deg);
      -moz-transform: rotate(180deg);
