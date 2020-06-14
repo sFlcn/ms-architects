@@ -834,11 +834,41 @@ a {
 
 /* clients */
 
+.clients .wrapper {
+  margin-top: 114px;
+  margin-bottom: 100px;
+}
+
 .clients__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  
+  width: 824px;
+  margin: 70px auto 10px 305px;
+  padding: 0;
   
   list-style: none;
+}
+
+.clients__item {
+  margin-right: 70px;
+  margin-bottom: 47px;
+  
+  border-radius: 2%;
+  
+  -webkit-filter: grayscale(1);
+          filter: gray;
+          filter: grayscale(1);
+}
+
+.clients__item:hover,
+.clients__item:focus {
+  background-color: #fafafa;
+  
+  -webkit-filter: grayscale(0.2);
+          filter: gray(0);
+          filter: grayscale(0.2);
 }
 
 .clients__item a {
@@ -1080,7 +1110,7 @@ a {
 .employee:hover .employee__photo,
 .employee:focus .employee__photo {
   -webkit-filter: grayscale(0);
-          filter: gra(0);
+          filter: gray(0);
           filter: grayscale(0);
 }
 
