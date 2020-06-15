@@ -956,6 +956,26 @@ a {
   background-size: 107px 39px;
 }
 
+/* proud-of-work */
+
+.proud-of-work {
+  padding-top: 118px;
+  padding-bottom: 71px;
+  background: #F2F2F2;
+}
+
+.proud-of-work .wrapper {
+  padding: 0;
+}
+
+.proud-of-work .title-container {
+  padding-left: 110px;
+}
+
+.proud-of-work__slider {
+  margin: 106px 0 100px 0;
+}
+
 /* bottom */
 
 .bottom .wrapper{
