@@ -1118,3 +1118,45 @@ a {
 .employee:focus .employee__link {
   border-bottom: 1px solid currentColor;
 }
+
+.works-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  
+  padding: 20px 0;
+}
+
+.works-slider__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 100%;
+  margin: 0 0 82px 0;
+  padding: 20px 0;
+  
+  list-style: none;
+}
+
+.works-slider__marker {
+  position: relative;
+  
+  width: 334px;
+  height: 2px;
+  
+  border-bottom: 1px solid #000000;
+}
+
+.works-slider__pointer {
+  position: absolute;
+  bottom: 0;
+  
+  width: 16.17%;
+  height: 2px;
+  
+  background-color: #000000;
+}
