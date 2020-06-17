@@ -471,7 +471,7 @@ a {
   align-items: flex-start;
   
   min-width: 323px;
-  max-width: 400px;
+  max-width: 450px;
   padding-right: 10px;
 }
 
@@ -730,6 +730,7 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   
+  min-width: 900px;
   max-height: 680px;
   margin: 0;
   padding: 42px 0;
