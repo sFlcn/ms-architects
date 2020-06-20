@@ -1029,7 +1029,7 @@ a {
 /* our-other-services */
 
 .our-other-services {
-  padding: 95px 0;
+  padding: 95px 0 10px 0;
   
   background: #F2F2F2;
 }
@@ -1285,3 +1285,20 @@ a {
   color: #000000;
 }
 
+.serv-slider__details {
+  display: none;
+  
+  flex-direction: column;
+  
+  max-width: 500px;
+  margin: 5px 5px 5px 222px;
+}
+
+.serv-slider__details--active {
+  display: flex;
+  flex-direction: column;
+}
+
+.serv-slider__link {
+  margin: 11px auto 11px 0;
+}
