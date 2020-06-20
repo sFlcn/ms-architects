@@ -1016,6 +1016,34 @@ a {
   margin-right: 51px;
 }
 
+.our-services__item-link {
+  width: 31px;
+  height: 31px;
+  margin-top: 19px;
+  
+  border-radius: 50%;
+  background-color: #FF8D31;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/arrow-3-white.svg");
+}
+
+.our-services__item:nth-child(2n) .our-services__item-link {
+  background-color: #92B9E1;
+}
+
+.our-services__item:nth-child(3n) .our-services__item-link {
+  background-color: #21758F;
+}
+
+.our-services__item:nth-child(4n) .our-services__item-link {
+  background-color: #90C32A;
+}
+
+.our-services__item:nth-child(5n) .our-services__item-link {
+  background-color: #CE80D6;
+}
+
 /* our-other-services */
 
 .our-other-services {
