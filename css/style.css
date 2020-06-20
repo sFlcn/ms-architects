@@ -977,6 +977,45 @@ a {
   margin: 106px 0 100px 0;
 }
 
+/* our-services */
+
+.our-services__list {
+  display: flex;
+  flex-direction: column;
+  
+  margin: 59px auto 117px 323px;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.our-services__item {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  
+  width: 857px;
+  height: 280px;
+  margin: 81.5px 0;
+}
+
+.our-services__item-description {
+  width: 320px;
+  margin-left: 57px;
+  margin-right: 0;
+}
+
+.our-services__item:nth-child(even) {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.our-services__item:nth-child(even) .our-services__item-description {
+  margin-left: 0;
+  margin-right: 51px;
+}
+
 /* bottom */
 
 .bottom .wrapper{
