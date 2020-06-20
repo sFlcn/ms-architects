@@ -1047,6 +1047,8 @@ a {
 /* our-other-services */
 
 .our-other-services {
+  padding: 95px 0;
+  
   background: #F2F2F2;
 }
 
@@ -1254,3 +1256,50 @@ a {
   
   background-color: #000000;
 }
+
+.serv-slider {
+  display: flex;
+  flex-direction: row;
+  
+  padding: 75.5px 19px;
+}
+
+.serv-slider__list {
+  flex-shrink: 0;
+  
+  max-width: 320px;
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.serv-slider__item {
+  margin: 9px 0;
+}
+
+.serv-slider__button {
+  padding: 22px 10px;
+  
+  border: 0;
+  background-color: transparent;
+  
+  text-align: left;
+  color: #828282;
+  
+  cursor: pointer;
+}
+
+.serv-slider__item:hover .serv-slider__button {
+  margin-left: 14px;
+  
+  color: #555555;
+}
+
+.serv-slider__item--active .serv-slider__button {
+  margin-left: 14px;
+  border-left: 2px solid #FF8D31;
+  
+  color: #000000;
+}
+
