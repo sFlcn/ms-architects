@@ -1077,6 +1077,34 @@ a {
   background-color: #2e2e2e;
 }
 
+.something4you .wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+  padding: 75px 110px 79px 110px;
+}
+
+.something4you .title-container {
+  padding-bottom: 15px;
+}
+
+.something4you__invitation {
+  max-width: 520px;
+  margin-left: 270px;
+  padding-right: 10px;
+}
+
+.something4you__text {
+  margin: 0 0 27px 0;
+  
+  color: inherit;
+}
+
+.something4you__link {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
 /* sliders */
 
