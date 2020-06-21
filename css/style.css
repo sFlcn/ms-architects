@@ -1036,16 +1036,16 @@ a {
 
 /* bottom */
 
-.bottom .wrapper{
-  display: flex;
-  
-  padding: 120px 110px 102px 110px;
-}
-
 .bottom {
   color: #FFFFFF;
   
   background: #333333;
+}
+
+.advice .wrapper{
+  display: flex;
+  
+  padding: 120px 110px 102px 110px;
 }
 
 .bottom .section__title {
@@ -1054,7 +1054,7 @@ a {
   color: inherit;
 }
 
-.bottom__text {
+.advice__text {
   max-width: 520px;
   margin: 0;
   padding-right: 10px;
