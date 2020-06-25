@@ -1296,9 +1296,10 @@ a {
 }
 
 .tabs-slider__button {
+  width: 100%;
   margin-left: 0px;
   margin-right: 14px;
-  padding: 22px 10px;
+  padding: 22px 14px;
   
   border: 0;
   background-color: transparent;
@@ -1313,6 +1314,8 @@ a {
 .tabs-slider__item:focus .tabs-slider__button {
   margin-left: 14px;
   margin-right: 0px;
+  padding-left: 17px;
+  padding-right: 11px;
   
   color: #555555;
 }
@@ -1320,9 +1323,13 @@ a {
 .tabs-slider__item--active .tabs-slider__button {
   margin-left: 14px;
   margin-right: 0px;
+  padding-left: 17px;
+  padding-right: 11px;
   border-left: 2px solid #FF8D31;
   
   color: #000000;
+  
+  cursor: default;
 }
 
 .tabs-slider__details {
