@@ -1040,7 +1040,62 @@ a {
 
 .our-other-services__slider .tabs-slider__details {
   max-width: 500px;
-  margin: 5px 5px 5px 222px;
+  margin: 5px 5px 5px 206px;
+}
+
+/* writeus */
+
+.writeus__slider {
+  padding: 24px 0 0 310px;
+}
+
+.writeus__slider-leftbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+  
+  width: 411px;
+}
+
+.writeus__contacts-in-slider {
+  margin-top: 20px;
+  padding: 5px 14px;
+}
+
+.writeus__contact {
+  display: flex;
+  flex-direction: column;
+  
+  margin-top: 49px;
+}
+
+.writeus__contact-type {
+  margin: 10px 0;
+  
+  text-transform: uppercase;
+  color: #FF8D31;
+}
+
+.writeus__contact-text {
+  align-self: flex-start;
+  
+  margin: 10px 0;
+  
+  text-decoration: none;
+  color: #000000;
+}
+
+.writeus__contact-link {
+  align-self: flex-start;
+  
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  color: #828282;
+  
+  padding: 3px 1px 0 1px;
+  border-bottom: 1px solid currentColor;
 }
 
 /* bottom */
