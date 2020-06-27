@@ -1150,6 +1150,60 @@ a {
 .writeus-form input::placeholder {
   color: #BDBDBD;
 }
+
+.writeus-form__privacy {
+  margin-top: 36px;
+  margin-bottom: 30px;
+  
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+}
+
+.writeus-form__privacy-label {
+  position: relative;
+  padding: 5px 0 5px 24px;
+}
+
+.writeus-form__privacy a {
+  padding: 3px 0;
+  border-bottom: 0.5px solid currentColor;
+  
+  text-decoration: none;
+}
+
+.writeus-form__privacy-checkbox + .writeus-form__privacy-label::before {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: 0;
+  
+  width: 20px;
+  height: 20px;
+  border: 0.5px solid #000000;
+  box-sizing: border-box;
+}
+
+.writeus-form__privacy-checkbox:checked + .writeus-form__privacy-label::before {
+  background-image: url("../img/checkedbox.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.writeus-form .button {
+  align-self: flex-start;
+  
+  height: 56px;
+  width: 165px;
+  padding: 8px 5px 5px 4px;
+  
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
 /* bottom */
 
 .bottom {
