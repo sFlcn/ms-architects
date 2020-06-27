@@ -107,18 +107,20 @@
             </div>
             <div class="tabs-slider__details tabs-slider__details--design-project tabs-slider__details--active">
               <form class="tabs-slider__form writeus-form" action="index.html" method="post">
-                <label for="writeus-form__name">Ваше имя</label>
+                <label class="visuallyhidden" for="writeus-form__name">Ваше имя</label>
                 <input id="writeus-form__name" type="text" name="writeus-form__name" placeholder="Имя*">
-                <label for="writeus-form__company">Название вашей компании</label>
+                <label class="visuallyhidden" for="writeus-form__company">Название вашей компании</label>
                 <input id="writeus-form__company" type="text" name="writeus-form__company" placeholder="Компания">
-                <label for="writeus-form__phone">Контактный телефон</label>
+                <label class="visuallyhidden" for="writeus-form__phone">Контактный телефон</label>
                 <input id="writeus-form__phone" type="tel" name="writeus-form__phone" placeholder="Телефон">
-                <label for="writeus-form__email">E-mail для связи</label>
+                <label class="visuallyhidden" for="writeus-form__email">E-mail для связи</label>
                 <input id="writeus-form__email" type="email" name="writeus-form__email" placeholder="E-mail*">
-                <label for="writeus-form__comment">Комментарий</label>
-                <textarea id="writeus-form__comment" name="writeus-form__comment" cols="59" rows="5" placeholder="Комментарий*"></textarea>
-                <input id="writeus-form__privacy-checkbox" type="checkbox" name="writeus-form__privacy-checkbox">
-                <label for="writeus-form__privacy-checkbox" class="writeus-form__privacy-label">я согласен с политикой конфиденциальности</label>
+                <label class="visuallyhidden" for="writeus-form__comment">Комментарий</label>
+                <textarea id="writeus-form__comment" name="writeus-form__comment" cols="57" rows="8" placeholder="Комментарий*"></textarea>
+                <div class="writeus-form__privacy">
+                  <input class="writeus-form__privacy-checkbox visuallyhidden" id="writeus-form__privacy-checkbox" type="checkbox" name="writeus-form__privacy-checkbox">
+                  <label for="writeus-form__privacy-checkbox" class="writeus-form__privacy-label">я согласен с <a class="noa" href="#">политикой конфиденциальности</a></label>
+                </div>
                 <input class="button noa" type="submit" name="writeus-form__submit" value="Отправить">
               </form>
             </div>
