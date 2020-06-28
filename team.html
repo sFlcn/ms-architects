@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Контакты MS Architects</title>
+    <title>Команда MS Architects</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
@@ -19,7 +19,7 @@
               <a class="menu-text noa" href="#"><span>Архитектурное бюро</span></a>
               <ul class="site-nav__sub-list">
                 <li class="site-nav__sub-item"><a href="./company.html">О нас</a></li>
-                <li class="site-nav__sub-item"><a href="./team.html">Команда</a></li>
+                <li class="site-nav__sub-item site-nav__sub-item--current"><a>Команда</a></li>
                 <li class="site-nav__sub-item"><a class="noa" href="#">Вакансии</a></li>
                 <li class="site-nav__sub-item"><a class="noa" href="#">Политика конфиденциальности</a></li>
               </ul>
@@ -54,94 +54,17 @@
             <li class="site-nav__item">
               <a class="menu-text noa" href="#"><span>Экспертные статьи</span></a>
             </li>
-            <li class="site-nav__item site-nav__item--active">
-              <a class="menu-text"><span>Контакты</span></a>
+            <li class="site-nav__item">
+              <a class="menu-text" href="./contacts.html"><span>Контакты</span></a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     
-    
-    <main class="main">
-      <h1 class="visuallyhidden">Контакты MS Architects.</h1>
-      <div class="wrapper">
-        <section class="top-image">
-          <a class="noa" href="#">
-            <img src="./img/mc-ark.jpg" width="967" height="628" alt="Фото в офисе компании MS Architects во время работы.">
-          </a>
-        </section>
-      </div>
+    <main>
       
-        <section class="writeus">
-        <div class="wrapper">
-          <div class="title-container">
-            <h2 class="page__title title2">Свяжитесь с нами</h2>
-          </div>
-          <div class="writeus__slider tabs-slider">
-            <div class="writeus__slider-leftbox">
-              <ul class="tabs-slider__list">
-                <li class="tabs-slider__item tabs-slider__item--design-project tabs-slider__item--active">
-                  <button class="tabs-slider__button menu-text" type="button" name="tabs-slider__item--design-project">Дизайн-проект</button>
-                </li>
-                <li class="tabs-slider__item tabs-slider__item--commercial-offer">
-                  <button class="tabs-slider__button menu-text" type="button" name="tabs-slider__item--commercial-offer">Коммерческое предложение</button>
-                </li>
-                <li class="tabs-slider__item tabs-slider__item--work">
-                  <button class="tabs-slider__button menu-text" type="button" name="tabs-slider__item--work">Работа у нас</button>
-                </li>
-              </ul>
-              <div class="writeus__contacts-in-slider">
-                <h3 class="visuallyhidden">Наши адрес и телефон</h3>
-                <div class="writeus__contact writeus__contact--address">
-                  <p class="writeus__contact-type main-text">Офис</p>
-                  <p class="writeus__contact-text main-text">Москва, <br>Нижняя Красносельская, д. 35, стр. 48</p>
-                  <a class="writeus__contact-link links-text" href="#">посмотреть на карте</a>
-                </div>
-                <div class="writeus__contact writeus__contact--tel">
-                  <p class="writeus__contact-type main-text">Телефон</p>
-                  <a class="writeus__contact-text main-text" href="tel:+74993467056">+7 (499) 346-70-56</a>
-                  <a class="writeus__contact-link links-text" href="#">заказать звонок</a>
-                </div>
-              </div>
-            </div>
-            <div class="tabs-slider__details tabs-slider__details--design-project tabs-slider__details--active">
-              <form class="tabs-slider__form writeus-form" action="contacts.html" method="post">
-                <label class="visuallyhidden" for="writeus-form__name">Ваше имя</label>
-                <input id="writeus-form__name" type="text" name="writeus-form__name" placeholder="Имя*">
-                <label class="visuallyhidden" for="writeus-form__company">Название вашей компании</label>
-                <input id="writeus-form__company" type="text" name="writeus-form__company" placeholder="Компания">
-                <label class="visuallyhidden" for="writeus-form__phone">Контактный телефон</label>
-                <input id="writeus-form__phone" type="tel" name="writeus-form__phone" placeholder="Телефон">
-                <label class="visuallyhidden" for="writeus-form__email">E-mail для связи</label>
-                <input id="writeus-form__email" type="email" name="writeus-form__email" placeholder="E-mail*">
-                <label class="visuallyhidden" for="writeus-form__comment">Комментарий</label>
-                <textarea id="writeus-form__comment" name="writeus-form__comment" cols="57" rows="8" placeholder="Комментарий*"></textarea>
-                <div class="writeus-form__privacy">
-                  <input class="writeus-form__privacy-checkbox visuallyhidden" id="writeus-form__privacy-checkbox" type="checkbox" name="writeus-form__privacy-checkbox">
-                  <label for="writeus-form__privacy-checkbox" class="writeus-form__privacy-label">я согласен с <a class="noa" href="#">политикой конфиденциальности</a></label>
-                </div>
-                <input class="button noa" type="submit" name="writeus-form__submit" value="Отправить">
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="bottom something4you">
-        <div class="wrapper">
-          <div class="title-container">
-            <h2 class="section__title title2">У нас есть кое-что для вас</h2>
-          </div>
-          <div class="something4you__invitation">
-            <p class="something4you__text cta-text">Вам интересны дизайн, проектирование, инженеринг? <br>Вы студент или уже состоявшийся профи?</p>
-            <a class="something4you__link links-text section__link noa" href="#">Присоединяйтесь к нам!</a>
-          </div>
-        </div>
-      </section>
-
     </main>
-    
     
     <footer class="footer">
       <div class="wrapper">
