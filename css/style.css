@@ -1234,6 +1234,22 @@ a {
   letter-spacing: 0.03em;
 }
 
+/* our-team */
+
+.our-team .wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
+  margin-bottom: 158px;
+}
+
+.our-team__thesis {
+  max-width: 435px;
+  margin: 20px 0;
+  padding-right: 10px;
+}
+
 /* bottom */
 
 .bottom {
