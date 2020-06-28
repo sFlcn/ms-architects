@@ -1244,8 +1244,10 @@ a {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  
-  margin-bottom: 158px;
+}
+
+.our-team__catalog {
+  margin-top: 158px;
 }
 
 .our-team__thesis {
@@ -1256,6 +1258,8 @@ a {
 
 .employee__list {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   
   margin: 0;
   padding: 0;
