@@ -180,6 +180,16 @@ a {
           user-select: none;
 }
 
+.button:hover,
+.button:focus {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.button:active {
+  background-color: #444444;
+}
+
 .ms-logo {
   mix-blend-mode: multiply;
 }
@@ -478,11 +488,6 @@ a {
 .page__title {
   margin-top: 10px;
   margin-bottom: 24px;
-}
-
-.title-container .button:hover,
-.title-container .button:focus {
-  background-color: #f7f7f7;
 }
 
 .orange-numbers {
@@ -999,6 +1004,7 @@ a {
 }
 
 .our-services__item-link {
+  display: block;
   width: 31px;
   height: 31px;
   margin-top: 19px;
@@ -1008,6 +1014,12 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../img/arrow-3-white.svg");
+  
+  box-sizing: border-box;
+}
+.our-services__item-link:hover,
+.our-services__item-link:focus {
+  border: 2px solid rgba(255, 255, 255, 0.5);;
 }
 
 .our-services__item:nth-child(2n) .our-services__item-link {
@@ -1244,7 +1256,12 @@ a {
 
 .button--bottom:hover,
 .button--bottom:focus {
-  background-color: #2e2e2e;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.button--bottom:active {
+  background-color: #cccccc;
 }
 
 .something4you .wrapper{
