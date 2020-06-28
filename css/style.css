@@ -1122,7 +1122,9 @@ a {
   padding: 12px 14px;
 }
 
-.writeus-form input:not([type="submit"]),
+.writeus-form input[type="text"],
+.writeus-form input[type="tel"],
+.writeus-form input[type="email"],
 .writeus-form textarea {
   margin: 12.5px 0;
   padding: 18px 12px;
@@ -1131,7 +1133,9 @@ a {
   background-color: #F2F2F2;
 }
 
-.writeus-form input:not([type="submit"]) {
+.writeus-form input[type="text"],
+.writeus-form input[type="tel"],
+.writeus-form input[type="email"] {
   height: 53px;
   padding: 12px;
 }
