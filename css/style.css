@@ -1248,6 +1248,7 @@ a {
 
 .our-team__catalog {
   margin-top: 158px;
+  margin-bottom: 64px;
 }
 
 .our-team__thesis {
@@ -1272,7 +1273,6 @@ a {
   align-items: flex-start;
   
   max-width: 221px;
-  margin-left: 116px;
   
   text-decoration: none;
 }
@@ -1562,4 +1562,8 @@ a {
 
 .tabs-slider__link {
   margin: 11px auto 11px 0;
+}
+
+.employees-slider .employee a {
+  margin-left: 116px;
 }
