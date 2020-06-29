@@ -1257,6 +1257,16 @@ a {
   padding-right: 10px;
 }
 
+.our-team__catalog .employee a {
+  margin: 98px 145px 75px 57px;
+}
+
+.our-team__catalog .employee:nth-child(6n-5),
+.our-team__catalog .employee:nth-child(6n-4),
+.our-team__catalog .employee:nth-child(6n-3) {
+  background-color: #f9f9f9;
+}
+
 .employee__list {
   display: flex;
   flex-direction: row;
