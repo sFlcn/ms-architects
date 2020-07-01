@@ -265,14 +265,13 @@ a {
   list-style: none;
   
   overflow: hidden;
-  background-color: rgba(242, 242, 242, 0.7);
+  background-color: rgba(242, 242, 242, 0.8);
   box-shadow: 1px 1px 2px rgba(100, 100, 100, 0.5);
   
+  opacity: 0;
   transform: scaleY(0);
   transform-origin: 0 0;
-  transition: 0.2s;
-  transition-property: transform;
-  transition-timing-function: ease-in;
+  transition: transform 0.1s ease-in 0.01s;
 }
 
 .site-nav__sub-list::after {
@@ -285,16 +284,18 @@ a {
   height: 100%;
   
   background: linear-gradient(0deg, transparent, rgba(255, 255, 255, 0.3),transparent);
-  transition: 0.35s;
+  transition-duration: 0.7s;
+  transition-delay: 0.2s;
 }
 
-.site-nav__sub-list:hover::after {
+.site-nav__item:hover .site-nav__sub-list:after {
   top: 100%;
 }
 
 .site-nav__item:hover .site-nav__sub-list,
 .site-nav__item:focus-within .site-nav__sub-list {
   transform: scaleY(1);
+  opacity: 1;
 }
 
 .site-nav__sub-item > a {
