@@ -1297,6 +1297,31 @@ a {
   background-color: #f9f9f9;
 }
 
+.our-team__catalog .employee:nth-child(6n-3)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  z-index: -1;
+  
+  width: 100vw;
+  height: 100%;
+  
+  background-color: #f9f9f9;
+}
+.our-team__catalog .employee:nth-child(6n-3)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100vw;
+  z-index: -1;
+  
+  width: 100vw;
+  height: 100%;
+  
+  background-color: #f9f9f9;
+}
+
 .employee__list {
   display: flex;
   flex-direction: row;
@@ -1305,6 +1330,10 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.employee {
+  position: relative;
 }
 
 .employee a {
