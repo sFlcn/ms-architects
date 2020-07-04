@@ -1092,7 +1092,7 @@ a {
 /* writeus */
 
 .writeus__slider {
-  padding: 24px 0 158px 310px;
+  padding: 24px 0 158px 309px;
 }
 
 .writeus__slider-leftbox {
@@ -1101,7 +1101,7 @@ a {
   justify-content: space-between;
   flex-shrink: 0;
   
-  width: 411px;
+  width: 415px;
 }
 
 .writeus__contacts-in-slider {
@@ -1113,7 +1113,7 @@ a {
   display: flex;
   flex-direction: column;
   
-  margin-top: 49px;
+  margin-top: 47px;
 }
 
 .writeus__contact-type {
@@ -1227,6 +1227,8 @@ a {
 .writeus-form__privacy-label {
   position: relative;
   padding: 5px 0 5px 24px;
+  
+  user-select: none;
 }
 
 .writeus-form__privacy a {
