@@ -1004,7 +1004,7 @@ a {
   display: flex;
   flex-direction: column;
   
-  margin: 59px auto 117px 323px;
+  margin: 21px auto 117px 323px;
   padding: 0;
   
   list-style: none;
@@ -1086,7 +1086,7 @@ a {
 
 .our-other-services__slider .tabs-slider__details {
   max-width: 500px;
-  margin: 5px 5px 5px 206px;
+  margin: 5px 5px 5px 213px;
 }
 
 /* writeus */
