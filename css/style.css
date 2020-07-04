@@ -731,7 +731,7 @@ a {
 }
 
 .our-specialists__slider {
-  margin: 146px 72px 31px 0;
+  margin: 146px 72px 37px 0;
 }
 
 .our-specialists__slider .employee__list {
@@ -1277,8 +1277,8 @@ a {
 }
 
 .our-team__catalog {
-  margin-top: 158px;
-  margin-bottom: 64px;
+  margin-top: 146px;
+  margin-bottom: 9px;
 }
 
 .our-team__thesis {
@@ -1288,7 +1288,7 @@ a {
 }
 
 .our-team__catalog .employee a {
-  margin: 98px 145px 75px 57px;
+  margin: 120px 145px 98px 57px;
 }
 
 .our-team__catalog .employee:nth-child(6n-5),
@@ -1369,7 +1369,7 @@ a {
 }
 
 .employee__link {
-  margin-top: 6px;
+  margin-top: 0;
   padding: 6px 0;
   
   font-size: 12px;
