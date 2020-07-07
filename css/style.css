@@ -1377,6 +1377,37 @@ a {
   border-bottom: 1px solid currentColor;
 }
 
+/* employee-info */
+
+.employee-info-card {
+  display: flex;
+  flex-direction: row;
+  
+  margin-left: 326px;
+  padding-top: 93px;
+  padding-bottom: 118px;
+}
+
+.employee-info-card__portrait {
+  margin-top: 4px;
+}
+
+.employee-info-card__text {
+  order: 1;
+  
+  max-width: 440px;
+  margin-left: 66px;
+}
+
+.employee-info-card__position {
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.employee-info-card__bio {
+  margin: 58px 0;
+}
+
 /* bottom */
 
 .bottom {
