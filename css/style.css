@@ -1408,6 +1408,14 @@ a {
   margin: 58px 0;
 }
 
+/* employee-projects */
+
+.employee-projects__slider {
+  margin-top: 28px;
+  margin-bottom: 35px;
+  margin-right: 50px;
+}
+
 /* bottom */
 
 .bottom {
@@ -1561,6 +1569,15 @@ a {
   padding: 20px 0;
   
   list-style: none;
+}
+
+.works-slider__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.works-slider__item a {
+  order: -1;
 }
 
 .works-slider__marker {
