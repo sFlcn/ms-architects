@@ -1386,7 +1386,7 @@ a {
   
   margin-left: 326px;
   padding-top: 93px;
-  padding-bottom: 118px;
+  padding-bottom: 108px;
 }
 
 .employee-info-card__portrait {
@@ -1410,6 +1410,10 @@ a {
 }
 
 /* employee-projects */
+
+.employee-projects {
+  padding: 10px 0 102px 0;
+}
 
 .employee-projects__slider {
   margin-top: 28px;
