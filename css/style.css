@@ -472,10 +472,15 @@ a {
 .footer-nav__item a {
   display: inline-block;
   
-  padding-top: 5px;
-  padding-bottom: 6px;
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
   
   text-decoration: none;
+}
+
+.footer-nav__item a:hover,
+.footer-nav__item a:focus {
+  border-bottom: 1px solid currentColor;
 }
 
 .footer__copyrights {
