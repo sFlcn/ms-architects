@@ -1576,8 +1576,17 @@ a {
   flex-direction: column;
 }
 
-.works-slider__item a {
+.works-slider__slide-image {
   order: -1;
+}
+
+.works-slider__slide-title {
+  margin-top: 25px;
+  margin-bottom: 18px;
+}
+
+.works-slider__slide-text {
+  margin: 0;
 }
 
 .works-slider__marker {
