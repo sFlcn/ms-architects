@@ -737,10 +737,11 @@ a {
   flex-wrap: wrap;
   
   min-width: 900px;
-  max-height: 680px;
+  max-height: 750px;
   margin: 0;
   padding: 42px 0;
   
+  overflow: auto;
   list-style: none;
 }
 
