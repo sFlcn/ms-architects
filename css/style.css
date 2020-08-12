@@ -1421,6 +1421,51 @@ a {
   margin-right: 50px;
 }
 
+/* customers-reviews */
+
+.customers-reviews {
+  padding-top: 105px;
+  padding-bottom: 169px;
+  
+  background: #F2F2F2;
+}
+
+.customers-reviews .wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.customers-reviews__list {  
+  max-width: 400px;
+  padding: 0;
+  margin: 0 0 0 272px;
+  
+  list-style: none;
+}
+
+.customers-reviews__text {
+  margin: 0 0 50px 0;
+  
+  letter-spacing: -0.017em;
+}
+
+.customers-reviews__client{
+  margin: 33px 0;
+  
+  color: #000000; 
+  font-weight: bold;
+}
+
+.customers-reviews__attachment {
+  padding: 6px 0;
+}
+
+.customers-reviews__attachment:hover,
+.customers-reviews__attachment:focus {
+  border-bottom: 1px solid currentColor;
+}
+
 /* bottom */
 
 .bottom {
