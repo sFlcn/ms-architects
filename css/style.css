@@ -1193,9 +1193,8 @@ a {
   color: #BDBDBD;
 }
 
-.writeus-form__privacy {
+.writeus-form__check-n-submit {
   margin-top: 36px;
-  margin-bottom: 30px;
   
   font-size: 11px;
   line-height: 16px;
@@ -1218,7 +1217,7 @@ a {
   user-select: none;
 }
 
-.writeus-form__privacy a {
+.writeus-form__check-n-submit a {
   padding: 3px 0;
   border-bottom: 0.5px solid currentColor;
   
@@ -1251,6 +1250,7 @@ a {
   height: 56px;
   width: 165px;
   padding: 8px 5px 5px 4px;
+  margin-top: 30px;
   
   font-size: 16px;
   line-height: 24px;
