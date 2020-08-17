@@ -19,8 +19,7 @@ document.addEventListener("DOMContentLoaded", scrolling, false);
 var listItems = document.querySelectorAll(".animated-appearance");
 
 function scrolling(e) {
-  for (var i = 0; i < listItems.length; i++) {
-    var listItem = listItems[i];
+  for (var listItem of listItems) {
     if (isPartiallyVisible(listItem)) {
       listItem.classList.add("animated-appearance--shown");
     } 
