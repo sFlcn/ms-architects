@@ -1726,7 +1726,7 @@ a {
   color: #555555;
 }
 
-.tabs-slider__item--active .tabs-slider__button {
+.tabs-slider__button--active {
   margin-left: 14px;
   margin-right: 0px;
   padding-left: 17px;
