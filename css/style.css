@@ -173,6 +173,8 @@ a {
   text-decoration: none;
   color: #000000;
   
+  transition: all 0.55s ease-out;
+  
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -218,6 +220,8 @@ a {
 .site-nav__item a:focus span {
   padding-bottom: 4px;
   border-bottom: 1px solid currentColor;
+  
+  transition: all 0.21s ease-out;
 }
 
 .header__nav {
@@ -271,7 +275,7 @@ a {
   opacity: 0;
   transform: scaleY(0);
   transform-origin: 0 0;
-  transition: transform 0.1s ease-in 0.01s;
+  transition: transform 0.26s ease-in 0.01s;
 }
 
 .site-nav__sub-list::after {
@@ -417,6 +421,8 @@ a {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
+  
+  transition: all 0.42s ease;
 }
 
 .socials__link--vk {
@@ -472,6 +478,8 @@ a {
   border-bottom: 1px solid transparent;
   
   text-decoration: none;
+  
+  transition: all 0.55s ease;
 }
 
 .footer-nav__item a:hover,
@@ -1372,11 +1380,14 @@ a {
   -webkit-filter: grayscale(0);
           filter: gray(0);
           filter: grayscale(0);
+          
+  transition: all 0.42s ease-out;
 }
 
 .employee:hover .employee__link,
 .employee:focus .employee__link {
   border-bottom: 1px solid currentColor;
+  transition: all 0.42s ease-out;
 }
 
 /* employee-info */
@@ -1713,6 +1724,8 @@ a {
   
   text-align: left;
   color: #828282;
+  
+  transition: all 0.33s ease-out;
   
   cursor: pointer;
 }
