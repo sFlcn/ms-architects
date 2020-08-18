@@ -44,3 +44,38 @@ function isFullyVisible(el) {
 
   return ((top >= 0) && (bottom <= window.innerHeight));
 }
+
+// слайдер с вкладками
+
+var tabsSlider = document.querySelector(".tabs-slider");
+if (tabsSlider) {
+  var tabsSliderButtons = tabsSlider.querySelectorAll(".tabs-slider__button");
+  var tabsSliderTabs = tabsSlider.querySelectorAll(".tabs-slider__details");
+
+  for (var i = 0; i < tabsSliderButtons.length; i++) {
+    tabsSliderButtons[i].addEventListener("click", clickHandler.bind(null, i));
+  }
+  
+  function clickHandler(index, evt) {
+    evt.preventDefault();
+    var isCurrent = evt.target.classList.contains("tabs-slider__button--active");
+    if (isCurrent) {
+      return false;
+    }
+    var currentButton = tabsSlider.querySelector(".tabs-slider__button--active");
+    currentButton.classList.remove("tabs-slider__button--active");
+    evt.target.classList.add("tabs-slider__button--active");
+    getTab(index);
+    document.activeElement.blur()
+  }
+  
+  function getTab(tabIndex) {
+    try {
+      tabsSlider.querySelector(".tabs-slider__details--active").classList.remove("tabs-slider__details--active");
+      tabsSliderTabs[tabIndex].classList.add("tabs-slider__details--active");
+    }
+    catch (e) {
+      console.log(e);
+    }
+  }
+}
