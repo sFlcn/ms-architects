@@ -1093,14 +1093,13 @@ a {
 .writeus__slider-leftbox {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-shrink: 0;
   
   width: 415px;
 }
 
 .writeus__contacts-in-slider {
-  margin-top: 20px;
+  margin-top: 118px;
   padding: 12px 14px;
 }
 
@@ -1157,7 +1156,6 @@ a {
 .writeus-form input[type="email"],
 .writeus-form textarea {
   margin: 12.5px 0;
-  padding: 18px 12px;
   border: 0;
   
   background-color: #F2F2F2;
@@ -1173,11 +1171,14 @@ a {
 .writeus-form textarea {
   width: 100%;
   height: 170px;
+  padding: 18px 12px;
+  
   resize: vertical;
 }
 
 .writeus-form select {
   height: 33px;
+  padding: 0 8px;
 }
 
 .writeus-form textarea::-webkit-input-placeholder,
@@ -1243,13 +1244,18 @@ a {
   height: 20px;
   border: 0.5px solid #000000;
   box-sizing: border-box;
-}
-
-.writeus-form__privacy-checkbox:checked + .writeus-form__privacy-label::before {
+  
   background-image: url("../img/checkedbox.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 2100%;
+  
+  transition: all 0.17s ease-out;
+}
+
+.writeus-form__privacy-checkbox:checked + .writeus-form__privacy-label::before {
+  background-size: 100%;
 }
 
 .writeus-form .button {
