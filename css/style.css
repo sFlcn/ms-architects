@@ -1357,6 +1357,8 @@ a {
   -webkit-filter: grayscale(1);
           filter: gray;
           filter: grayscale(1);
+          
+  transition: all 0.42s ease-out;
 }
 
 .employee__name {
@@ -1373,7 +1375,8 @@ a {
 
 .employee__link {
   margin-top: 0;
-  padding: 6px 0;
+  margin-bottom: 18px;
+  padding: 6px 0 0 0;
   
   font-size: 12px;
   line-height: 14px;
@@ -1386,12 +1389,12 @@ a {
   -webkit-filter: grayscale(0);
           filter: gray(0);
           filter: grayscale(0);
-          
-  transition: all 0.42s ease-out;
 }
 
 .employee:hover .employee__link,
 .employee:focus .employee__link {
+  margin-bottom: 12px;
+  padding-bottom: 6px;
   border-bottom: 1px solid currentColor;
   transition: all 0.42s ease-out;
 }
