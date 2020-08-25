@@ -1787,7 +1787,10 @@ a {
 /* appearance animation */
 
 .animated-appearance {
-  transition: all 1.1s ease;
+  transition: transform 1.1s ease, opacity 1.3s ease;
+}
+
+.animated-appearance--hidden {
   transform: translate(0, 60px);
   opacity: 0;
 }

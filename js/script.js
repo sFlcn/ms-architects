@@ -18,9 +18,14 @@ document.addEventListener("DOMContentLoaded", scrolling, false);
 
 var listItems = document.querySelectorAll(".animated-appearance");
 
+for (var listItem of listItems) {
+  listItem.classList.add("animated-appearance--hidden");
+}
+
 function scrolling(e) {
   for (var listItem of listItems) {
     if (isPartiallyVisible(listItem)) {
+      listItem.classList.remove("animated-appearance--hidden");
       listItem.classList.add("animated-appearance--shown");
     } 
   }
