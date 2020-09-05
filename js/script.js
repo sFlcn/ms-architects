@@ -67,17 +67,21 @@ if (tabsSlider) {
     if (isCurrent) {
       return false;
     }
-    var currentButton = tabsSlider.querySelector(".tabs-slider__button--active");
-    currentButton.classList.remove("tabs-slider__button--active");
+    tabsSlider.querySelector(".tabs-slider__button--active").classList.remove("tabs-slider__button--active");
     evt.target.classList.add("tabs-slider__button--active");
     getTab(index);
-    document.activeElement.blur()
+    document.activeElement.blur();
   }
   
   function getTab(tabIndex) {
     try {
-      tabsSlider.querySelector(".tabs-slider__details--active").classList.remove("tabs-slider__details--active");
-      tabsSliderTabs[tabIndex].classList.add("tabs-slider__details--active");
+      tabsSlider.querySelector(".tabs-slider__details--active").style.display="none";
+      tabsSliderTabs[tabIndex].style.display="flex";
+      setTimeout(() => {
+        tabsSlider.querySelector(".tabs-slider__details--active").classList.remove("tabs-slider__details--active");
+        tabsSliderTabs[tabIndex].classList.add("tabs-slider__details--active");
+      }, 100);
+      
     }
     catch (e) {
       console.log(e);
