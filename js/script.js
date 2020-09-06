@@ -56,6 +56,10 @@ var tabsSlider = document.querySelector(".tabs-slider");
 if (tabsSlider) {
   var tabsSliderButtons = tabsSlider.querySelectorAll(".tabs-slider__button");
   var tabsSliderTabs = tabsSlider.querySelectorAll(".tabs-slider__details");
+  
+  for (var tabsSliderTab of tabsSliderTabs) {
+    if (!tabsSliderTab.classList.contains("tabs-slider__details--active")) tabsSliderTab.setAttribute("hidden","");
+  }
 
   for (var i = 0; i < tabsSliderButtons.length; i++) {
     tabsSliderButtons[i].addEventListener("click", clickHandler.bind(null, i));
@@ -75,8 +79,8 @@ if (tabsSlider) {
   
   function getTab(tabIndex) {
     try {
-      tabsSlider.querySelector(".tabs-slider__details--active").style.display="none";
-      tabsSliderTabs[tabIndex].style.display="flex";
+      tabsSlider.querySelector(".tabs-slider__details--active").setAttribute("hidden","");
+      tabsSliderTabs[tabIndex].removeAttribute("hidden");
       setTimeout(() => {
         tabsSlider.querySelector(".tabs-slider__details--active").classList.remove("tabs-slider__details--active");
         tabsSliderTabs[tabIndex].classList.add("tabs-slider__details--active");

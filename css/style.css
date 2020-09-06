@@ -1863,7 +1863,6 @@ a {
 }
 
 .tabs-slider__details {
-  display: none;
   flex-direction: column;
   
   transform: translate(-30px, 0);
