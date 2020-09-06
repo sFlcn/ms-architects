@@ -92,3 +92,42 @@ if (tabsSlider) {
     }
   }
 }
+
+// обратная связь
+
+var popupСallback = document.querySelector(".popup--callback");
+if (popupСallback) {
+  var popupСallbackClose = popupСallback.querySelector(".popup-close");
+  var popupUnderlay = popupСallback.querySelector(".popup__underlay");
+  var buttonsСallback = document.querySelectorAll(".callback-button");
+  
+  for (var buttonСallback of buttonsСallback) {
+    buttonСallback.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popupСallback.removeAttribute("hidden");
+      popupСallback.classList.add("popup-show");
+    });
+  }
+  
+  popupСallbackClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupСallback.setAttribute("hidden","");
+    popupСallback.classList.remove("popup-show");
+  });
+  
+  popupUnderlay.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupСallback.setAttribute("hidden","");
+    popupСallback.classList.remove("popup-show");
+  });
+  
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (!(popupСallback.hasAttribute("hidden"))) {
+        popupСallback.setAttribute("hidden","");
+        popupСallback.classList.remove("popup-show");
+      }
+    }
+  });
+}
