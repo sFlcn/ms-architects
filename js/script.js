@@ -134,3 +134,31 @@ if (popupСallback) {
     }
   });
 }
+
+// карта
+
+var popupMap = document.querySelector(".popup--map");
+if (popupMap) {
+  var buttonMap = document.querySelector(".map-button");
+  var popupMapClose = popupMap.querySelector(".popup-close");
+  
+  buttonMap.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupMap.removeAttribute("hidden");
+  });
+
+  popupMapClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupMap.setAttribute("hidden","");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (!(popupMap.hasAttribute("hidden"))) {
+        popupMap.setAttribute("hidden","");
+        popupMap.classList.remove("popup-show");
+      }
+    }
+  });
+}

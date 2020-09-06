@@ -1590,7 +1590,7 @@ a {
 
 /* popups */
 
-.popup {
+.popup--callback {
   position: fixed;
   top: 0;
   left: 0;
@@ -1702,6 +1702,47 @@ a {
 
 .popup--callback .writeus-form__check-n-submit input[type="submit"] {
   margin-top: 30px;
+}
+
+.popup--map {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  z-index: 90;
+  
+  min-width: 915px;
+  min-height: 506px;
+  margin-left: -457px;
+}
+
+.popup--map a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
+}
+
+.popup--map .popup-close {
+  top: 25px;
+  right: 10px;
+}
+.popup-close::before,
+.popup-close::after {
+  height: 2px;
+  width: 36px;
+  background-color: #222222;
+}
+
+.popup__iframe-map {
+  position: relative;
+  z-index: 2;
+
+  width: 915px;
+  height: 506px;
+
+  border: none;
 }
 
 /* sliders */
