@@ -1609,12 +1609,12 @@ a {
 }
 
 .popup--callback .popup__content {
-  width: 827px;
-  height: 924px;
+  max-width: 827px;
+  min-height: 924px;
   
   background-color: white;
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: left top 183px;
   background-image: url("../img/callback-background.jpg");
 }
 
@@ -1660,7 +1660,7 @@ a {
 
 .popup--callback .callback-form {
   width: 405px;
-  margin-left: auto;
+  margin-left: 376px;
   margin-right: 46px;
 }
 
