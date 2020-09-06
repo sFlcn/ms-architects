@@ -98,27 +98,30 @@ if (tabsSlider) {
 var popupСallback = document.querySelector(".popup--callback");
 if (popupСallback) {
   var popupСallbackClose = popupСallback.querySelector(".popup-close");
-  var popupUnderlay = popupСallback.querySelector(".popup__underlay");
+  var popupСallbackUnderlay = popupСallback.querySelector(".popup__underlay");
+  var popupСallbackContent = popupСallback.querySelector(".popup__content");
+  var popupСallbackMessage = document.getElementById("callback-form__message");
   var buttonsСallback = document.querySelectorAll(".callback-button");
   
   for (var buttonСallback of buttonsСallback) {
     buttonСallback.addEventListener("click", function (evt) {
       evt.preventDefault();
       popupСallback.removeAttribute("hidden");
-      popupСallback.classList.add("popup-show");
+      popupСallbackContent.classList.add("popup-show");
+      popupСallbackMessage.focus();
     });
   }
   
   popupСallbackClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupСallback.setAttribute("hidden","");
-    popupСallback.classList.remove("popup-show");
+    popupСallbackContent.classList.remove("popup-show");
   });
   
-  popupUnderlay.addEventListener("click", function (evt) {
+  popupСallbackUnderlay.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupСallback.setAttribute("hidden","");
-    popupСallback.classList.remove("popup-show");
+    popupСallbackContent.classList.remove("popup-show");
   });
   
   window.addEventListener("keydown", function (evt) {
@@ -126,7 +129,7 @@ if (popupСallback) {
       evt.preventDefault();
       if (!(popupСallback.hasAttribute("hidden"))) {
         popupСallback.setAttribute("hidden","");
-        popupСallback.classList.remove("popup-show");
+        popupСallbackContent.classList.remove("popup-show");
       }
     }
   });
