@@ -46,141 +46,141 @@
     <main class="main">
       <h1 class="visuallyhidden">Контакты MS Architects.</h1>
       <div class="wrapper">
-        <section class="top-image">
+        <div class="top-image">
           <a class="noa" href="#">
             <img src="./img/mc-ark.jpg" width="967" height="628" alt="Фото в офисе компании MS Architects во время работы.">
           </a>
-        </section>
+        </div>
       </div>
       
         <section class="writeus">
-        <div class="wrapper">
-          <div class="title-container animated-appearance">
-            <h2 class="page__title title2">Свяжитесь с нами</h2>
-          </div>
-          <div class="writeus__slider tabs-slider animated-appearance">
-            <div class="writeus__slider-leftbox">
-              <ul class="tabs-slider__list">
-                <li class="tabs-slider__item tabs-slider__item--design-project">
-                  <button class="tabs-slider__button tabs-slider__button--active menu-text" type="button" name="tabs-slider__item--design-project">Дизайн-проект</button>
-                </li>
-                <li class="tabs-slider__item tabs-slider__item--commercial-offer">
-                  <button class="tabs-slider__button menu-text" type="button" name="tabs-slider__item--commercial-offer">Коммерческое предложение</button>
-                </li>
-                <li class="tabs-slider__item tabs-slider__item--work">
-                  <button class="tabs-slider__button menu-text" type="button" name="tabs-slider__item--work">Работа у нас</button>
-                </li>
-              </ul>
-              <div class="writeus__contacts-in-slider animated-appearance">
-                <h3 class="visuallyhidden">Наши адрес и телефон</h3>
-                <div class="writeus__contact writeus__contact--address">
-                  <p class="writeus__contact-type main-text">Офис</p>
-                  <p class="writeus__contact-text main-text">Москва, <br>Нижняя Красносельская, д. 35, стр. 48</p>
-                  <a class="writeus__contact-link map-button links-text" href="#">посмотреть на карте</a>
-                </div>
-                <div class="writeus__contact writeus__contact--tel">
-                  <p class="writeus__contact-type main-text">Телефон</p>
-                  <a class="writeus__contact-text main-text" href="tel:+74993467056">+7 (499) 346-70-56</a>
-                  <a class="writeus__contact-link callback-button links-text" href="#">заказать звонок</a>
+          <div class="wrapper">
+            <div class="title-container animated-appearance">
+              <h2 class="page__title title2">Свяжитесь с нами</h2>
+            </div>
+            <div class="writeus__slider tabs-slider animated-appearance">
+              <div class="writeus__slider-leftbox">
+                <ul class="tabs-slider__list">
+                  <li class="tabs-slider__item tabs-slider__item--design-project">
+                    <button class="tabs-slider__button tabs-slider__button--active menu-text" type="button" name="tabs-slider__item--design-project">Дизайн-проект</button>
+                  </li>
+                  <li class="tabs-slider__item tabs-slider__item--commercial-offer">
+                    <button class="tabs-slider__button menu-text" type="button" name="tabs-slider__item--commercial-offer">Коммерческое предложение</button>
+                  </li>
+                  <li class="tabs-slider__item tabs-slider__item--work">
+                    <button class="tabs-slider__button menu-text" type="button" name="tabs-slider__item--work">Работа у нас</button>
+                  </li>
+                </ul>
+                <div class="writeus__contacts-in-slider animated-appearance">
+                  <h3 class="visuallyhidden">Наши адрес и телефон</h3>
+                  <div class="writeus__contact writeus__contact--address">
+                    <p class="writeus__contact-type main-text">Офис</p>
+                    <p class="writeus__contact-text main-text">Москва, <br>Нижняя Красносельская, д. 35, стр. 48</p>
+                    <a class="writeus__contact-link map-button links-text" href="#">посмотреть на карте</a>
+                  </div>
+                  <div class="writeus__contact writeus__contact--tel">
+                    <p class="writeus__contact-type main-text">Телефон</p>
+                    <a class="writeus__contact-text main-text" href="tel:+74993467056">+7 (499) 346-70-56</a>
+                    <a class="writeus__contact-link callback-button links-text" href="#">заказать звонок</a>
+                  </div>
                 </div>
               </div>
+              <ul class="tabs-slider__details-list">
+                <li class="tabs-slider__details tabs-slider__details--design-project tabs-slider__details--active">
+                  <form class="tabs-slider__form writeus-form" action="contacts.html" method="post">
+                    <input id="writeus-form__design-subject" type="text" name="writeus-form__subject" value="Дизайн-проект" hidden>
+                    <label class="visuallyhidden" for="writeus-form__design-name">Ваше имя</label>
+                    <input id="writeus-form__design-name" type="text" name="writeus-form__name" placeholder="Имя*" required>
+                    <label class="visuallyhidden" for="writeus-form__design-company">Название вашей компании</label>
+                    <input id="writeus-form__design-company" type="text" name="writeus-form__company" placeholder="Компания">
+                    <label class="visuallyhidden" for="writeus-form__design-phone">Контактный телефон</label>
+                    <input id="writeus-form__design-phone" type="tel" name="writeus-form__phone" placeholder="Телефон">
+                    <label class="visuallyhidden" for="writeus-form__design-email">E-mail для связи</label>
+                    <input id="writeus-form__design-email" type="email" name="writeus-form__email" placeholder="E-mail*" required>
+                    <label class="visuallyhidden" for="writeus-form__design-comment">Комментарий</label>
+                    <textarea id="writeus-form__design-comment" name="writeus-form__comment" cols="57" rows="8" placeholder="Комментарий*" required></textarea>
+                    <div class="writeus-form__check-n-submit animated-appearance">
+                      <input class="writeus-form__privacy-checkbox visuallyhidden" id="writeus-form__design-checkbox" type="checkbox" name="writeus-form__design-project-checkbox" required>
+                      <label for="writeus-form__design-checkbox" class="writeus-form__privacy-label">я согласен с <a class="noa" href="#">политикой конфиденциальности</a></label>
+                      <input class="button noa" type="submit" name="writeus-form__submit" value="Отправить">
+                    </div>
+                  </form>
+                </li>
+                <li class="tabs-slider__details tabs-slider__details--commercial-offer">
+                  <form class="tabs-slider__form writeus-form" action="contacts.html" method="post">
+                    <input id="writeus-form__offer-subject" type="text" name="writeus-form__subject" value="Коммерческое предложение" hidden>
+                    <label class="visuallyhidden" for="writeus-form__offer-company">Название компании</label>
+                    <input id="writeus-form__offer-company" type="text" name="writeus-form__company" placeholder="Название компании*" required>
+                    <label class="visuallyhidden" for="writeus-form__offer-category">Категория</label>
+                    <select id="writeus-form__offer-category" name="writeus-form__commercial-offer-category" required>
+                      <option label="Выберите категорию"></option>
+                      <option>Офисные товары, канцелярия</option>
+                      <option>Акустические, стеновые, потолочные панели</option>
+                      <option>Мебель кухонная</option>
+                      <option>Проектирование инженерных систем</option>
+                      <option>Строительные материалы</option>
+                      <option>Мебель и оборудование для офисов</option>
+                      <option>Аутсорс, частные услуги проектирования , визуализации</option>
+                      <option>Мебель, шкафы и столярные изделия</option>
+                      <option>Подрядные услуги</option>
+                      <option>Уличное/специализированное оборудование, детские/спортивные площадки</option>
+                      <option>Курьерские, потовые услуги, доставка</option>
+                      <option>Экспертиза проектной документации</option>
+                      <option>Декор, камень, лепнина, гипсовые изделия, молдинги и карнизы</option>
+                      <option>Другое (укажите категорию в описании)</option>
+                      <option>IT, услуги сис админа, продажа hardware, картриджей и периферии</option>
+                      <option>Свет, производство/продажа</option>
+                      <option>Маркетинг, реклама, SEO, рассылки, базы</option>
+                      <option>Паркет, деревянные изделия</option>
+                      <option>Софт, программное обеспечение</option>
+                      <option>Потолочные системы</option>
+                      <option>Аудио и видео системы, мультимедиа</option>
+                      <option>Напольные покрытия</option>
+                    </select>
+                    <label class="visuallyhidden" for="writeus-form__offer-phone">Контактный телефон</label>
+                    <input id="writeus-form__offer-phone" type="tel" name="writeus-form__phone" placeholder="Телефон*" required>
+                    <label class="visuallyhidden" for="writeus-form__offer-email">E-mail для связи</label>
+                    <input id="writeus-form__offer-email" type="email" name="writeus-form__email" placeholder="E-mail*" required>
+                    <label class="visuallyhidden" for="writeus-form__offer-name">Контактное лицо</label>
+                    <input id="writeus-form__offer-name" type="tel" name="writeus-form__name" placeholder="Контактное лицо*" required>
+                    <label class="visuallyhidden" for="writeus-form__offer-description">Описание компании</label>
+                    <textarea id="writeus-form__offer-description" name="writeus-form__description" cols="57" rows="8" placeholder="Описание компании*" required></textarea>
+                    <input class="writeus-form__fileupload" type="file" id="writeus-form__offer-fileupload" name="writeus-form__commercial-offer-fileupload">
+                    <div class="writeus-form__check-n-submit animated-appearance">
+                      <input class="writeus-form__privacy-checkbox visuallyhidden" id="writeus-form__offer-checkbox" type="checkbox" name="writeus-form__commercial-offer-checkbox" required>
+                      <label for="writeus-form__offer-checkbox" class="writeus-form__privacy-label">согласен с <a class="noa" href="#">политикой конфиденциальности</a></label>
+                      <input class="button noa" type="submit" name="writeus-form__submit" value="Отправить">
+                    </div>
+                  </form>
+                </li>
+                <li class="tabs-slider__details tabs-slider__details--job">
+                  <form class="tabs-slider__form writeus-form" action="contacts.html" method="post">
+                    <input id="writeus-form__job-subject" type="text" name="writeus-form__subject" value="Отправка резюме" hidden>
+                    <label class="visuallyhidden" for="writeus-form__job-name">Ваше имя</label>
+                    <input id="writeus-form__job-name" type="text" name="writeus-form__name" placeholder="Ваше имя:*" required>
+                    <label class="visuallyhidden" for="writeus-form__job-phone">телефон</label>
+                    <input id="writeus-form__job-phone" type="tel" name="writeus-form__phone" placeholder="Телефон*" required>
+                    <label class="visuallyhidden" for="writeus-form__job-email">E-mail</label>
+                    <input id="writeus-form__job-email" type="email" name="writeus-form__email" placeholder="E-mail">
+                    <select id="writeus-form__job-category" name="writeus-form__job-category" required>
+                      <option label="Желаемая должность"></option>
+                      <option>Архитектор</option>
+                      <option>Визуализатор</option>
+                      <option>Стажёр</option>
+                    </select>
+                    <label class="visuallyhidden" for="writeus-form__job-info">Дополнительная информация:</label>
+                    <textarea id="writeus-form__job-info" name="writeus-form__info" cols="57" rows="8" placeholder="Дополнительная информация:"></textarea>
+                    <label>Файл с резюме: <input class="writeus-form__fileupload" type="file" id="writeus-form__job-fileupload" name="writeus-form__job-fileupload" required></label>
+                    <div class="writeus-form__check-n-submit animated-appearance">
+                      <p>Мы заботимся о Ваших данных! <br>Нажимая на кнопку, Вы даете согласие на обработку персональных данных</p>
+                      <input class="button noa" type="submit" name="writeus-form__submit" value="Отправить">
+                    </div>
+                  </form>
+                </li>
+              </ul>
             </div>
-            <ul class="tabs-slider__details-list">
-              <li class="tabs-slider__details tabs-slider__details--design-project tabs-slider__details--active">
-                <form class="tabs-slider__form writeus-form" action="contacts.html" method="post">
-                  <input id="writeus-form__subject" type="text" name="writeus-form__subject" value="Дизайн-проект" hidden>
-                  <label class="visuallyhidden" for="writeus-form__name">Ваше имя</label>
-                  <input id="writeus-form__name" type="text" name="writeus-form__name" placeholder="Имя*" required>
-                  <label class="visuallyhidden" for="writeus-form__company">Название вашей компании</label>
-                  <input id="writeus-form__company" type="text" name="writeus-form__company" placeholder="Компания">
-                  <label class="visuallyhidden" for="writeus-form__phone">Контактный телефон</label>
-                  <input id="writeus-form__phone" type="tel" name="writeus-form__phone" placeholder="Телефон">
-                  <label class="visuallyhidden" for="writeus-form__email">E-mail для связи</label>
-                  <input id="writeus-form__email" type="email" name="writeus-form__email" placeholder="E-mail*" required>
-                  <label class="visuallyhidden" for="writeus-form__comment">Комментарий</label>
-                  <textarea id="writeus-form__comment" name="writeus-form__comment" cols="57" rows="8" placeholder="Комментарий*" required></textarea>
-                  <div class="writeus-form__check-n-submit animated-appearance">
-                    <input class="writeus-form__privacy-checkbox visuallyhidden" id="writeus-form__design-project-checkbox" type="checkbox" name="writeus-form__design-project-checkbox" required>
-                    <label for="writeus-form__design-project-checkbox" class="writeus-form__privacy-label">я согласен с <a class="noa" href="#">политикой конфиденциальности</a></label>
-                    <input class="button noa" type="submit" name="writeus-form__submit" value="Отправить">
-                  </div>
-                </form>
-              </li>
-              <li class="tabs-slider__details tabs-slider__details--commercial-offer">
-                <form class="tabs-slider__form writeus-form" action="contacts.html" method="post">
-                  <input id="writeus-form__subject" type="text" name="writeus-form__subject" value="Коммерческое предложение" hidden>
-                  <label class="visuallyhidden" for="writeus-form__company">Название компании</label>
-                  <input id="writeus-form__company" type="text" name="writeus-form__company" placeholder="Название компании*" required>
-                  <label class="visuallyhidden" for="writeus-form__commercial-offer-category">Категория</label>
-                  <select id="writeus-form__commercial-offer-category" name="writeus-form__commercial-offer-category" required>
-                    <option label="Выберите категорию"></option>
-                    <option>Офисные товары, канцелярия</option>
-                    <option>Акустические, стеновые, потолочные панели</option>
-                    <option>Мебель кухонная</option>
-                    <option>Проектирование инженерных систем</option>
-                    <option>Строительные материалы</option>
-                    <option>Мебель и оборудование для офисов</option>
-                    <option>Аутсорс, частные услуги проектирования , визуализации</option>
-                    <option>Мебель, шкафы и столярные изделия</option>
-                    <option>Подрядные услуги</option>
-                    <option>Уличное/специализированное оборудование, детские/спортивные площадки</option>
-                    <option>Курьерские, потовые услуги, доставка</option>
-                    <option>Экспертиза проектной документации</option>
-                    <option>Декор, камень, лепнина, гипсовые изделия, молдинги и карнизы</option>
-                    <option>Другое (укажите категорию в описании)</option>
-                    <option>IT, услуги сис админа, продажа hardware, картриджей и периферии</option>
-                    <option>Свет, производство/продажа</option>
-                    <option>Маркетинг, реклама, SEO, рассылки, базы</option>
-                    <option>Паркет, деревянные изделия</option>
-                    <option>Софт, программное обеспечение</option>
-                    <option>Потолочные системы</option>
-                    <option>Аудио и видео системы, мультимедиа</option>
-                    <option>Напольные покрытия</option>
-                  </select>
-                  <label class="visuallyhidden" for="writeus-form__phone">Контактный телефон</label>
-                  <input id="writeus-form__phone" type="tel" name="writeus-form__phone" placeholder="Телефон*" required>
-                  <label class="visuallyhidden" for="writeus-form__email">E-mail для связи</label>
-                  <input id="writeus-form__email" type="email" name="writeus-form__email" placeholder="E-mail*" required>
-                  <label class="visuallyhidden" for="writeus-form__name">Контактное лицо</label>
-                  <input id="writeus-form__name" type="tel" name="writeus-form__name" placeholder="Контактное лицо*" required>
-                  <label class="visuallyhidden" for="writeus-form__description">Описание компании</label>
-                  <textarea id="writeus-form__description" name="writeus-form__description" cols="57" rows="8" placeholder="Описание компании*" required></textarea>
-                  <input class="writeus-form__fileupload" type="file" id="writeus-form__commercial-offer-fileupload" name="writeus-form__commercial-offer-fileupload">
-                  <div class="writeus-form__check-n-submit animated-appearance">
-                    <input class="writeus-form__privacy-checkbox visuallyhidden" id="writeus-form__commercial-offer-checkbox" type="checkbox" name="writeus-form__commercial-offer-checkbox" required>
-                    <label for="writeus-form__commercial-offer-checkbox" class="writeus-form__privacy-label">согласен с <a class="noa" href="#">политикой конфиденциальности</a></label>
-                    <input class="button noa" type="submit" name="writeus-form__submit" value="Отправить">
-                  </div>
-                </form>
-              </li>
-              <li class="tabs-slider__details tabs-slider__details--job">
-                <form class="tabs-slider__form writeus-form" action="contacts.html" method="post">
-                  <input id="writeus-form__subject" type="text" name="writeus-form__subject" value="Отправка резюме" hidden>
-                  <label class="visuallyhidden" for="writeus-form__name">Ваше имя</label>
-                  <input id="writeus-form__name" type="text" name="writeus-form__name" placeholder="Ваше имя:*" required>
-                  <label class="visuallyhidden" for="writeus-form__phone">телефон</label>
-                  <input id="writeus-form__phone" type="tel" name="writeus-form__phone" placeholder="Телефон*" required>
-                  <label class="visuallyhidden" for="writeus-form__email">E-mail</label>
-                  <input id="writeus-form__email" type="email" name="writeus-form__email" placeholder="E-mail">
-                  <select id="writeus-form__commercial-offer-category" name="writeus-form__commercial-offer-category" required>
-                    <option label="Желаемая должность"></option>
-                    <option>Архитектор</option>
-                    <option>Визуализатор</option>
-                    <option>Стажёр</option>
-                  </select>
-                  <label class="visuallyhidden" for="writeus-form__info">Дополнительная информация:</label>
-                  <textarea id="writeus-form__info" name="writeus-form__info" cols="57" rows="8" placeholder="Дополнительная информация:"></textarea>
-                  <label>Файл с резюме: <input class="writeus-form__fileupload" type="file" id="writeus-form__job-fileupload" name="writeus-form__job-fileupload" required></label>
-                  <div class="writeus-form__check-n-submit animated-appearance">
-                    <p>Мы заботимся о Ваших данных! <br>Нажимая на кнопку, Вы даете согласие на обработку персональных данных</p>
-                    <input class="button noa" type="submit" name="writeus-form__submit" value="Отправить">
-                  </div>
-                </form>
-              </li>
-            </ul>
           </div>
-        </div>
-      </section>
+        </section>
       
       <section class="bottom something4you">
         <div class="wrapper">
@@ -261,7 +261,7 @@
       <a href="https://yandex.ru/maps/-/CCQxeXwCtC" target="_blank">
         <img src="./img/map.png" width="915" height="506" alt="город Москва, улица Нижняя Красносельская, дом 35, строение 48.">
       </a>
-      <iframe class="popup__iframe-map" src="https://yandex.ru/map-widget/v1/-/CCQxeXa9-B"></iframe>
+      <iframe class="popup__iframe-map" src="https://yandex.ru/map-widget/v1/-/CCQxeXwCtC"></iframe>
     </section>
     
     <script src="./js/script.js"></script>
