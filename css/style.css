@@ -1600,7 +1600,7 @@ a {
   height: 100%;
 }
 
-@keyframes appearance {
+@keyframes popup-appearance-from-left {
   0% {
     opacity: 0;
     transform: translateX(-25px);
@@ -1611,8 +1611,17 @@ a {
   }
 }
 
+@keyframes popup-appearance-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .popup-show {
-  animation: appearance 0.75s;
+  animation: popup-appearance-from-left 0.75s;
 }
 
 .popup__underlay {
@@ -1743,6 +1752,11 @@ a {
   height: 506px;
 
   border: none;
+  box-shadow: 1px 1px 2px 1px rgba(100, 100, 100, 0.75);
+}
+
+.popup__iframe-map--show {
+  animation: popup-appearance-fade 0.95s;
 }
 
 /* sliders */

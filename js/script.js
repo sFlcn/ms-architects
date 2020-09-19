@@ -145,11 +145,13 @@ if (popupMap) {
   buttonMap.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupMap.removeAttribute("hidden");
+    popupMap.classList.add("popup__iframe-map--show");
   });
 
   popupMapClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupMap.setAttribute("hidden","");
+    popupMap.classList.remove("popup__iframe-map--show");
   });
 
   window.addEventListener("keydown", function (evt) {
@@ -157,7 +159,7 @@ if (popupMap) {
       evt.preventDefault();
       if (!(popupMap.hasAttribute("hidden"))) {
         popupMap.setAttribute("hidden","");
-        popupMap.classList.remove("popup-show");
+        popupMap.classList.remove("popup__iframe-map--show");
       }
     }
   });
