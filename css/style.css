@@ -1962,6 +1962,76 @@ a {
   margin-left: 116px;
 }
 
+/* main slider */
+
+.slider {
+  position: relative;
+}
+
+.slider__window {
+  width: 967px;
+  height: 628px;
+  overflow: hidden;
+}
+
+.slider__window .grab {
+  cursor: grab;
+}
+
+.slider__window .grabbing {
+  cursor: grabbing;
+}
+
+.slider__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.slider__item {
+  flex-shrink: 0;
+}
+
+.slider__item a {
+  display: flex;
+}
+
+.slider__item img {
+  pointer-events: none;
+}
+
+.slider__markers-list {
+  position: absolute;
+  display: flex;
+  bottom: 30px;
+  right: 37px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slider__markers-item {
+  margin: 0 6px 0 0;
+}
+
+.slider__marker {
+  position: relative;
+  display: flex;
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 /* appearance animation */
 
 .animated-appearance {
