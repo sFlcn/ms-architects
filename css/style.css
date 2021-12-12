@@ -1958,17 +1958,21 @@ a {
   position: relative;
 }
 
-.slider__window {
+.slider img {
+  poiner-events: none;
+}
+
+.slider__wrapper {
   width: 967px;
   height: 628px;
   overflow: hidden;
 }
 
-.slider__window .grab {
+.slider__wrapper.grab {
   cursor: grab;
 }
 
-.slider__window .grabbing {
+.slider__wrapper.grabbing {
   cursor: grabbing;
 }
 
@@ -1991,6 +1995,20 @@ a {
 }
 
 .slider__item img {
+  pointer-events: none;
+}
+
+.slider__button-list {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.slider__button--disabled {
+  opacity: .1;
   pointer-events: none;
 }
 
@@ -2020,6 +2038,18 @@ a {
   border: 0;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider__markers-item--current .slider__marker:after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 6px;
+  height: 6px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #FF8D31;
 }
 
 /* appearance animation */
