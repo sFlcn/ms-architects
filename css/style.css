@@ -1745,9 +1745,9 @@ a {
   box-shadow: 1px 1px 2px 1px rgba(100, 100, 100, 0.75);
 }
 
-.popup__iframe-map--show {
+/* .popup__iframe-map--show {
   animation: popup-appearance-fade 0.95s;
-}
+} */
 
 /* sliders */
 

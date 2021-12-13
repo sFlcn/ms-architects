@@ -1,56 +1,54 @@
 'use strict';
 
-// анимация появления контента при скроле
+// анимация появления контента при скролле
 
-var isScrolling = false;
+const animateAppearance = (elementsCssClass) => {
+  const listItems = document.querySelectorAll(`.${elementsCssClass}`);
+  let isScrolling = false;
 
-window.addEventListener("scroll", throttleScroll, false);
-
-function throttleScroll(e) {
-  if (isScrolling == false) {
-    window.requestAnimationFrame(function() {
-      scrolling(e);
-      isScrolling = false;
-    });
+  for (let item of listItems) {
+    item.classList.add(`${elementsCssClass}--hidden`);
   }
-  isScrolling = true;
-}
 
-document.addEventListener("DOMContentLoaded", scrolling, false);
+  const isPartiallyVisible = (element) => {
+    const elementBoundary = element.getBoundingClientRect();
+    const top = elementBoundary.top;
+    const bottom = elementBoundary.bottom;
+    const height = elementBoundary.height;
+    return (height + window.innerHeight >= bottom) /* && (top + height >= 0)*/ ;
+  }
 
-var listItems = document.querySelectorAll(".animated-appearance");
+  const isFullyVisible = (element) => {
+    const elementBoundary = el.getBoundingClientRect();
+    const top = elementBoundary.top;
+    const bottom = elementBoundary.bottom;
+    return ((top >= 0) && (bottom <= window.innerHeight));
+  }
 
-for (var listItem of listItems) {
-  listItem.classList.add("animated-appearance--hidden");
-}
-
-function scrolling(e) {
-  for (var listItem of listItems) {
-    if (isPartiallyVisible(listItem)) {
-      listItem.classList.remove("animated-appearance--hidden");
-      listItem.classList.add("animated-appearance--shown");
+  const scrolling = (evt) => {
+    for (let item of listItems) {
+      if (isPartiallyVisible(item)) {
+        item.classList.remove(`${elementsCssClass}--hidden`);
+        item.classList.add(`${elementsCssClass}--shown`);
+      }
     }
   }
+
+  const throttleScroll = (evt) => {
+    if (isScrolling === false) {
+      window.requestAnimationFrame(() => {
+        scrolling(evt);
+        isScrolling = false;
+      });
+    }
+    isScrolling = true;
+  }
+
+  window.addEventListener("scroll", throttleScroll);
+  document.addEventListener("DOMContentLoaded", scrolling);
 }
 
-function isPartiallyVisible(el) {
-  var elementBoundary = el.getBoundingClientRect();
-
-  var top = elementBoundary.top;
-  var bottom = elementBoundary.bottom;
-  var height = elementBoundary.height;
-
-  return (height + window.innerHeight >= bottom) /* && (top + height >= 0)*/ ;
-}
-
-function isFullyVisible(el) {
-  var elementBoundary = el.getBoundingClientRect();
-
-  var top = elementBoundary.top;
-  var bottom = elementBoundary.bottom;
-
-  return ((top >= 0) && (bottom <= window.innerHeight));
-}
+animateAppearance('animated-appearance');
 
 // слайдер с вкладками
 
@@ -139,40 +137,50 @@ if (popupСallback) {
 
 // карта
 
-var popupMap = document.querySelector(".popup--map");
-if (popupMap) {
-  var buttonMap = document.querySelector(".map-button");
-  var popupMapClose = popupMap.querySelector(".popup-close");
+const initPopup = (popupCssClass, callButtonCssClass, closeButtonCssClass) => {
+  const popup = document.querySelector(`.${popupCssClass}`);
+  if (!popup) {
+    return
+  };
+  const popupCloseButton = popup.querySelector(`.${closeButtonCssClass}`);
+  const callButtons = document.querySelectorAll(`.${callButtonCssClass}`);
 
-  buttonMap.addEventListener("click", function (evt) {
+  const callButtonClickHandler = (evt) => {
     evt.preventDefault();
-    popupMap.removeAttribute("hidden");
-    popupMap.classList.add("popup__iframe-map--show");
-  });
+    popup.removeAttribute('hidden');
+    popupCloseButton.addEventListener('click', closeButtonClickHandler);
+    window.addEventListener('keydown', escClickHandler);
+  }
 
-  popupMapClose.addEventListener("click", function (evt) {
+  const closeButtonClickHandler = (evt) => {
     evt.preventDefault();
-    popupMap.setAttribute("hidden","");
-    popupMap.classList.remove("popup__iframe-map--show");
-  });
+    popup.setAttribute('hidden', 'true');
+    popupCloseButton.removeEventListener('click', closeButtonClickHandler);
+    window.removeEventListener('keydown', escClickHandler);
+  }
 
-  window.addEventListener("keydown", function (evt) {
+  const escClickHandler = (evt) => {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      if (!(popupMap.hasAttribute("hidden"))) {
-        popupMap.setAttribute("hidden","");
-        popupMap.classList.remove("popup__iframe-map--show");
-      }
+      popup.toggleAttribute('hidden');
+      popupCloseButton.removeEventListener('click', closeButtonClickHandler);
+      window.removeEventListener('keydown', escClickHandler);
     }
-  });
+  }
+
+  for (let button of callButtons) {
+    button.addEventListener('click', callButtonClickHandler);
+  }
 }
-
-
-
+initPopup('popup--map', 'map-button', 'popup-close');
 
 // главный слайдер ------------------------------------------------------------------------
 
-const initSlider = (target, swipeThreshold = 0.3, transitionDuration = 0.7) => {
+const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0.7) => {
+  const target = document.querySelector(`.${targetCssClass}`);
+  if (!target) {
+    return
+  };
   const sliderWrapper = target.querySelector('.slider__wrapper');
   const sliderList = target.querySelector('.slider__list');
   const slides = target.querySelectorAll('.slider__item');
@@ -367,4 +375,4 @@ const initSlider = (target, swipeThreshold = 0.3, transitionDuration = 0.7) => {
   arrows.addEventListener('click', (evt) => onArrowsClick(evt));
 
 }
-initSlider(document.querySelector('.slider'), 0.2);
+initSlider('slider', 0.2);
