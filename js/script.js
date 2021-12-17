@@ -176,6 +176,54 @@ initPopup('popup--map', 'map-button', 'popup-close');
 
 // главный слайдер ------------------------------------------------------------------------
 
+const sliderContent = [
+  {
+    'src': './img/index-slider-1.jpg',
+    'alt': 'Проект транспортного узла и досугового центра на архитектурном конкурсе eVOLO New-York 2013.',
+  },
+  {
+    'src': './img/index-slider-2.jpg',
+    'alt': 'Наш проект 2',
+  },
+  {
+    'src': './img/index-slider-3.jpg',
+    'alt': 'Наш проект 3',
+  },
+  {
+    'src': './img/index-slider-4.jpg',
+    'alt': 'Наш проект 4',
+  },
+]
+
+const loadSlider = (targetCssClass, sliderContent) => {
+  const target = document.querySelector(`.${targetCssClass}`);
+  const sliderList = target.querySelector(`.slider__list`);
+  const pinsList = target.querySelector('.slider__markers-list');
+
+  let sliderListString = '';
+  for (const slide of sliderContent) {
+    let slideItem =
+    `<li class="slider__item">
+      <img src="${slide.src}" width="967" height="628" alt="${slide.alt}">
+    </li>`;
+    sliderListString += slideItem;
+  }
+  sliderList.innerHTML = sliderListString;
+
+  const slides = target.querySelectorAll('.slider__item');
+  let pinsString = '';
+  for (let i = 0; i < slides.length; i++) {
+    let pinItem =
+    `<li class="slider__markers-item">
+      <button class="slider__marker" type="button" name="Slide-${i+1}"><span class="visuallyhidden">Слайд номер ${i+1}</span></button>
+    </li>`;
+    pinsString += pinItem;
+  }
+  pinsList.innerHTML = pinsString;
+
+}
+loadSlider('slider', sliderContent);
+
 const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0.7) => {
   const target = document.querySelector(`.${targetCssClass}`);
   if (!target) {
@@ -185,7 +233,7 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
   const sliderList = target.querySelector('.slider__list');
   const slides = target.querySelectorAll('.slider__item');
   const arrows = target.querySelector('.slider__button-list');
-  const pinsList = target.querySelector('.slider__markers-list');
+  const markers = target.querySelectorAll('.slider__markers-item');
   const prev = arrows.children[0];
   const next = arrows.children[1];
   const slideWidth = slides[0].offsetWidth;
@@ -206,23 +254,11 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
   const lastTrf = (slides.length - 1) * slideWidth;
   const transformValueRegExp = /([-0-9.]+(?=px))/;
 
-  let pinsString = '';
-  for (let i = 0; i < slides.length; i++) {
-    let pin =
-    `<li class="slider__markers-item">
-      <button class="slider__marker" type="button" name="Slide-${i+1}"><span class="visuallyhidden">Слайд номер ${i+1}</span></button>
-    </li>`;
-    pinsString += pin;
+  const changeCurrentMarker = (oldIndex, newIndex) => {
+    markers[oldIndex].classList.remove('slider__markers-item--current');
+    markers[newIndex].classList.add('slider__markers-item--current');
   }
-  pinsList.innerHTML = pinsString;
-  const pins = pinsList.querySelectorAll('.slider__markers-item');
-
-
-  const changeCurrentPin = (oldIndex, newIndex) => {
-    pins[oldIndex].classList.remove('slider__markers-item--current');
-    pins[newIndex].classList.add('slider__markers-item--current');
-  }
-  changeCurrentPin(0, 0);
+  changeCurrentMarker(0, 0);
 
   const getEvent = () => {
     if (event.type.search('touch') !== -1) {
@@ -318,10 +354,10 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
     if (allowSwipe) {
       if (positionShift > posThreshold) {
         if (posX1 > posInit) {
-          changeCurrentPin(slideIndex, slideIndex - 1);
+          changeCurrentMarker(slideIndex, slideIndex - 1);
           slideIndex--;
         } else if (posX1 < posInit) {
-          changeCurrentPin(slideIndex, slideIndex + 1);
+          changeCurrentMarker(slideIndex, slideIndex + 1);
           slideIndex++;
         }
       }
@@ -355,10 +391,10 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
     const clickedButton = evt.target;
       console.log(clickedButton);
     if (clickedButton.classList.contains('slider__button-next')) {
-      changeCurrentPin(slideIndex, slideIndex + 1);
+      changeCurrentMarker(slideIndex, slideIndex + 1);
       slideIndex++;
     } else if (clickedButton.classList.contains('slider__button-prev')) {
-      changeCurrentPin(slideIndex, slideIndex - 1);
+      changeCurrentMarker(slideIndex, slideIndex - 1);
       slideIndex--;
     } else {
       return;
