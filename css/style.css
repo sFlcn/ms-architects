@@ -1580,7 +1580,8 @@ a {
 
 /* popups */
 
-.popup--callback {
+.popup-callback {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -1610,10 +1611,6 @@ a {
   }
 }
 
-.popup-show {
-  animation: popup-appearance-from-left 0.75s;
-}
-
 .popup__underlay {
   z-index: -10;
 
@@ -1629,7 +1626,11 @@ a {
   margin-top: 10px;
 }
 
-.popup--callback .popup__content {
+.popup--show .popup__content {
+  animation: popup-appearance-from-left 0.75s;
+}
+
+.popup-callback .popup__content {
   max-width: 827px;
   min-height: 924px;
 
@@ -1679,31 +1680,32 @@ a {
   background-color: #000000;
 }
 
-.popup--callback .callback-form {
+.popup-callback .callback-form {
   width: 405px;
   margin-left: 376px;
   margin-right: 46px;
 }
 
-.popup--callback .callback-form select,
-.popup--callback .callback-form input,
-.popup--callback .callback-form textarea {
+.popup-callback .callback-form select,
+.popup-callback .callback-form input,
+.popup-callback .callback-form textarea {
   margin: 16px 0;
 }
 
-.popup--callback .callback-form textarea {
+.popup-callback .callback-form textarea {
   height: 275px;
 }
 
-.popup--callback .writeus-form__check-n-submit {
+.popup-callback .writeus-form__check-n-submit {
   margin-top: 24px;
 }
 
-.popup--callback .writeus-form__check-n-submit input[type="submit"] {
+.popup-callback .writeus-form__check-n-submit input[type="submit"] {
   margin-top: 30px;
 }
 
-.popup--map {
+.popup-map {
+  display: none;
   position: fixed;
   top: 15%;
   left: 50%;
@@ -1714,7 +1716,7 @@ a {
   margin-left: -457px;
 }
 
-.popup--map a {
+.popup-map a {
   position: absolute;
   top: 0;
   left: 0;
@@ -1723,7 +1725,7 @@ a {
   margin: 0;
 }
 
-.popup--map .popup-close {
+.popup-map .popup-close {
   top: 25px;
   right: 10px;
 }
@@ -1743,6 +1745,10 @@ a {
 
   border: none;
   box-shadow: 1px 1px 2px 1px rgba(100, 100, 100, 0.75);
+}
+
+.popup--show {
+  display: block;
 }
 
 /* .popup__iframe-map--show {
@@ -1959,7 +1965,7 @@ a {
 }
 
 .slider img {
-  poiner-events: none;
+  pointer-events: none;
 }
 
 .slider__wrapper {

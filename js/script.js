@@ -1,5 +1,39 @@
 'use strict';
 
+// Pop-up
+
+const POPUP_SHOW_CSS_CLASS = 'popup--show';
+
+const showPopup = ({popupElement, popupCloseElements, onPopupShow}) => {
+
+  const closePopup = () => {
+    popupCloseElements.forEach(element => element.removeEventListener('click', closeButtonHandler));
+    document.removeEventListener('keydown', escKeydownHandler);
+    popupElement.classList.remove(POPUP_SHOW_CSS_CLASS);
+  };
+
+  const escKeydownHandler = (evt) => {
+    if (evt.key === 'Escape' || evt.key === 'Esc') {
+      evt.preventDefault();
+      closePopup();
+    }
+  };
+
+  const closeButtonHandler = (evt) => {
+    evt.preventDefault();
+    closePopup();
+  };
+
+  popupElement.classList.add(POPUP_SHOW_CSS_CLASS);
+  document.addEventListener('keydown', escKeydownHandler);
+  popupCloseElements.forEach(element => element.addEventListener('click', closeButtonHandler));
+
+  if (typeof onPopupShow === 'function') {
+    onPopupShow();
+  }
+};
+
+
 // анимация появления контента при скролле
 
 const animateAppearance = (elementsCssClass) => {
@@ -95,87 +129,50 @@ if (tabsSlider) {
 
 // обратная связь
 
-var popupСallback = document.querySelector(".popup--callback");
-if (popupСallback) {
-  var popupСallbackClose = popupСallback.querySelector(".popup-close");
-  var popupСallbackUnderlay = popupСallback.querySelector(".popup__underlay");
-  var popupСallbackContent = popupСallback.querySelector(".popup__content");
-  var popupСallbackMessage = document.getElementById("callback-form__message");
-  var buttonsСallback = document.querySelectorAll(".callback-button");
+const callbackPopup = document.querySelector('.popup-callback');
+const callbackButtons = document.querySelectorAll('.callback-button');
 
-  for (var buttonСallback of buttonsСallback) {
-    buttonСallback.addEventListener("click", function (evt) {
+if (callbackButtons && callbackPopup) {
+  const popupСallbackClose = callbackPopup.querySelector('.popup-close');
+  const popupСallbackUnderlay = callbackPopup.querySelector('.popup__underlay');
+  const popupСallbackMessage = callbackPopup.querySelector('.callback-form__message');
+  const callbackPopupOptions = {
+    popupElement: callbackPopup,
+    popupCloseElements: [popupСallbackClose, popupСallbackUnderlay],
+    onPopupShow: () => popupСallbackMessage.focus(),
+  };
+
+  callbackButtons.forEach(element => {
+    element.addEventListener('click', (evt) => {
       evt.preventDefault();
-      popupСallback.removeAttribute("hidden");
-      popupСallbackContent.classList.add("popup-show");
-      popupСallbackMessage.focus();
+      showPopup(callbackPopupOptions);
     });
-  }
-
-  popupСallbackClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popupСallback.setAttribute("hidden","");
-    popupСallbackContent.classList.remove("popup-show");
-  });
-
-  popupСallbackUnderlay.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popupСallback.setAttribute("hidden","");
-    popupСallbackContent.classList.remove("popup-show");
-  });
-
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (!(popupСallback.hasAttribute("hidden"))) {
-        popupСallback.setAttribute("hidden","");
-        popupСallbackContent.classList.remove("popup-show");
-      }
-    }
   });
 }
 
 // карта
 
-const initPopup = (popupCssClass, callButtonCssClass, closeButtonCssClass) => {
-  const popup = document.querySelector(`.${popupCssClass}`);
-  if (!popup) {
-    return
+const mapPopup = document.querySelector('.popup-map');
+const mapButton = document.querySelector('.map-button');
+const mapPopupCloseButton = document.querySelector('.popup-map .popup-close');
+
+if (mapButton && mapPopup && mapPopupCloseButton) {
+  const mapPopupOptions = {
+    popupElement: mapPopup,
+    popupCloseElements: [mapPopupCloseButton],
   };
-  const popupCloseButton = popup.querySelector(`.${closeButtonCssClass}`);
-  const callButtons = document.querySelectorAll(`.${callButtonCssClass}`);
 
-  const callButtonClickHandler = (evt) => {
+  mapButton.addEventListener('click', (evt) => {
     evt.preventDefault();
-    popup.removeAttribute('hidden');
-    popupCloseButton.addEventListener('click', closeButtonClickHandler);
-    window.addEventListener('keydown', escClickHandler);
-  }
-
-  const closeButtonClickHandler = (evt) => {
-    evt.preventDefault();
-    popup.setAttribute('hidden', 'true');
-    popupCloseButton.removeEventListener('click', closeButtonClickHandler);
-    window.removeEventListener('keydown', escClickHandler);
-  }
-
-  const escClickHandler = (evt) => {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      popup.toggleAttribute('hidden');
-      popupCloseButton.removeEventListener('click', closeButtonClickHandler);
-      window.removeEventListener('keydown', escClickHandler);
-    }
-  }
-
-  for (let button of callButtons) {
-    button.addEventListener('click', callButtonClickHandler);
-  }
+    showPopup(mapPopupOptions);
+  })
 }
-initPopup('popup--map', 'map-button', 'popup-close');
 
-// главный слайдер ------------------------------------------------------------------------
+// главный слайдер
 
+const mainSlider = document.querySelector('.main__slider');
+
+const sliderOptions = {swipeThreshold: 0.2};
 const sliderContent = [
   {
     'src': './img/index-slider-1.jpg',
@@ -193,10 +190,9 @@ const sliderContent = [
     'src': './img/index-slider-4.jpg',
     'alt': 'Наш проект 4',
   },
-]
+];
 
-const loadSlider = (targetCssClass, sliderContent) => {
-  const target = document.querySelector(`.${targetCssClass}`);
+const loadSlider = (target, sliderContent) => {
   const sliderList = target.querySelector(`.slider__list`);
   const pinsList = target.querySelector('.slider__markers-list');
 
@@ -222,22 +218,21 @@ const loadSlider = (targetCssClass, sliderContent) => {
   pinsList.innerHTML = pinsString;
 
 }
-loadSlider('slider', sliderContent);
 
-const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0.7) => {
-  const target = document.querySelector(`.${targetCssClass}`);
-  if (!target) {
-    return
-  };
+const startSlider = (
+  target,
+  {
+    workScreenWidthMax = Infinity,
+    swipeThreshold = 0.3,
+    transitionDuration = 0.7
+  }) => {
   const sliderWrapper = target.querySelector('.slider__wrapper');
   const sliderList = target.querySelector('.slider__list');
   const slides = target.querySelectorAll('.slider__item');
-  const arrows = target.querySelector('.slider__button-list');
+  const arrows = target.querySelectorAll('.slider__button');
+  const prev = arrows[0];
+  const next = arrows[1];
   const markers = target.querySelectorAll('.slider__markers-item');
-  const prev = arrows.children[0];
-  const next = arrows.children[1];
-  const slideWidth = slides[0].offsetWidth;
-  const posThreshold = slideWidth * swipeThreshold;
   let slideIndex = 0;
   let posInit = 0;
   let posX1 = 0;
@@ -251,35 +246,57 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
   let transition = true;
   let toNextTransform = 0;
   let toPrevTransform = 0;
-  const lastTrf = (slides.length - 1) * slideWidth;
   const transformValueRegExp = /([-0-9.]+(?=px))/;
 
-  const changeCurrentMarker = (oldIndex, newIndex) => {
-    markers[oldIndex].classList.remove('slider__markers-item--current');
+  let slideWidth;
+  let posThreshold;
+  let lastTrf;
+  const updateWidthData = () => {
+    slideWidth = slides[0].offsetWidth;
+    posThreshold = slideWidth * swipeThreshold;
+    lastTrf = (slides.length - 1) * slideWidth;
+  }
+
+  const isNotWorkingScreenWidth = () => {
+    return document.documentElement.clientWidth > workScreenWidthMax;
+  }
+
+  const updateSliderMarkers = (newIndex = 0) => {
+    for (const markerItem of markers) {
+      markerItem.classList.remove('slider__markers-item--current');
+    }
     markers[newIndex].classList.add('slider__markers-item--current');
   }
-  changeCurrentMarker(0, 0);
+  updateSliderMarkers();
 
-  const getEvent = () => {
-    if (event.type.search('touch') !== -1) {
-      return event.touches[0];
+  const getEvent = (evt) => {
+    if (evt.type.search('touch') !== -1) {
+      return evt.touches[0];
     } else {
-      return event;
+      return evt;
     }
   };
 
   const slide = () => {
+    updateWidthData();
+    updateSliderMarkers(slideIndex);
     if (transition) {
       sliderList.style.transition = `transform ${transitionDuration}s ease-out`;
     }
     sliderList.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
 
     prev.classList.toggle('slider__button--disabled', slideIndex === 0);
+    prev.toggleAttribute('disabled', slideIndex === 0);
     next.classList.toggle('slider__button--disabled', slideIndex === (slides.length - 1));
+    next.toggleAttribute('disabled', slideIndex === (slides.length - 1));
   };
 
-  const swipeStart = () => {
-    let userEvt = getEvent();
+  const swipeStart = (evt) => {
+    updateWidthData();
+    if (isNotWorkingScreenWidth()) {
+      return;
+    }
+    let userEvt = getEvent(evt);
 
     if (allowSwipe) {
       transition = true;
@@ -301,8 +318,8 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
     }
   };
 
-  const swipeAction = () => {
-    let userEvt = getEvent();
+  const swipeAction = (evt) => {
+    let userEvt = getEvent(evt);
     let transform = +(sliderList.style.transform.match(transformValueRegExp)[0]);
 
     posX2 = posX1 - userEvt.clientX;
@@ -341,6 +358,7 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
   };
 
   const swipeEnd = () => {
+    updateWidthData();
     positionShift = Math.abs(posInit - posX1);
     isScroll = false;
     isSwipe = false;
@@ -354,10 +372,8 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
     if (allowSwipe) {
       if (positionShift > posThreshold) {
         if (posX1 > posInit) {
-          changeCurrentMarker(slideIndex, slideIndex - 1);
           slideIndex--;
         } else if (posX1 < posInit) {
-          changeCurrentMarker(slideIndex, slideIndex + 1);
           slideIndex++;
         }
       }
@@ -388,13 +404,10 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
   };
 
   const onArrowsClick = (evt) => {
-    const clickedButton = evt.target;
-      console.log(clickedButton);
+    const clickedButton = evt.target.closest('button');
     if (clickedButton.classList.contains('slider__button-next')) {
-      changeCurrentMarker(slideIndex, slideIndex + 1);
       slideIndex++;
     } else if (clickedButton.classList.contains('slider__button-prev')) {
-      changeCurrentMarker(slideIndex, slideIndex - 1);
       slideIndex--;
     } else {
       return;
@@ -406,9 +419,20 @@ const initSlider = (targetCssClass, swipeThreshold = 0.3, transitionDuration = 0
   sliderWrapper.classList.add('grab');
 
   sliderList.addEventListener('transitionend', () => allowSwipe = true);
-  target.addEventListener('touchstart', swipeStart);
-  target.addEventListener('mousedown', swipeStart);
-  arrows.addEventListener('click', (evt) => onArrowsClick(evt));
+  sliderWrapper.addEventListener('touchstart', swipeStart);
+  sliderWrapper.addEventListener('mousedown', swipeStart);
+  prev.addEventListener('click', onArrowsClick);
+  next.addEventListener('click', onArrowsClick);
 
+  window.addEventListener('resize', () => {
+    if (isNotWorkingScreenWidth()) {
+      slideIndex = 0;
+      slide();
+    }
+  });
 }
-initSlider('slider', 0.2);
+
+if (mainSlider) {
+  loadSlider(mainSlider, sliderContent);
+  startSlider(mainSlider, sliderOptions);
+}
