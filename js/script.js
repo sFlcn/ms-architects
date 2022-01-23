@@ -36,30 +36,22 @@ const showPopup = ({popupElement, popupCloseElements, onPopupShow}) => {
 
 // анимация появления контента при скролле
 
-const animateAppearance = (elementsCssClass) => {
+const animateAppearance = (elementsCssClass, throttleTimer) => {
   const listItems = document.querySelectorAll(`.${elementsCssClass}`);
-  let isScrolling = false;
+  if (!listItems) {
+    return;
+  }
 
   for (let item of listItems) {
     item.classList.add(`${elementsCssClass}--hidden`);
   }
 
   const isPartiallyVisible = (element) => {
-    const elementBoundary = element.getBoundingClientRect();
-    const top = elementBoundary.top;
-    const bottom = elementBoundary.bottom;
-    const height = elementBoundary.height;
-    return (height + window.innerHeight >= bottom) /* && (top + height >= 0)*/ ;
+    const {top, bottom, height} = element.getBoundingClientRect();
+    return (bottom - height < window.innerHeight);
   }
 
-  const isFullyVisible = (element) => {
-    const elementBoundary = el.getBoundingClientRect();
-    const top = elementBoundary.top;
-    const bottom = elementBoundary.bottom;
-    return ((top >= 0) && (bottom <= window.innerHeight));
-  }
-
-  const scrolling = (evt) => {
+  const scrolling = () => {
     for (let item of listItems) {
       if (isPartiallyVisible(item)) {
         item.classList.remove(`${elementsCssClass}--hidden`);
@@ -68,21 +60,26 @@ const animateAppearance = (elementsCssClass) => {
     }
   }
 
-  const throttleScroll = (evt) => {
-    if (isScrolling === false) {
-      window.requestAnimationFrame(() => {
-        scrolling(evt);
-        isScrolling = false;
-      });
+  let isThrottle = false;
+
+  const throttledScroll = (time) => {
+    if (isThrottle) {
+      return;
     }
-    isScrolling = true;
+
+    isThrottle = true;
+
+    setTimeout(() => {
+      scrolling();
+      isThrottle = false;
+    }, throttleTimer);
   }
 
-  window.addEventListener("scroll", throttleScroll);
-  document.addEventListener("DOMContentLoaded", scrolling);
+  window.addEventListener('scroll', throttledScroll);
+  document.addEventListener('DOMContentLoaded', scrolling);
 }
 
-animateAppearance('animated-appearance');
+animateAppearance('animated-appearance', 250);
 
 // слайдер с вкладками
 
