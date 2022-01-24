@@ -83,45 +83,46 @@ animateAppearance('animated-appearance', 250);
 
 // слайдер с вкладками
 
-var tabsSlider = document.querySelector(".tabs-slider");
+const tabsSlider = document.querySelector('.tabs-slider');
+
 if (tabsSlider) {
-  var tabsSliderButtons = tabsSlider.querySelectorAll(".tabs-slider__button");
-  var tabsSliderTabs = tabsSlider.querySelectorAll(".tabs-slider__details");
+  const tabsSliderButtons = tabsSlider.querySelectorAll('.tabs-slider__button');
+  const tabsSliderTabs = tabsSlider.querySelectorAll('.tabs-slider__details');
 
-  for (var tabsSliderTab of tabsSliderTabs) {
-    if (!tabsSliderTab.classList.contains("tabs-slider__details--active")) tabsSliderTab.setAttribute("hidden","");
+  const setActiveButtonAndTab = (selectedButton, selectedTab) => {
+    tabsSliderButtons.forEach(element => {
+      element.classList.remove('tabs-slider__button--active');
+    });
+    tabsSliderTabs.forEach(element => {
+      element.classList.remove('tabs-slider__details--active');
+      element.classList.add('tabs-slider__details--hidden');
+    });
+
+    if (selectedButton) {
+      selectedButton.classList.add('tabs-slider__button--active');
+    }
+    if (selectedTab) {
+      selectedTab.classList.remove('tabs-slider__details--hidden');
+      selectedTab.classList.add('tabs-slider__details--active');
+    }
   }
 
-  for (var i = 0; i < tabsSliderButtons.length; i++) {
-    tabsSliderButtons[i].addEventListener("click", clickHandler.bind(null, i));
-  }
-
-  function clickHandler(index, evt) {
+  const onTabSliderClick = (evt) => {
+    const selectedButton = evt.target.closest('.tabs-slider__button');
+    if (!selectedButton) return;
     evt.preventDefault();
-    var isCurrent = evt.target.classList.contains("tabs-slider__button--active");
-    if (isCurrent) {
-      return false;
-    }
-    tabsSlider.querySelector(".tabs-slider__button--active").classList.remove("tabs-slider__button--active");
-    evt.target.classList.add("tabs-slider__button--active");
-    getTab(index);
-    document.activeElement.blur();
+
+    const selectedTopic = selectedButton.getAttribute('name');
+    const selectedTab = Array.from(tabsSliderTabs).find( element => element.dataset.topic == selectedTopic );
+
+    setActiveButtonAndTab(selectedButton, selectedTab);
   }
 
-  function getTab(tabIndex) {
-    try {
-      tabsSlider.querySelector(".tabs-slider__details--active").setAttribute("hidden","");
-      tabsSliderTabs[tabIndex].removeAttribute("hidden");
-      setTimeout(() => {
-        tabsSlider.querySelector(".tabs-slider__details--active").classList.remove("tabs-slider__details--active");
-        tabsSliderTabs[tabIndex].classList.add("tabs-slider__details--active");
-      }, 100);
-
-    }
-    catch (e) {
-      console.log(e);
-    }
-  }
+  setActiveButtonAndTab(
+    tabsSlider.querySelector('.tabs-slider__button--active'),
+    tabsSlider.querySelector('.tabs-slider__details--active'),
+  );
+  tabsSlider.addEventListener('click', onTabSliderClick);
 }
 
 // обратная связь

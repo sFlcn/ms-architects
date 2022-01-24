@@ -62,13 +62,13 @@
               <div class="writeus__slider-leftbox">
                 <ul class="tabs-slider__list">
                   <li class="tabs-slider__item tabs-slider__item--design-project">
-                    <button class="tabs-slider__button tabs-slider__button--active menu-text" type="button" name="tabs-slider__item--design-project">Дизайн-проект</button>
+                    <button class="tabs-slider__button tabs-slider__button--active menu-text" type="button" name="design-project">Дизайн-проект</button>
                   </li>
                   <li class="tabs-slider__item tabs-slider__item--commercial-offer">
-                    <button class="tabs-slider__button menu-text" type="button" name="tabs-slider__item--commercial-offer">Коммерческое предложение</button>
+                    <button class="tabs-slider__button menu-text" type="button" name="commercial-offer">Коммерческое предложение</button>
                   </li>
                   <li class="tabs-slider__item tabs-slider__item--work">
-                    <button class="tabs-slider__button menu-text" type="button" name="tabs-slider__item--work">Работа у нас</button>
+                    <button class="tabs-slider__button menu-text" type="button" name="work">Работа у нас</button>
                   </li>
                 </ul>
                 <div class="writeus__contacts-in-slider">
@@ -86,7 +86,7 @@
                 </div>
               </div>
               <ul class="tabs-slider__details-list">
-                <li class="tabs-slider__details tabs-slider__details--design-project tabs-slider__details--active">
+                <li class="tabs-slider__details tabs-slider__details--design-project tabs-slider__details--active" data-topic="design-project">
                   <form class="tabs-slider__form writeus-form" action="contacts.html" method="post">
                     <input id="writeus-form__design-subject" type="text" name="writeus-form__subject" value="Дизайн-проект" hidden>
                     <label class="visuallyhidden" for="writeus-form__design-name">Ваше имя</label>
@@ -101,12 +101,12 @@
                     <textarea id="writeus-form__design-comment" name="writeus-form__comment" cols="57" rows="8" placeholder="Комментарий*" required></textarea>
                     <div class="writeus-form__check-n-submit">
                       <input class="writeus-form__privacy-checkbox visuallyhidden" id="writeus-form__design-checkbox" type="checkbox" name="writeus-form__design-project-checkbox" required>
-                      <label for="writeus-form__design-checkbox" class="writeus-form__privacy-label">я согласен с <a class="noa" href="#">политикой конфиденциальности</a></label>
+                      <label for="writeus-form__design-checkbox" class="writeus-form__privacy-label animated-appearance">я согласен с <a class="noa" href="#">политикой конфиденциальности</a></label>
                       <input class="button noa" type="submit" name="writeus-form__submit" value="Отправить">
                     </div>
                   </form>
                 </li>
-                <li class="tabs-slider__details tabs-slider__details--commercial-offer">
+                <li class="tabs-slider__details tabs-slider__details--commercial-offer" data-topic="commercial-offer">
                   <form class="tabs-slider__form writeus-form" action="contacts.html" method="post">
                     <input id="writeus-form__offer-subject" type="text" name="writeus-form__subject" value="Коммерческое предложение" hidden>
                     <label class="visuallyhidden" for="writeus-form__offer-company">Название компании</label>
@@ -153,7 +153,7 @@
                     </div>
                   </form>
                 </li>
-                <li class="tabs-slider__details tabs-slider__details--job">
+                <li class="tabs-slider__details tabs-slider__details--job" data-topic="work">
                   <form class="tabs-slider__form writeus-form" action="contacts.html" method="post">
                     <input id="writeus-form__job-subject" type="text" name="writeus-form__subject" value="Отправка резюме" hidden>
                     <label class="visuallyhidden" for="writeus-form__job-name">Ваше имя</label>
