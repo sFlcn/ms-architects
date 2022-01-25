@@ -116,6 +116,7 @@ if (tabsSlider) {
     const selectedTab = Array.from(tabsSliderTabs).find( element => element.dataset.topic == selectedTopic );
 
     setActiveButtonAndTab(selectedButton, selectedTab);
+    document.activeElement.blur();
   }
 
   setActiveButtonAndTab(
