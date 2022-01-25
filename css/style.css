@@ -1273,6 +1273,8 @@ a[href="##"],
 .our-team__catalog {
   margin-top: 146px;
   margin-bottom: 9px;
+
+  overflow: hidden;
 }
 
 .our-team__thesis {
@@ -1321,8 +1323,9 @@ a[href="##"],
   flex-direction: row;
   flex-wrap: wrap;
 
-  margin: 0;
-  padding: 0;
+  width: 1400px;
+  margin: 0 auto;
+  padding: 0 0 0 110px;
   list-style: none;
 }
 
