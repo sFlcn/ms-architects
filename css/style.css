@@ -1323,10 +1323,13 @@ a[href="##"],
   flex-direction: row;
   flex-wrap: wrap;
 
-  width: 1400px;
   margin: 0 auto;
   padding: 0 0 0 110px;
   list-style: none;
+}
+
+.our-team__catalog .employee__list {
+  width: 1400px;
 }
 
 .employee {
