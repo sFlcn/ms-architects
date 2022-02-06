@@ -1,83 +1,7 @@
-'use strict';
-
-// Pop-up
+import showPopup from './popup';
+import animateAppearance from './animate-appearance';
 
 const POPUP_SHOW_CSS_CLASS = 'popup--show';
-
-const showPopup = ({popupElement, popupCloseElements, onPopupShow}) => {
-
-  const closePopup = () => {
-    popupCloseElements.forEach(element => element.removeEventListener('click', closeButtonHandler));
-    document.removeEventListener('keydown', escKeydownHandler);
-    popupElement.classList.remove(POPUP_SHOW_CSS_CLASS);
-  };
-
-  const escKeydownHandler = (evt) => {
-    if (evt.key === 'Escape' || evt.key === 'Esc') {
-      evt.preventDefault();
-      closePopup();
-    }
-  };
-
-  const closeButtonHandler = (evt) => {
-    evt.preventDefault();
-    closePopup();
-  };
-
-  popupElement.classList.add(POPUP_SHOW_CSS_CLASS);
-  document.addEventListener('keydown', escKeydownHandler);
-  popupCloseElements.forEach(element => element.addEventListener('click', closeButtonHandler));
-
-  if (typeof onPopupShow === 'function') {
-    onPopupShow();
-  }
-};
-
-
-// анимация появления контента при скролле
-
-const animateAppearance = (elementsCssClass, throttleTimer) => {
-  const listItems = document.querySelectorAll(`.${elementsCssClass}`);
-  if (!listItems) {
-    return;
-  }
-
-  for (let item of listItems) {
-    item.classList.add(`${elementsCssClass}--hidden`);
-  }
-
-  const isPartiallyVisible = (element) => {
-    const {top, bottom, height} = element.getBoundingClientRect();
-    return (bottom - height < window.innerHeight);
-  }
-
-  const scrolling = () => {
-    for (let item of listItems) {
-      if (isPartiallyVisible(item)) {
-        item.classList.remove(`${elementsCssClass}--hidden`);
-        item.classList.add(`${elementsCssClass}--shown`);
-      }
-    }
-  }
-
-  let isThrottle = false;
-
-  const throttledScroll = (time) => {
-    if (isThrottle) {
-      return;
-    }
-
-    isThrottle = true;
-
-    setTimeout(() => {
-      scrolling();
-      isThrottle = false;
-    }, throttleTimer);
-  }
-
-  window.addEventListener('scroll', throttledScroll);
-  document.addEventListener('DOMContentLoaded', scrolling);
-}
 
 animateAppearance('animated-appearance', 250);
 
@@ -128,23 +52,24 @@ if (tabsSlider) {
 
 // обратная связь
 
-const callbackPopup = document.querySelector('.popup-callback');
-const callbackButtons = document.querySelectorAll('.callback-button');
+const callMeBackPopup = document.querySelector('.popup-callback');
+const callMeBackButtons = document.querySelectorAll('.callback-button');
 
-if (callbackButtons && callbackPopup) {
-  const popupСallbackClose = callbackPopup.querySelector('.popup-close');
-  const popupСallbackUnderlay = callbackPopup.querySelector('.popup__underlay');
-  const popupСallbackMessage = callbackPopup.querySelector('.callback-form__message');
-  const callbackPopupOptions = {
-    popupElement: callbackPopup,
+if (callMeBackButtons && callMeBackPopup) {
+  const popupСallbackClose = callMeBackPopup.querySelector('.popup-close');
+  const popupСallbackUnderlay = callMeBackPopup.querySelector('.popup__underlay');
+  const popupСallbackMessage = callMeBackPopup.querySelector('#callback-form__message');
+  const callMeBackPopupOptions = {
+    popupElement: callMeBackPopup,
     popupCloseElements: [popupСallbackClose, popupСallbackUnderlay],
-    onPopupShow: () => popupСallbackMessage.focus(),
+    cssClassPopupShow: POPUP_SHOW_CSS_CLASS,
+    onPopupShowCallback: () => popupСallbackMessage.focus(),
   };
 
-  callbackButtons.forEach(element => {
+  callMeBackButtons.forEach(element => {
     element.addEventListener('click', (evt) => {
       evt.preventDefault();
-      showPopup(callbackPopupOptions);
+      showPopup(callMeBackPopupOptions);
     });
   });
 }
@@ -159,6 +84,7 @@ if (mapButton && mapPopup && mapPopupCloseButton) {
   const mapPopupOptions = {
     popupElement: mapPopup,
     popupCloseElements: [mapPopupCloseButton],
+    cssClassPopupShow: POPUP_SHOW_CSS_CLASS,
   };
 
   mapButton.addEventListener('click', (evt) => {
