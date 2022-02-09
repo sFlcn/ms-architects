@@ -8,14 +8,13 @@
     "url": "git+https://github.com/sFlcn/ms-architects.git"
   },
   "devDependencies": {
-    "parcel": "^2.2.1",
-    "stylelint": "^14.3.0",
-    "stylelint-config-standard": "^24.0.0",
     "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
-    "eslint-config-airbnb-base": "^15.0.0"
+    "parcel": "^2.3.0",
+    "stylelint": "^14.3.0",
+    "stylelint-config-standard": "^24.0.0"
   },
-
   "scripts": {
     "eslint": "eslint source/js/",
     "stylelint": "stylelint \"source/css/**/*.css\"",
@@ -23,7 +22,6 @@
     "build": "parcel build source/index.html",
     "clean": "rm dist/*"
   },
-
   "browserslist": [
     "> 0.5%",
     "last 2 versions",
@@ -34,36 +32,41 @@
   ],
   "eslintConfig": {
     "env": {
-        "browser": true,
-        "es2021": true
+      "browser": true,
+      "es2021": true
     },
     "extends": [
-        "airbnb-base"
+      "airbnb-base"
     ],
     "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+      "ecmaVersion": "latest",
+      "sourceType": "module"
     },
     "rules": {
-      "no-use-before-define": ["error", { "functions": false }]
+      "no-use-before-define": [
+        "error",
+        {
+          "functions": false
+        }
+      ]
     }
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
-        "string-quotes": "double",
-        "no-duplicate-selectors": true,
-        "selector-attribute-quotes": "always",
-        "declaration-no-important": true,
-        "property-no-vendor-prefix": true,
-        "value-no-vendor-prefix": true,
-        "number-leading-zero": "always",
-        "function-url-quotes": "always",
-        "font-family-name-quotes": "always-unless-keyword",
-        "at-rule-no-vendor-prefix": true,
-        "selector-no-vendor-prefix": true,
-        "media-feature-name-no-vendor-prefix": true,
-        "selector-class-pattern": ".*"
+      "string-quotes": "double",
+      "no-duplicate-selectors": true,
+      "selector-attribute-quotes": "always",
+      "declaration-no-important": true,
+      "property-no-vendor-prefix": true,
+      "value-no-vendor-prefix": true,
+      "number-leading-zero": "always",
+      "function-url-quotes": "always",
+      "font-family-name-quotes": "always-unless-keyword",
+      "at-rule-no-vendor-prefix": true,
+      "selector-no-vendor-prefix": true,
+      "media-feature-name-no-vendor-prefix": true,
+      "selector-class-pattern": ".*"
     }
   }
 }
