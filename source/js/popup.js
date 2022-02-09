@@ -1,4 +1,4 @@
-function showPopup({
+export function showPopup({
   popupElement,
   popupCloseElements,
   cssClassPopupShow,
@@ -28,4 +28,11 @@ function showPopup({
   if (typeof onPopupShowCallback === 'function') { onPopupShowCallback(); }
 }
 
-export default showPopup;
+export function initPopup(targetsArray, popupOptions) {
+  targetsArray.forEach((element) => {
+    element.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      showPopup(popupOptions);
+    });
+  });
+}

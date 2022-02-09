@@ -1,61 +1,18 @@
-import showPopup from './popup';
+import initPopup from './popup';
 import animateAppearance from './animate-appearance';
+import tabSliderInit from './tabs-slider';
 
 const POPUP_SHOW_CSS_CLASS = 'popup--show';
+const tabsSlider = document.querySelector('.tabs-slider');
+const callMeBackPopup = document.querySelector('.popup-callback');
+const mapPopup = document.querySelector('.popup-map');
 
 animateAppearance('animated-appearance', 250);
-
-// слайдер с вкладками
-
-const tabsSlider = document.querySelector('.tabs-slider');
-
-if (tabsSlider) {
-  const tabsSliderButtons = tabsSlider.querySelectorAll('.tabs-slider__button');
-  const tabsSliderTabs = tabsSlider.querySelectorAll('.tabs-slider__details');
-
-  const setActiveButtonAndTab = (selectedButton, selectedTab) => {
-    tabsSliderButtons.forEach(element => {
-      element.classList.remove('tabs-slider__button--active');
-    });
-    tabsSliderTabs.forEach(element => {
-      element.classList.remove('tabs-slider__details--active');
-      element.classList.add('tabs-slider__details--hidden');
-    });
-
-    if (selectedButton) {
-      selectedButton.classList.add('tabs-slider__button--active');
-    }
-    if (selectedTab) {
-      selectedTab.classList.remove('tabs-slider__details--hidden');
-      selectedTab.classList.add('tabs-slider__details--active');
-    }
-  }
-
-  const onTabSliderClick = (evt) => {
-    const selectedButton = evt.target.closest('.tabs-slider__button');
-    if (!selectedButton) return;
-    evt.preventDefault();
-
-    const selectedTopic = selectedButton.getAttribute('name');
-    const selectedTab = Array.from(tabsSliderTabs).find( element => element.dataset.topic == selectedTopic );
-
-    setActiveButtonAndTab(selectedButton, selectedTab);
-    document.activeElement.blur();
-  }
-
-  setActiveButtonAndTab(
-    tabsSlider.querySelector('.tabs-slider__button--active'),
-    tabsSlider.querySelector('.tabs-slider__details--active'),
-  );
-  tabsSlider.addEventListener('click', onTabSliderClick);
-}
+tabSliderInit(tabsSlider);
 
 // обратная связь
-
-const callMeBackPopup = document.querySelector('.popup-callback');
-const callMeBackButtons = document.querySelectorAll('.callback-button');
-
-if (callMeBackButtons && callMeBackPopup) {
+if (callMeBackPopup) {
+  const callMeBackButtons = document.querySelectorAll('.callback-button');
   const popupСallbackClose = callMeBackPopup.querySelector('.popup-close');
   const popupСallbackUnderlay = callMeBackPopup.querySelector('.popup__underlay');
   const popupСallbackMessage = callMeBackPopup.querySelector('#callback-form__message');
@@ -66,31 +23,20 @@ if (callMeBackButtons && callMeBackPopup) {
     onPopupShowCallback: () => popupСallbackMessage.focus(),
   };
 
-  callMeBackButtons.forEach(element => {
-    element.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      showPopup(callMeBackPopupOptions);
-    });
-  });
+  initPopup(callMeBackButtons, callMeBackPopupOptions);
 }
 
 // карта
-
-const mapPopup = document.querySelector('.popup-map');
-const mapButton = document.querySelector('.map-button');
-const mapPopupCloseButton = document.querySelector('.popup-map .popup-close');
-
-if (mapButton && mapPopup && mapPopupCloseButton) {
+if (mapPopup) {
+  const mapButtons = document.querySelectorAll('.map-button');
+  const mapPopupCloseButton = document.querySelector('.popup-map .popup-close');
   const mapPopupOptions = {
     popupElement: mapPopup,
     popupCloseElements: [mapPopupCloseButton],
     cssClassPopupShow: POPUP_SHOW_CSS_CLASS,
   };
 
-  mapButton.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    showPopup(mapPopupOptions);
-  })
+  initPopup(mapButtons, mapPopupOptions);
 }
 
 // главный слайдер

@@ -12,7 +12,7 @@ function scrollingResolve(elementsList, elementsCssClass) {
   });
 }
 
-function animateAppearance(elementsCssClass, throttleTimer) {
+export default function animateAppearance(elementsCssClass, throttleTimer) {
   const elementsList = document.querySelectorAll(`.${elementsCssClass}`);
   if (!elementsList) { return; }
 
@@ -33,5 +33,3 @@ function animateAppearance(elementsCssClass, throttleTimer) {
   window.addEventListener('scroll', throttledScroll);
   document.addEventListener('DOMContentLoaded', scrollingResolve);
 }
-
-export default animateAppearance;
