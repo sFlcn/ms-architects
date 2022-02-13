@@ -3,18 +3,18 @@ function isPartiallyVisible(element) {
   return (bottom - height < window.innerHeight);
 }
 
-function scrollingResolve(elementsList, elementsCssClass) {
-  elementsList.forEach((element) => {
-    if (isPartiallyVisible(element)) {
-      element.classList.remove(`${elementsCssClass}--hidden`);
-      element.classList.add(`${elementsCssClass}--shown`);
-    }
-  });
-}
-
 export default function animateAppearance(elementsCssClass, throttleTimer) {
   const elementsList = document.querySelectorAll(`.${elementsCssClass}`);
   if (!elementsList) { return; }
+
+  function scrollingResolve() {
+    elementsList.forEach((element) => {
+      if (isPartiallyVisible(element)) {
+        element.classList.remove(`${elementsCssClass}--hidden`);
+        element.classList.add(`${elementsCssClass}--shown`);
+      }
+    });
+  }
 
   let isThrottle = false;
 

@@ -12,15 +12,20 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
     "parcel": "^2.3.0",
+    "parcel-reporter-static-files-copy": "^1.3.4",
     "stylelint": "^14.3.0",
     "stylelint-config-standard": "^24.0.0"
   },
   "scripts": {
     "eslint": "eslint source/js/",
     "stylelint": "stylelint \"source/css/**/*.css\"",
-    "start": "parcel source/index.html",
+    "start": "parcel source/*.html source/js/*.js",
     "build": "parcel build source/index.html",
-    "clean": "rm dist/*"
+    "clean": "rm -r dist/* && rm -r .parcel-cache/*"
+  },
+  "staticFiles": {
+    "staticPath": "source/slider",
+    "staticOutPath": "slider"
   },
   "browserslist": [
     "> 0.5%",
