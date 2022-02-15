@@ -409,7 +409,7 @@ a[href="##"],
   color: #bdbdbd;
 }
 
-.footer-nav__item a {
+.footer-nav__link {
   display: inline-block;
   padding: 5px 0;
   border-bottom: 1px solid transparent;
@@ -417,8 +417,8 @@ a[href="##"],
   transition: all 0.55s ease;
 }
 
-.footer-nav__item a:hover,
-.footer-nav__item a:focus {
+.footer-nav__link:hover,
+.footer-nav__link:focus {
   border-bottom: 1px solid currentcolor;
 }
 
@@ -512,18 +512,15 @@ a[href="##"],
   padding-right: 5px;
 }
 
-.about__company-numbers .orange-numbers:nth-child(3n+1),
-.features__item:nth-child(3n+1) {
+.about__company-numbers .orange-numbers:nth-child(3n+1) {
   width: 310px;
 }
 
-.about__company-numbers .orange-numbers:nth-child(3n+2),
-.features__item:nth-child(3n+2) {
+.about__company-numbers .orange-numbers:nth-child(3n+2) {
   width: 285px;
 }
 
-.about__company-numbers .orange-numbers:nth-child(3n+3),
-.features__item:nth-child(3n+3) {
+.about__company-numbers .orange-numbers:nth-child(3n+3) {
   width: 290px;
 }
 
@@ -543,6 +540,18 @@ a[href="##"],
 .features__item {
   margin-bottom: 81px;
   padding-right: 5px;
+}
+
+.features__item:nth-child(3n+1) {
+  width: 310px;
+}
+
+.features__item:nth-child(3n+2) {
+  width: 285px;
+}
+
+.features__item:nth-child(3n+3) {
+  width: 290px;
 }
 
 .feature__title {
@@ -571,7 +580,7 @@ a[href="##"],
   list-style: none;
 }
 
-.proj-nav__item a {
+.proj-nav__item .proj-nav__link {
   margin-right: 4px;
   padding: 3.5px 0;
   font-size: 14px;
@@ -581,13 +590,13 @@ a[href="##"],
   color: #bdbdbd;
 }
 
-.proj-nav__item--current a {
+.proj-nav__item--current .proj-nav__link {
   border-bottom: 0.5px solid #000000;
   color: #000000;
 }
 
-.proj-nav__item a:hover,
-.proj-nav__item a:focus {
+.proj-nav__item .proj-nav__link:hover,
+.proj-nav__item .proj-nav__link:focus {
   border-bottom: 0.5px solid;
 }
 
@@ -644,10 +653,6 @@ a[href="##"],
 
 .our-specialists__slider {
   margin: 146px 72px 37px 0;
-}
-
-.our-specialists__slider .employee__list {
-  justify-content: flex-end;
 }
 
 /* company-theses */
@@ -788,7 +793,7 @@ a[href="##"],
   filter: grayscale(0.2);
 }
 
-.clients__item a {
+.clients__item .clients__link {
   display: block;
   width: 150px;
   height: 70px;
@@ -797,77 +802,77 @@ a[href="##"],
   background-position: center;
 }
 
-.clients__item--sok a {
+.clients__item--sok .clients__link {
   background-image: url("../img/logo_sok.svg");
   background-size: 77px 32px;
 }
 
-.clients__item--stroitransgaz a {
+.clients__item--stroitransgaz .clients__link {
   background-image: url("../img/logo_stroitransgaz.png");
   background-size: 110px 39px;
 }
 
-.clients__item--ikea a {
+.clients__item--ikea .clients__link {
   background-image: url("../img/logo_ikea.svg");
   background-size: 77px 32px;
 }
 
-.clients__item--accenture a {
+.clients__item--accenture .clients__link {
   background-image: url("../img/logo_accenture.svg");
   background-size: 103px 27px;
 }
 
-.clients__item--alium a {
+.clients__item--alium .clients__link {
   background-image: url("../img/logo_alium.png");
   background-size: 109px 32px;
 }
 
-.clients__item--mtsbank a {
+.clients__item--mtsbank .clients__link {
   background-image: url("../img/logo_mts-bank.png");
   background-size: 76px 29px;
 }
 
-.clients__item--nornickel a {
+.clients__item--nornickel .clients__link {
   background-image: url("../img/logo_nornickel.svg");
   background-size: 59px 34px;
 }
 
-.clients__item--otkrytie a {
+.clients__item--otkrytie .clients__link {
   background-image: url("../img/logo_otkrytie.svg");
   background-size: 111px 26px;
 }
 
-.clients__item--sberbank a {
+.clients__item--sberbank .clients__link {
   background-image: url("../img/logo_sberbank2009.svg");
   background-size: 127px 25px;
 }
 
-.clients__item--gazprommedia a {
+.clients__item--gazprommedia .clients__link {
   background-image: url("../img/logo_gazprommedia.png");
   background-size: 61px 34px;
 }
 
-.clients__item--huawei a {
+.clients__item--huawei .clients__link {
   background-image: url("../img/logo_huawei.svg");
   background-size: 37px 37px;
 }
 
-.clients__item--simple a {
+.clients__item--simple .clients__link {
   background-image: url("../img/logo_simple.png");
   background-size: 87px 33px;
 }
 
-.clients__item--jll a {
+.clients__item--jll .clients__link {
   background-image: url("../img/logo_jll.svg");
   background-size: 78px 35px;
 }
 
-.clients__item--oknastolicy a {
+.clients__item--oknastolicy .clients__link {
   background-image: url("../img/logo_oknastolicy.png");
   background-size: 94px 33px;
 }
 
-.clients__item--rostelecom a {
+.clients__item--rostelecom .clients__link {
   background-image: url("../img/logo_rostelecom.svg");
   background-size: 107px 39px;
 }
@@ -1086,7 +1091,7 @@ a[href="##"],
   user-select: none;
 }
 
-.writeus-form__check-n-submit a {
+.writeus-form__check-n-submit .writeus-form__privacy-link {
   padding: 3px 0;
   border-bottom: 0.5px solid currentcolor;
   text-decoration: none;
@@ -1143,6 +1148,23 @@ a[href="##"],
   padding-right: 10px;
 }
 
+.employee__list {
+  display: flex;
+  flex-flow: row wrap;
+  width: 1400px;
+  margin: 0 auto;
+  padding: 0 0 0 110px;
+  list-style: none;
+}
+
+.employee__list--right-shift {
+  justify-content: flex-end;
+}
+
+.employee {
+  position: relative;
+}
+
 .our-team__catalog .employee a {
   margin: 120px 145px 98px 57px;
 }
@@ -1173,19 +1195,6 @@ a[href="##"],
   width: 100vw;
   height: 100%;
   background-color: #f9f9f9;
-}
-
-.employee__list {
-  display: flex;
-  flex-flow: row wrap;
-  width: 1400px;
-  margin: 0 auto;
-  padding: 0 0 0 110px;
-  list-style: none;
-}
-
-.employee {
-  position: relative;
 }
 
 .employee a {
