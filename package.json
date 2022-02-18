@@ -1,7 +1,7 @@
 {
   "name": "ms-architects",
   "private": true,
-  "description": "Учебный проект, свёрстанный для отработки навыков html/css/js",
+  "description": "Учебный проект, свёрстанный для отработки навыков фронтенд разработки",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -17,11 +17,10 @@
     "stylelint-config-standard": "^24.0.0"
   },
   "scripts": {
-    "eslint": "eslint source/js/",
-    "stylelint": "stylelint \"source/css/**/*.css\"",
+    "test": "stylelint \"source/css/**/*.css\" && eslint source/js/",
+    "clean": "rm -r dist/* && rm -r .parcel-cache/*",
     "start": "parcel source/*.html source/js/*.js",
-    "build": "parcel build source/index.html",
-    "clean": "rm -r dist/* && rm -r .parcel-cache/*"
+    "build": "parcel build source/index.html"
   },
   "staticFiles": {
     "staticPath": "source/slider",
@@ -32,8 +31,7 @@
     "last 2 versions",
     "not dead",
     "Firefox ESR",
-    "not ie <= 11",
-    "not op_mini all"
+    "not ie <= 11"
   ],
   "eslintConfig": {
     "env": {
@@ -48,12 +46,9 @@
       "sourceType": "module"
     },
     "rules": {
-      "no-use-before-define": [
-        "error",
-        {
-          "functions": false
-        }
-      ]
+      "no-use-before-define": [ "error", {
+        "functions": false
+      }]
     }
   },
   "stylelint": {
