@@ -20,7 +20,7 @@
     "test": "stylelint \"source/css/**/*.css\" && eslint source/js/",
     "clean": "rm -r dist/* && rm -r .parcel-cache/*",
     "start": "parcel source/*.html source/js/*.js",
-    "build": "parcel build source/index.html"
+    "build": "parcel build source/index.html --public-url ./"
   },
   "staticFiles": {
     "staticPath": "source/slider",
