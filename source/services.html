@@ -19,9 +19,9 @@
               <a class="menu-text" href="./index.html"><span>Архитектурное бюро</span></a>
               <div class="site-nav__sub">
                 <ul class="site-nav__sub-list">
-                  <li class="site-nav__sub-item"><a class="menu-text" href="./company.html">О компании</a></li>
-                  <li class="site-nav__sub-item"><a class="menu-text" href="./team.html">Команда</a></li>
-                  <li class="site-nav__sub-item"><a class="menu-text" href="./employee_mikhail-khoroshavtsev.html">Карточка сотрудника</a></li>
+                  <li class="site-nav__sub-item"><a class="menu-text site-nav__sub-link" href="./company.html">О компании</a></li>
+                  <li class="site-nav__sub-item"><a class="menu-text site-nav__sub-link" href="./team.html">Команда</a></li>
+                  <li class="site-nav__sub-item"><a class="menu-text site-nav__sub-link" href="./employee_mikhail-khoroshavtsev.html">Карточка сотрудника</a></li>
                 </ul>
               </div>
             </li>
@@ -203,14 +203,14 @@
             </ul>
           </div>
           <ul class="footer__nav footer-nav">
-            <li class="footer-nav__item menu-text"><a href="./index.html">Архитектурное бюро</a></li>
-            <li class="footer-nav__item menu-text"><a href="./contacts.html">Контакты</a></li>
-            <li class="footer-nav__item menu-text"><a>Услуги</a></li>
-            <li class="footer-nav__item menu-text"><a href="##" onclick="return false">Скачать презентацию</a></li>
-            <li class="footer-nav__item menu-text"><a href="##" onclick="return false">Портфолио</a></li>
-            <li class="footer-nav__item menu-text"><a href="##" onclick="return false">Экспертные статьи</a></li>
-            <li class="footer-nav__item menu-text"><a href="##" onclick="return false">Цены и акции</a></li>
-            <li class="footer-nav__item menu-text"><a href="##" onclick="return false">For foreigners</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="./index.html">Архитектурное бюро</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="./contacts.html">Контакты</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link">Услуги</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="##" onclick="return false">Скачать презентацию</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="##" onclick="return false">Портфолио</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="##" onclick="return false">Экспертные статьи</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="##" onclick="return false">Цены и акции</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="##" onclick="return false">For foreigners</a></li>
           </ul>
         </div>
         <p class="footer__copyrights extra-text">
@@ -239,13 +239,13 @@
           <textarea id="callback-form__message" name="callbackForm_Message" cols="57" rows="8" placeholder="Сообщение*" required></textarea>
           <div class="writeus-form__check-n-submit">
             <input class="writeus-form__privacy-checkbox visuallyhidden" id="callback-checkbox" type="checkbox" name="callbackForm_CallbackCheckbox" required>
-            <label for="callback-checkbox" class="writeus-form__privacy-label">я согласен с <a href="##" onclick="return false">политикой конфиденциальности</a></label>
+            <label for="callback-checkbox" class="writeus-form__privacy-label">я согласен с <a class="writeus-form__privacy-link" href="##" onclick="return false">политикой конфиденциальности</a></label>
             <input class="button noa" type="submit" name="callbackForm_Submit" value="Отправить">
           </div>
         </form>
       </div>
     </section>
 
-    <script src="./js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>

@@ -19,9 +19,9 @@
               <a class="menu-text"><span>Архитектурное бюро</span></a>
               <div class="site-nav__sub">
                 <ul class="site-nav__sub-list">
-                  <li class="site-nav__sub-item"><a class="menu-text" href="./company.html">О компании</a></li>
-                  <li class="site-nav__sub-item"><a class="menu-text" href="./team.html">Команда</a></li>
-                  <li class="site-nav__sub-item"><a class="menu-text" href="./employee_mikhail-khoroshavtsev.html">Карточка сотрудника</a></li>
+                  <li class="site-nav__sub-item"><a class="menu-text site-nav__sub-link" href="./company.html">О компании</a></li>
+                  <li class="site-nav__sub-item"><a class="menu-text site-nav__sub-link" href="./team.html">Команда</a></li>
+                  <li class="site-nav__sub-item"><a class="menu-text site-nav__sub-link" href="./employee_mikhail-khoroshavtsev.html">Карточка сотрудника</a></li>
                 </ul>
               </div>
             </li>
@@ -50,7 +50,7 @@
             <div class="slider__wrapper">
               <ul class="slider__list">
                 <li class="slider__item">
-                  <img src="./img/index-slider-1.jpg" width="967" height="628" alt="Проект транспортного узла и досугового центра на архитектурном конкурсе eVOLO New-York 2013.">
+                  <img src="./slider/index-slider-1.jpg" width="967" height="628" alt="Проект транспортного узла и досугового центра на архитектурном конкурсе eVOLO New-York 2013.">
                 </li>
               </ul>
             </div>
@@ -168,12 +168,12 @@
             <h2 class="section__title title3">Наши проекты</h2>
           </div>
           <ul class="projects__navigation proj-nav__list animated-appearance">
-            <li class="proj-nav__item proj-nav__item--current"><a>Новые проекты</a></li>
-            <li class="proj-nav__item"><a href="##" onclick="return false">Дизайн</a></li>
-            <li class="proj-nav__item"><a href="##" onclick="return false">Проектирование</a></li>
-            <li class="proj-nav__item"><a href="##" onclick="return false">Офисы</a></li>
-            <li class="proj-nav__item"><a href="##" onclick="return false">Ландшафт</a></li>
-            <li class="proj-nav__item"><a href="##" onclick="return false">Сети</a></li>
+            <li class="proj-nav__item proj-nav__item--current"><a class="proj-nav__link">Новые проекты</a></li>
+            <li class="proj-nav__item"><a class="proj-nav__link" href="##" onclick="return false">Дизайн</a></li>
+            <li class="proj-nav__item"><a class="proj-nav__link" href="##" onclick="return false">Проектирование</a></li>
+            <li class="proj-nav__item"><a class="proj-nav__link" href="##" onclick="return false">Офисы</a></li>
+            <li class="proj-nav__item"><a class="proj-nav__link" href="##" onclick="return false">Ландшафт</a></li>
+            <li class="proj-nav__item"><a class="proj-nav__link" href="##" onclick="return false">Сети</a></li>
             </ul>
           <ul class="projects__list">
             <li class="projects__item project animated-appearance">
@@ -251,26 +251,26 @@
             <h2 class="section__title title3 animated-appearance">Наши специалисты</h2>
           </div>
           <!-- Слайдер сотрудников -->
-          <div class="our-specialists__slider employees-slider animated-appearance">
-            <ul class="employee__list">
-              <li class="employee animated-appearance">
-                <a href="./employee_mikhail-khoroshavtsev.html">
+          <div class="our-specialists__slider employees-slider">
+            <ul class="employee__list employee__list--right-shift">
+              <li class="employee">
+                <a class="employee__card-link animated-appearance" href="./employee_mikhail-khoroshavtsev.html">
                   <h3 class="employee__name title3">Михаил <br>Хорошавцев</h3>
                   <img class="employee__photo" src="./img/portrait_mikhail-khoroshavtsev.jpg" width="221" height="278" alt="портрет Михаила Хорошавцева.">
                   <p class="employee__position main-text">Генеральный директор</p>
                   <p class="employee__link links-text">подробнее</p>
                 </a>
               </li>
-              <li class="employee animated-appearance">
-                <a href="##" onclick="return false">
+              <li class="employee">
+                <a class="employee__card-link animated-appearance" href="##" onclick="return false">
                   <h3 class="employee__name title3">Василий <br>Бирюков </h3>
                   <img class="employee__photo" src="./img/portrait_vasily-biryukov.jpg" width="221" height="278" alt="портрет Василия Бирюкова.">
                   <p class="employee__position main-text">Заместитель генерального директора</p>
                   <p class="employee__link links-text">подробнее</p>
                 </a>
               </li>
-              <li class="employee animated-appearance">
-                <a href="##" onclick="return false">
+              <li class="employee">
+                <a class="employee__card-link animated-appearance" href="##" onclick="return false">
                   <h3 class="employee__name title3">Татьяна <br>Хозиева </h3>
                   <img class="employee__photo" src="./img/portrait_khozieva-tatyana.jpg" width="221" height="278" alt="портрет Татьяны Хозиевой.">
                   <p class="employee__position main-text">Главный дизайнер</p>
@@ -310,14 +310,14 @@
             </ul>
           </div>
           <ul class="footer__nav footer-nav">
-            <li class="footer-nav__item menu-text"><a>Архитектурное бюро</a></li>
-            <li class="footer-nav__item menu-text"><a href="./contacts.html">Контакты</a></li>
-            <li class="footer-nav__item menu-text"><a href="./services.html">Услуги</a></li>
-            <li class="footer-nav__item menu-text"><a href="##" onclick="return false">Скачать презентацию</a></li>
-            <li class="footer-nav__item menu-text"><a href="##" onclick="return false">Портфолио</a></li>
-            <li class="footer-nav__item menu-text"><a href="##" onclick="return false">Экспертные статьи</a></li>
-            <li class="footer-nav__item menu-text"><a href="##" onclick="return false">Цены и акции</a></li>
-            <li class="footer-nav__item menu-text"><a href="##" onclick="return false">For foreigners</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link">Архитектурное бюро</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="./contacts.html">Контакты</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="./services.html">Услуги</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="##" onclick="return false">Скачать презентацию</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="##" onclick="return false">Портфолио</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="##" onclick="return false">Экспертные статьи</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="##" onclick="return false">Цены и акции</a></li>
+            <li class="footer-nav__item menu-text"><a class="footer-nav__link" href="##" onclick="return false">For foreigners</a></li>
           </ul>
         </div>
         <p class="footer__copyrights extra-text">
@@ -346,13 +346,13 @@
           <textarea id="callback-form__message" name="callbackForm_Message" cols="57" rows="8" placeholder="Сообщение*" required></textarea>
           <div class="writeus-form__check-n-submit">
             <input class="writeus-form__privacy-checkbox visuallyhidden" id="callback-checkbox" type="checkbox" name="callbackForm_CallbackCheckbox" required>
-            <label for="callback-checkbox" class="writeus-form__privacy-label">я согласен с <a href="##" onclick="return false">политикой конфиденциальности</a></label>
+            <label for="callback-checkbox" class="writeus-form__privacy-label">я согласен с <a class="writeus-form__privacy-link" href="##" onclick="return false">политикой конфиденциальности</a></label>
             <input class="button noa" type="submit" name="callbackForm_Submit" value="Отправить">
           </div>
         </form>
       </div>
     </section>
 
-    <script src="./js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
