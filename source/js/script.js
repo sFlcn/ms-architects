@@ -9,7 +9,7 @@ const tabsSlider = document.querySelector('.tabs-slider');
 const callMeBackPopup = document.querySelector('.popup-callback');
 const mapPopup = document.querySelector('.popup-map');
 const mainSlider = document.querySelector('.main__slider');
-const SLIDER_DATA_URL = '../slider/sliderData.json';
+const SLIDER_DATA_URL = 'slider/sliderData.json';
 const sliderOptions = { swipeThreshold: 0.2 };
 
 animateAppearance('animated-appearance', 250);
