@@ -1,0 +1,247 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title Контакты MS Architects
+    link(rel='stylesheet' href='./css/normalize.css')
+    link(rel='stylesheet' href='./css/style.css')
+    link(rel='shortcut icon' href='./img/favicon.png' type='image/png')
+  body
+    header.header
+      .wrapper
+        a.header__logo(href='./index.pug')
+          img.ms-logo(src='./img/ms-architects_logo.png' width='249' height='81' alt='логотип MS Architects.')
+        nav.header__nav.site-nav
+          ul.site-nav__list
+            li.site-nav__item
+              a.menu-text(href='./index.pug')
+                span Архитектурное бюро
+              .site-nav__sub
+                ul.site-nav__sub-list
+                  li.site-nav__sub-item
+                    a.menu-text.site-nav__sub-link(href='./company.pug') О компании
+                  li.site-nav__sub-item
+                    a.menu-text.site-nav__sub-link(href='./team.pug') Команда
+                  li.site-nav__sub-item
+                    a.menu-text.site-nav__sub-link(href='./employee_mikhail-khoroshavtsev.pug') Карточка сотрудника
+            li.site-nav__item
+              a.menu-text(href='./services.pug')
+                span Услуги
+            li.site-nav__item
+              a.menu-text(href='##' onclick='return false')
+                span Портфолио
+            li.site-nav__item
+              a.menu-text(href='##' onclick='return false')
+                span Экспертные статьи
+            li.site-nav__item.site-nav__item--active
+              a.menu-text
+                span Контакты
+    main.main
+      h1.visuallyhidden Контакты MS Architects.
+      .wrapper
+        .top-image
+          img(src='./img/mc-ark.jpg' width='967' height='628' alt='Фото в офисе компании MS Architects во время работы.')
+      section.writeus
+        .wrapper
+          .title-container
+            h2.page__title.title2 Свяжитесь с нами
+          .writeus__slider.tabs-slider
+            .writeus__slider-leftbox
+              ul.tabs-slider__list
+                li.tabs-slider__item.tabs-slider__item--design-project
+                  button.tabs-slider__button.tabs-slider__button--active.menu-text(type='button' name='design-project') Дизайн-проект
+                li.tabs-slider__item.tabs-slider__item--commercial-offer
+                  button.tabs-slider__button.menu-text(type='button' name='commercial-offer') Коммерческое предложение
+                li.tabs-slider__item.tabs-slider__item--work
+                  button.tabs-slider__button.menu-text(type='button' name='work') Работа у нас
+              .writeus__contacts-in-slider
+                h3.visuallyhidden Наши адрес и телефон
+                .writeus__contact.writeus__contact--address
+                  p.writeus__contact-type.main-text Офис
+                  p.writeus__contact-text.main-text
+                    | Москва,
+                    br
+                    | Нижняя Красносельская, д. 35, стр. 48
+                  a.writeus__contact-link.map-button.links-text(href='https://yandex.ru/maps/-/CCQxeXwCtC') посмотреть на карте
+                .writeus__contact.writeus__contact--tel
+                  p.writeus__contact-type.main-text Телефон
+                  a.writeus__contact-text.main-text(href='tel:+7') +7 (499) 346-70-56
+                  a.writeus__contact-link.callback-button.links-text(href='#') заказать звонок
+            ul.tabs-slider__details-list
+              li.tabs-slider__details.tabs-slider__details--design-project.tabs-slider__details--active(data-topic='design-project')
+                form.tabs-slider__form.writeus-form(action='contacts.pug' method='post')
+                  input#writeus-form__design-subject(type='text' name='writeus-form__subject' value='Дизайн-проект' hidden='')
+                  label.visuallyhidden(for='writeus-form__design-name') Ваше имя
+                  input#writeus-form__design-name(type='text' name='writeus-form__name' placeholder='Имя*' required='')
+                  label.visuallyhidden(for='writeus-form__design-company') Название вашей компании
+                  input#writeus-form__design-company(type='text' name='writeus-form__company' placeholder='Компания')
+                  label.visuallyhidden(for='writeus-form__design-phone') Контактный телефон
+                  input#writeus-form__design-phone(type='tel' name='writeus-form__phone' placeholder='Телефон')
+                  label.visuallyhidden(for='writeus-form__design-email') E-mail для связи
+                  input#writeus-form__design-email(type='email' name='writeus-form__email' placeholder='E-mail*' required='')
+                  label.visuallyhidden(for='writeus-form__design-comment') Комментарий
+                  textarea#writeus-form__design-comment(name='writeus-form__comment' cols='57' rows='8' placeholder='Комментарий*' required='')
+                  .writeus-form__check-n-submit
+                    input#writeus-form__design-checkbox.writeus-form__privacy-checkbox.visuallyhidden(type='checkbox' name='writeus-form__design-project-checkbox' required='')
+                    label.writeus-form__privacy-label.animated-appearance(for='writeus-form__design-checkbox')
+                      | я согласен с
+                      a.writeus-form__privacy-link(href='##' onclick='return false') политикой конфиденциальности
+                    input.button.noa(type='submit' name='writeus-form__submit' value='Отправить')
+              li.tabs-slider__details.tabs-slider__details--commercial-offer(data-topic='commercial-offer')
+                form.tabs-slider__form.writeus-form(action='contacts.pug' method='post')
+                  input#writeus-form__offer-subject(type='text' name='writeus-form__subject' value='Коммерческое предложение' hidden='')
+                  label.visuallyhidden(for='writeus-form__offer-company') Название компании
+                  input#writeus-form__offer-company(type='text' name='writeus-form__company' placeholder='Название компании*' required='')
+                  label.visuallyhidden(for='writeus-form__offer-category') Категория
+                  select#writeus-form__offer-category(name='writeus-form__commercial-offer-category' required='')
+                    option(label='Выберите категорию')
+                    option Офисные товары, канцелярия
+                    option Акустические, стеновые, потолочные панели
+                    option Мебель кухонная
+                    option Проектирование инженерных систем
+                    option Строительные материалы
+                    option Мебель и оборудование для офисов
+                    option Аутсорс, частные услуги проектирования, визуализации
+                    option Мебель, шкафы и столярные изделия
+                    option Подрядные услуги
+                    option Уличное/специализированное оборудование, детские/спортивные площадки
+                    option Курьерские, потовые услуги, доставка
+                    option Экспертиза проектной документации
+                    option Декор, камень, лепнина, гипсовые изделия, молдинги и карнизы
+                    option Другое (укажите категорию в описании)
+                    option IT, услуги сис админа, продажа hardware, картриджей и периферии
+                    option Свет, производство/продажа
+                    option Маркетинг, реклама, SEO, рассылки, базы
+                    option Паркет, деревянные изделия
+                    option Софт, программное обеспечение
+                    option Потолочные системы
+                    option Аудио и видео системы, мультимедиа
+                    option Напольные покрытия
+                  label.visuallyhidden(for='writeus-form__offer-phone') Контактный телефон
+                  input#writeus-form__offer-phone(type='tel' name='writeus-form__phone' placeholder='Телефон*' required='')
+                  label.visuallyhidden(for='writeus-form__offer-email') E-mail для связи
+                  input#writeus-form__offer-email(type='email' name='writeus-form__email' placeholder='E-mail*' required='')
+                  label.visuallyhidden(for='writeus-form__offer-name') Контактное лицо
+                  input#writeus-form__offer-name(type='tel' name='writeus-form__name' placeholder='Контактное лицо*' required='')
+                  label.visuallyhidden(for='writeus-form__offer-description') Описание компании
+                  textarea#writeus-form__offer-description(name='writeus-form__description' cols='57' rows='8' placeholder='Описание компании*' required='')
+                  input#writeus-form__offer-fileupload.writeus-form__fileupload(type='file' name='writeus-form__commercial-offer-fileupload')
+                  .writeus-form__check-n-submit
+                    input#writeus-form__offer-checkbox.writeus-form__privacy-checkbox.visuallyhidden(type='checkbox' name='writeus-form__commercial-offer-checkbox' required='')
+                    label.writeus-form__privacy-label(for='writeus-form__offer-checkbox')
+                      | согласен с
+                      a.writeus-form__privacy-link(href='##' onclick='return false') политикой конфиденциальности
+                    input.button.noa(type='submit' name='writeus-form__submit' value='Отправить')
+              li.tabs-slider__details.tabs-slider__details--job(data-topic='work')
+                form.tabs-slider__form.writeus-form(action='contacts.pug' method='post')
+                  input#writeus-form__job-subject(type='text' name='writeus-form__subject' value='Отправка резюме' hidden='')
+                  label.visuallyhidden(for='writeus-form__job-name') Ваше имя
+                  input#writeus-form__job-name(type='text' name='writeus-form__name' placeholder='Ваше имя:*' required='')
+                  label.visuallyhidden(for='writeus-form__job-phone') телефон
+                  input#writeus-form__job-phone(type='tel' name='writeus-form__phone' placeholder='Телефон*' required='')
+                  label.visuallyhidden(for='writeus-form__job-email') E-mail
+                  input#writeus-form__job-email(type='email' name='writeus-form__email' placeholder='E-mail')
+                  select#writeus-form__job-category(name='writeus-form__job-category' required='')
+                    option(label='Желаемая должность')
+                    option Архитектор
+                    option Визуализатор
+                    option Стажёр
+                  label.visuallyhidden(for='writeus-form__job-info') Дополнительная информация:
+                  textarea#writeus-form__job-info(name='writeus-form__info' cols='57' rows='8' placeholder='Дополнительная информация:')
+                  label
+                    | Файл с резюме:
+                    input#writeus-form__job-fileupload.writeus-form__fileupload(type='file' name='writeus-form__job-fileupload' required='')
+                  .writeus-form__check-n-submit
+                    p
+                      | Мы заботимся о Ваших данных!
+                      br
+                      | Нажимая на кнопку, Вы даете согласие на обработку персональных данных
+                    input.button.noa(type='submit' name='writeus-form__submit' value='Отправить')
+      section.bottom.something4you
+        .wrapper
+          .title-container
+            h2.section__title.title2 У нас есть кое-что для вас
+          .something4you__invitation
+            p.something4you__text.cta-text
+              | Вам интересны дизайн, проектирование, инженеринг?
+              br
+              | Вы студент или уже состоявшийся профи?
+            a.something4you__link.links-text.section__link(href='##' onclick='return false') Присоединяйтесь к нам!
+    footer.footer
+      .wrapper
+        .footer__box
+          a.footer__logo(href='./index.pug')
+            img.ms-logo(src='./img/ms-architects_logo.png' width='232' height='75' alt='логотип MS Architects.')
+          .footer__feedback
+            a.footer__tel.main-text(href='tel:+7') +7 (499) 346-70-56
+            p.footer__address.main-text Москва, Нижняя Красносельская, д. 35, стр. 48
+            a.footer__email.main-text(href='mailto:msarchitects') msarchitects@mail.ru
+            ul.footer__socials.socials__list
+              li
+                a.socials__item.socials__link--fb(href='##' onclick='return false')
+                  span.visuallyhidden Facebook
+              li
+                a.socials__item.socials__link--insta(href='##' onclick='return false')
+                  span.visuallyhidden Instagram
+              li
+                a.socials__item.socials__link--vk(href='##' onclick='return false')
+                  span.visuallyhidden Вконтакте
+          ul.footer__nav.footer-nav
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='./index.pug') Архитектурное бюро
+            li.footer-nav__item.menu-text
+              a.footer-nav__link Контакты
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='./services.pug') Услуги
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') Скачать презентацию
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') Портфолио
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') Экспертные статьи
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') Цены и акции
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') For foreigners
+        p.footer__copyrights.extra-text
+          | © Design: Alisa Melnichenko
+          br
+          |           © Web-development: Pavel Sokolovskii
+          br
+          br
+          |           Данный сайт  является некоммерческим проектом, созданным в процессе обучения в школе UPROCK
+    section.popup.popup-callback
+      .popup__underlay
+      .popup__content
+        .popup-head
+          h2.popup-title.title2
+            | Напишите нам,
+            br
+            | и мы с удовольствием
+            br
+            | вам ответим
+          button.popup-close(type='button' name='popupClose')
+            span.visuallyhidden Закрыть
+        form.writeus-form.callback-form(action='https://echo.htmlacademy.ru' method='post')
+          label.visuallyhidden(for='callback-form__name') имя
+          input#callback-form__name(type='text' name='callbackForm_Name' placeholder='Имя:*' required='')
+          label.visuallyhidden(for='callback-form__email') e-mail
+          input#callback-form__email(type='email' name='callbackForm_Email' placeholder='E-mail*' required='')
+          label.visuallyhidden(for='callback-form__phone') телефон
+          input#callback-form__phone(type='tel' name='callbackForm_Phone' placeholder='Телефон')
+          label.visuallyhidden(for='callback-form__message') Сообщение
+          textarea#callback-form__message.callback-form__message(name='callbackForm_Message' cols='57' rows='8' placeholder='Сообщение*' required='')
+          .writeus-form__check-n-submit
+            input#callback-checkbox.writeus-form__privacy-checkbox.visuallyhidden(type='checkbox' name='callbackForm_CallbackCheckbox' required='')
+            label.writeus-form__privacy-label.animated-appearance(for='callback-checkbox')
+              | я согласен с
+              a.writeus-form__privacy-link(href='##' onclick='return false') политикой конфиденциальности
+            input.button.noa(type='submit' name='callbackForm_Submit' value='Отправить')
+    section.popup.popup-map
+      h2.popup-title.visuallyhidden Карта
+      button.popup-close(type='button' name='map-popupClose')
+        span.visuallyhidden Закрыть
+      a.popup__link-map(href='https://yandex.ru/maps/-/CCQxeXwCtC' target='_blank')
+        img(src='./img/map.png' width='915' height='506' alt='город Москва, улица Нижняя Красносельская, дом 35, строение 48.')
+      iframe.popup__iframe-map(src='https://snazzymaps.com/embed/262233')
+    script(type='module' src='js/script.js')

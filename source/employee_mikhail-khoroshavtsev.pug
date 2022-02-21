@@ -1,0 +1,143 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title Карточка сотрудника MS Architects
+    link(rel='stylesheet' href='./css/normalize.css')
+    link(rel='stylesheet' href='./css/style.css')
+    link(rel='shortcut icon' href='./img/favicon.png' type='image/png')
+  body
+    header.header
+      .wrapper
+        a.header__logo(href='./index.pug')
+          img.ms-logo(src='./img/ms-architects_logo.png' width='249' height='81' alt='логотип MS Architects.')
+        nav.header__nav.site-nav
+          ul.site-nav__list
+            li.site-nav__item.site-nav__item--active
+              a.menu-text(href='./index.pug')
+                span Архитектурное бюро
+              .site-nav__sub
+                ul.site-nav__sub-list
+                  li.site-nav__sub-item
+                    a.menu-text.site-nav__sub-link(href='./company.pug') О компании
+                  li.site-nav__sub-item
+                    a.menu-text.site-nav__sub-link(href='./team.pug') Команда
+                  li.site-nav__sub-item.site-nav__sub-item--current
+                    a.menu-text.site-nav__sub-link Карточка сотрудника
+            li.site-nav__item
+              a.menu-text(href='./services.pug')
+                span Услуги
+            li.site-nav__item
+              a.menu-text(href='##' onclick='return false')
+                span Портфолио
+            li.site-nav__item
+              a.menu-text(href='##' onclick='return false')
+                span Экспертные статьи
+            li.site-nav__item
+              a.menu-text(href='./contacts.pug')
+                span Контакты
+    main.main
+      h1.visuallyhidden Страница о сотруднике
+      .wrapper
+        .top-image
+          img(src='./img/weare.jpg' width='967' height='628' alt='Коллективная фотография сотрудников.')
+      section.employee-info.animated-appearance
+        .wrapper
+          .employee-info-card
+            .employee-info-card__text
+              h2.employee-info-card__name.title3
+                | Михаил
+                br
+                | Хорошавцев
+              p.employee-info-card__position.main-text Генеральный директор
+              a.employee-info-card__contact.links-text(href='mailto:1@msarchitects.ru') 1@msarchitects.ru
+              p.employee-info-card__bio.main-text
+                | Руководитель архитектурного бюро MS Architects. Окончил художественную школу и Московский Государственный Строительный Университет по специальности инженер-архитектор. Имеет 15-летний опыт в проектировании зданий и более 10 лет управленческого опыта. Член НОПРИЗ. Внимательный, высокопрофессиональный специалист. Умеет слушать и слышать клиента. В свободное время пишет маслом.
+            img.employee-info-card__portrait(src='./img/portrait_mikhail-khoroshavtsev.jpg' width='289' height='316' alt='портрет Михаила Хорошавцева.')
+      section.employee-projects
+        .wrapper
+          .title-container.animated-appearance
+            h3.section__title.title3 Мои проекты
+          // слайдер работ
+          .employee-projects__slider.works-slider.animated-appearance
+            ul.works-slider__list
+              li.works-slider__item.works-slider__item--prev
+                h4.works-slider__slide-title.title3
+                  | Аэропорт Большое Савино
+                  br
+                  | г. Пермь
+                a.works-slider__slide-image(href='##' onclick='return false')
+                  img(src='./img/airport-savino_1.jpg' width='326' height='210' alt='Аэропорт Большое Савино город Пермь.')
+                p.works-slider__slide-text.main-text Вид проектных работ: архитектурная концепция
+                p.works-slider__slide-text.main-text Тип проекта: аэропорт
+              li.works-slider__item.works-slider__item--central
+                h4.works-slider__slide-title.title3 Проект библиотеки в Лондоне в Гайд-парке
+                a.works-slider__slide-image(href='##' onclick='return false')
+                  img(src='./img/library-london_1.jpg' width='429' height='278' alt='Проект библиотеки в Лондоне в Гайд-парке.')
+                p.works-slider__slide-text.main-text Вид проектных работ: международный конкурс
+                p.works-slider__slide-text.main-text Тип проекта: библиотека
+              li.works-slider__item.works-slider__item--next
+                h4.works-slider__slide-title.title3 Павильон Космос на ВДНХ
+                a.works-slider__slide-image(href='##' onclick='return false')
+                  img(src='./img/pavilion-cosmos_1.jpg' width='374' height='214' alt='Интерьер павильона "Космос".')
+                p.works-slider__slide-text.main-text Вид проектных работ: дизайн интерьеров
+                p.works-slider__slide-text.main-text Тип проекта: концепция музейного павильона
+            .works-slider__marker
+              .works-slider__pointer
+      section.customers-reviews.animated-appearance
+        .wrapper
+          .title-container
+            h3.section__title.title3 Отзывы клиентов
+          ul.customers-reviews__list
+            li.customers-reviews__item
+              p.customers-reviews__text.feedback-text
+                | От лица руководства ООО «ГПМ КИТ» благодарим компанию «MS Architects» в лице генерального директора Михаила Хорошавцева, а также Марину Ляутер, Бирюкова Василия и всех дизайнеров, задействованных в реализации нашего проекта, за оперативность в решении вопросов при реализации проекта и оригинальные стилевые решения.
+              p.customers-reviews__client.main-text Газпром_медиа
+              a.customers-reviews__attachment.links-text(href="./files/gpmkit'.pdf" target='_blank') gpmkit.pdf
+      .bottom.return
+        .wrapper
+          a.return__link.links-text(href='./team.pug') Все сотрудники
+    footer.footer
+      .wrapper
+        .footer__box
+          a.footer__logo(href='./index.pug')
+            img.ms-logo(src='./img/ms-architects_logo.png' width='232' height='75' alt='логотип MS Architects.')
+          .footer__feedback
+            a.footer__tel.main-text(href='tel:+7') +7 (499) 346-70-56
+            p.footer__address.main-text Москва, Нижняя Красносельская, д. 35, стр. 48
+            a.footer__email.main-text(href='mailto:msarchitects') msarchitects@mail.ru
+            ul.footer__socials.socials__list
+              li
+                a.socials__item.socials__link--fb(href='##' onclick='return false')
+                  span.visuallyhidden Facebook
+              li
+                a.socials__item.socials__link--insta(href='##' onclick='return false')
+                  span.visuallyhidden Instagram
+              li
+                a.socials__item.socials__link--vk(href='##' onclick='return false')
+                  span.visuallyhidden Вконтакте
+          ul.footer__nav.footer-nav
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='./index.pug') Архитектурное бюро
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='./contacts.pug') Контакты
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='./services.pug') Услуги
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') Скачать презентацию
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') Портфолио
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') Экспертные статьи
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') Цены и акции
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') For foreigners
+        p.footer__copyrights.extra-text
+          | © Design: Alisa Melnichenko
+          br
+          |           © Web-development: Pavel Sokolovskii
+          br
+          br
+          |           Данный сайт  является некоммерческим проектом, созданным в процессе обучения в школе UPROCK
+    script(type='module' src='js/script.js')

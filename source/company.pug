@@ -1,0 +1,257 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title О компании MS Architects
+    link(rel='stylesheet' href='./css/normalize.css')
+    link(rel='stylesheet' href='./css/style.css')
+    link(rel='shortcut icon' href='./img/favicon.png' type='image/png')
+  body
+    header.header
+      .wrapper
+        a.header__logo(href='./index.pug')
+          img.ms-logo(src='./img/ms-architects_logo.png' width='249' height='81' alt='логотип MS Architects.')
+        nav.header__nav.site-nav
+          ul.site-nav__list
+            li.site-nav__item.site-nav__item--active
+              a.menu-text(href='./index.pug')
+                span Архитектурное бюро
+              .site-nav__sub
+                ul.site-nav__sub-list
+                  li.site-nav__sub-item.site-nav__sub-item--current
+                    a.menu-text.site-nav__sub-link О компании
+                  li.site-nav__sub-item
+                    a.menu-text.site-nav__sub-link(href='./team.pug') Команда
+                  li.site-nav__sub-item
+                    a.menu-text.site-nav__sub-link(href='./employee_mikhail-khoroshavtsev.pug') Карточка сотрудника
+            li.site-nav__item
+              a.menu-text(href='./services.pug')
+                span Услуги
+            li.site-nav__item
+              a.menu-text(href='##' onclick='return false')
+                span Портфолио
+            li.site-nav__item
+              a.menu-text(href='##' onclick='return false')
+                span Экспертные статьи
+            li.site-nav__item
+              a.menu-text(href='./contacts.pug')
+                span Контакты
+    main.main
+      h1.visuallyhidden О компании MS Architects.
+      .wrapper
+        .top-image
+          img(src='./img/company-office.jpg' width='967' height='628' alt='Интерьер офиса MS Architects.')
+      section.company-theses
+        .wrapper
+          .title-container.animated-appearance
+            h2.page__title.title2
+              | МС Архитектс —
+              br
+              | креативная команда
+              br
+              | архитекторов,
+              br
+              | конструкторов
+              br
+              | и дизайнеров
+            a.button.callback-button(href='#') Заказать звонок
+          ul.company-theses__theses.theses__list.animated-appearance
+            li.theses__item
+              h3.theses__title.title3 Специализация
+              p.theses__text.main-text
+                | Мы отлично разрабатываем  дизайн офисов и коворкингов, эскизные, архитектурные и рабочие  проекты зданий, проектирование общественных пространств и интерьеров
+            li.theses__item
+              h3.theses__title.title3 Доступность
+              p.theses__text.main-text
+                | Наш производимый продукт — это сочетание научных методов разработки, современных технологий и искусства.
+                br
+                | И мы всегда открыты к встрече!
+            li.theses__item
+              h3.theses__title.title3 Актуальность проектирования
+              p.theses__text.main-text
+                | Мы понимаем тенденцию, моду и актуальность в нашей
+                br
+                | предметной области.
+            li.theses__item
+              h3.theses__title.title3 Исследования
+              p.theses__text.main-text
+                | У нас есть отдельный отдел который подготавливает, собирает и структурирует информацию по нашим объектам проектирования
+          // видео-фрейм
+          .company-theses__video.animated-appearance
+            a(href='##' onclick='return false')
+              img(src='./img/pavilion-cosmos_1.jpg' width='720' height='473' alt="Превью видео о павильоне 'Космос'.")
+            .company-theses__video-button
+              .video-button__base
+                svg.video-button__image.video-button__image--play(width='20%' height='20%' viewBox='0 0 2 2' preserveAspectRatio='none')
+                  polygon(fill='red' points='0,0 2,1 0,2')
+          .company-theses__company-numbers.animated-appearance
+            .orange-numbers.orange-numbers--projects
+              p 750
+              p
+                | разработанных
+                br
+                | уникальных проектов
+            .orange-numbers.orange-numbers--age
+              p 11
+              p
+                | лет надежной
+                br
+                | работы
+            .orange-numbers.orange-numbers--area
+              p 650 000
+              p
+                | квадратных метров
+                br
+                | выполненных проектов
+      section.clients
+        .wrapper
+          .title-container.animated-appearance
+            h2.section__title.title3
+              | Нашему качеству
+              br
+              | доверяют
+          ul.clients__list.animated-appearance
+            li.clients__item.clients__item--sok.animated-appearance
+              a.clients__link(href='https://sok.works' target='_blank')
+                span.visuallyhidden SOK
+            li.clients__item.clients__item--stroitransgaz.animated-appearance
+              a.clients__link(href='https://stng.ru' target='_blank')
+                span.visuallyhidden Стройтранснефтегаз
+            li.clients__item.clients__item--ikea.animated-appearance
+              a.clients__link(href='https://www.ikea.com' target='_blank')
+                span.visuallyhidden IKEA
+            li.clients__item.clients__item--accenture.animated-appearance
+              a.clients__link(href='https://www.accenture.com' target='_blank')
+                span.visuallyhidden Accenture
+            li.clients__item.clients__item--alium.animated-appearance
+              a.clients__link(href='http://obolensk.ru' target='_blank')
+                span.visuallyhidden Алиум
+            li.clients__item.clients__item--mtsbank.animated-appearance
+              a.clients__link(href='https://www.mtsbank.ru' target='_blank')
+                span.visuallyhidden МТС Банк
+            li.clients__item.clients__item--nornickel.animated-appearance
+              a.clients__link(href='https://www.nornickel.ru' target='_blank')
+                span.visuallyhidden Норникель
+            li.clients__item.clients__item--otkrytie.animated-appearance
+              a.clients__link(href='https://mgm.open.ru' target='_blank')
+                span.visuallyhidden Открытие
+            li.clients__item.clients__item--sberbank.animated-appearance
+              a.clients__link(href='https://www.sberbank.ru' target='_blank')
+                span.visuallyhidden Сбербанк
+            li.clients__item.clients__item--gazprommedia.animated-appearance
+              a.clients__link(href='http://www.gazprom-media.com' target='_blank')
+                span.visuallyhidden Газпром-медиа
+            li.clients__item.clients__item--huawei.animated-appearance
+              a.clients__link(href='https://www.huawei.com' target='_blank')
+                span.visuallyhidden Huawei
+            li.clients__item.clients__item--simple.animated-appearance
+              a.clients__link(href='http://simple.ru' target='_blank')
+                span.visuallyhidden Simple
+            li.clients__item.clients__item--jll.animated-appearance
+              a.clients__link(href='https://www.jll.ru' target='_blank')
+                span.visuallyhidden JLL
+            li.clients__item.clients__item--oknastolicy.animated-appearance
+              a.clients__link(href='http://www.okna-stolicy.ru' target='_blank')
+                span.visuallyhidden Окна Столицы
+            li.clients__item.clients__item--rostelecom.animated-appearance
+              a.clients__link(href='https://rt.ru' target='_blank')
+                span.visuallyhidden Ростелеком
+      section.proud-of-work.animated-appearance
+        .wrapper
+          .title-container.animated-appearance
+            h2.section__title.title3
+              | Мы гордимся
+              br
+              | своей работой
+          // слайдер работ
+          .proud-of-work__slider.works-slider.animated-appearance
+            ul.works-slider__list
+              li.works-slider__item.works-slider__item--prev
+                a(href='##' onclick='return false')
+                  img(src='./img/photo-2.jpg' width='423' height='244' alt='Интерьеры отделений Сбербанка России.')
+              li.works-slider__item.works-slider__item--central
+                a(href='##' onclick='return false')
+                  img(src='./img/airport-savino_1.jpg' width='460' height='315' alt='Аэропорт Большое Савино город Пермь.')
+              li.works-slider__item.works-slider__item--next
+                a(href='##' onclick='return false')
+                  img(src='./img/photo-1.jpg' width='423' height='244' alt='Жилой комплекс в Лангепасе.')
+            .works-slider__marker
+              .works-slider__pointer
+      section.bottom.advice
+        .wrapper
+          .title-container
+            h2.section__title.title2 Нужен совет?
+          p.advice__text.cta-text
+            | Подробно расскажем о наших услугах, видах работ, дадим полезный совет, рассчитаем стоимость и подготовим индивидуальное предложение!
+          a.button.button--bottom.callback-button(href='#') Заказать звонок
+    footer.footer
+      .wrapper
+        .footer__box
+          a.footer__logo(href='./index.pug')
+            img.ms-logo(src='./img/ms-architects_logo.png' width='232' height='75' alt='логотип MS Architects.')
+          .footer__feedback
+            a.footer__tel.main-text(href='tel:+7') +7 (499) 346-70-56
+            p.footer__address.main-text Москва, Нижняя Красносельская, д. 35, стр. 48
+            a.footer__email.main-text(href='mailto:msarchitects') msarchitects@mail.ru
+            ul.footer__socials.socials__list
+              li
+                a.socials__item.socials__link--fb(href='##' onclick='return false')
+                  span.visuallyhidden Facebook
+              li
+                a.socials__item.socials__link--insta(href='##' onclick='return false')
+                  span.visuallyhidden Instagram
+              li
+                a.socials__item.socials__link--vk(href='##' onclick='return false')
+                  span.visuallyhidden Вконтакте
+          ul.footer__nav.footer-nav
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='./index.pug') Архитектурное бюро
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='./contacts.pug') Контакты
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='./services.pug') Услуги
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') Скачать презентацию
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') Портфолио
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') Экспертные статьи
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') Цены и акции
+            li.footer-nav__item.menu-text
+              a.footer-nav__link(href='##' onclick='return false') For foreigners
+        p.footer__copyrights.extra-text
+          | © Design: Alisa Melnichenko
+          br
+          |           © Web-development: Pavel Sokolovskii
+          br
+          br
+          |           Данный сайт  является некоммерческим проектом, созданным в процессе обучения в школе UPROCK
+    section.popup.popup-callback
+      .popup__underlay
+      .popup__content
+        .popup-head
+          h2.popup-title.title2
+            | Напишите нам,
+            br
+            | и мы с удовольствием
+            br
+            | вам ответим
+          button.popup-close(type='button' name='popupClose')
+            span.visuallyhidden Закрыть
+        form.writeus-form.callback-form(action='https://echo.htmlacademy.ru' method='post')
+          label.visuallyhidden(for='callback-form__name') имя
+          input#callback-form__name(type='text' name='callbackForm_Name' placeholder='Имя:*' required='')
+          label.visuallyhidden(for='callback-form__email') e-mail
+          input#callback-form__email(type='email' name='callbackForm_Email' placeholder='E-mail*' required='')
+          label.visuallyhidden(for='callback-form__phone') телефон
+          input#callback-form__phone(type='tel' name='callbackForm_Phone' placeholder='Телефон')
+          label.visuallyhidden(for='callback-form__message') Сообщение
+          textarea#callback-form__message(name='callbackForm_Message' cols='57' rows='8' placeholder='Сообщение*' required='')
+          .writeus-form__check-n-submit
+            input#callback-checkbox.writeus-form__privacy-checkbox.visuallyhidden(type='checkbox' name='callbackForm_CallbackCheckbox' required='')
+            label.writeus-form__privacy-label(for='callback-checkbox')
+              | я согласен с
+              a.writeus-form__privacy-link(href='##' onclick='return false') политикой конфиденциальности
+            input.button.noa(type='submit' name='callbackForm_Submit' value='Отправить')
+    script(type='module' src='js/script.js')
