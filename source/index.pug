@@ -1,16 +1,16 @@
 doctype html
-html(lang='ru')
+html(lang="ru")
   head
-    meta(charset='utf-8')
+    meta(charset="utf-8")
     title MS Architects. Главная
-    link(rel='stylesheet' href='./css/normalize.css')
-    link(rel='stylesheet' href='./css/style.css')
-    link(rel='shortcut icon' href='./img/favicon.png' type='image/png')
+    link(rel="stylesheet", href="./css/normalize.css")
+    link(rel="stylesheet", href="./css/style.css")
+    link(rel="shortcut icon", href="./img/favicon.png", type="image/png")
   body
     header.header
       .wrapper
         a.header__logo
-          img.ms-logo(src='./img/ms-architects_logo.png' width='249' height='81' alt='логотип MS Architects.')
+          img.ms-logo(src="./img/ms-architects_logo.png", width="249", height="81", alt="логотип MS Architects.")
         nav.header__nav.site-nav
           ul.site-nav__list
             li.site-nav__item.site-nav__item--active
@@ -19,22 +19,22 @@ html(lang='ru')
               .site-nav__sub
                 ul.site-nav__sub-list
                   li.site-nav__sub-item
-                    a.menu-text.site-nav__sub-link(href='./company.pug') О компании
+                    a.menu-text.site-nav__sub-link(href="./company.pug") О компании
                   li.site-nav__sub-item
-                    a.menu-text.site-nav__sub-link(href='./team.pug') Команда
+                    a.menu-text.site-nav__sub-link(href="./team.pug") Команда
                   li.site-nav__sub-item
-                    a.menu-text.site-nav__sub-link(href='./employee_mikhail-khoroshavtsev.pug') Карточка сотрудника
+                    a.menu-text.site-nav__sub-link(href="./employee_mikhail-khoroshavtsev.pug") Карточка сотрудника
             li.site-nav__item
-              a.menu-text(href='./services.pug')
+              a.menu-text(href="./services.pug")
                 span Услуги
             li.site-nav__item
-              a.menu-text(href='##' onclick='return false')
+              a.menu-text(href="##", onclick="return false")
                 span Портфолио
             li.site-nav__item
-              a.menu-text(href='##' onclick='return false')
+              a.menu-text(href="##", onclick="return false")
                 span Экспертные статьи
             li.site-nav__item
-              a.menu-text(href='./contacts.pug')
+              a.menu-text(href="./contacts.pug")
                 span Контакты
     main.main
       h1.visuallyhidden Архитектурное бюро MS Architects. Главная страница.
@@ -44,13 +44,13 @@ html(lang='ru')
             .slider__wrapper
               ul.slider__list
                 li.slider__item
-                  img(src='./slider/index-slider-1.jpg' width='967' height='628' alt='Проект транспортного узла и досугового центра на архитектурном конкурсе eVOLO New-York 2013.')
+                  img(src="./slider/index-slider-1.jpg", width="967", height="628", alt="Проект транспортного узла и досугового центра на архитектурном конкурсе eVOLO New-York 2013.")
             ul.slider__button-list
-              button.slider__button.slider__button-prev(type='button' name='slider__button-prev' hidden='') Предыдущее фото
-              button.slider__button.slider__button-next(type='button' name='slider__button-next' hidden='') Следующее фото
+              button.slider__button.slider__button-prev(type="button", name="slider__button-prev", hidden="") Предыдущее фото
+              button.slider__button.slider__button-next(type="button", name="slider__button-next", hidden="") Следующее фото
             ul.slider__markers-list
               li.slider__markers-item.slider__markers-item--current
-                button.slider__marker.slider__marker(type='button' name='Slide-1')
+                button.slider__marker.slider__marker(type="button", name="Slide-1")
                   span.visuallyhidden Слайд номер 1
       section.about
         .wrapper
@@ -61,7 +61,7 @@ html(lang='ru')
               | Архитектура
               br
               | для жизни
-            a.button.callback-button(href='#') Заказать звонок
+            a.button.callback-button(href="#") Заказать звонок
           p.about__company.main-text.animated-appearance
             | Архитектурное бюро МС Архитектс предоставляет полный спектр услуг по проектированию зданий любой сложности и дизайну интерьеров. Мы создаем уникальные архитектурно-планировочные решения и элитные дизайн-проекты. Сделав заказ в нашем бюро, вы получите индивидуальный проект и персональный подход.
           .about__company-numbers.animated-appearance
@@ -206,25 +206,25 @@ html(lang='ru')
             li.proj-nav__item.proj-nav__item--current
               a.proj-nav__link Новые проекты
             li.proj-nav__item
-              a.proj-nav__link(href='##' onclick='return false') Дизайн
+              a.proj-nav__link(href="##", onclick="return false") Дизайн
             li.proj-nav__item
-              a.proj-nav__link(href='##' onclick='return false') Проектирование
+              a.proj-nav__link(href="##", onclick="return false") Проектирование
             li.proj-nav__item
-              a.proj-nav__link(href='##' onclick='return false') Офисы
+              a.proj-nav__link(href="##", onclick="return false") Офисы
             li.proj-nav__item
-              a.proj-nav__link(href='##' onclick='return false') Ландшафт
+              a.proj-nav__link(href="##", onclick="return false") Ландшафт
             li.proj-nav__item
-              a.proj-nav__link(href='##' onclick='return false') Сети
+              a.proj-nav__link(href="##", onclick="return false") Сети
           ul.projects__list
             li.projects__item.project.animated-appearance
               .project__photo.photo-slider
                 ul.photo-slider__list
                   li.photo-slider__item.photo-slide
-                    a(href='./img/library-london_1.jpg' target='_blank')
-                      img(src='./img/library-london_1.jpg' width='795' height='440' alt='Визуализация библиотеки на местности в 3D редакторе.')
-                button.photo-slider__button.photo-slider__button--next(type='button' name='photo-slider__button--next')
+                    a(href="./img/library-london_1.jpg", target="_blank")
+                      img(src="./img/library-london_1.jpg", width="795", height="440", alt="Визуализация библиотеки на местности в 3D редакторе.")
+                button.photo-slider__button.photo-slider__button--next(type="button", name="photo-slider__button--next")
                   span.visuallyhidden Следующее фото
-                button.photo-slider__button.photo-slider__button--previous(type='button' name='photo-slider__button--previous')
+                button.photo-slider__button.photo-slider__button--previous(type="button", name="photo-slider__button--previous")
                   span.visuallyhidden Предыдущее фото
               h3.project-title.title3 Проект библиотеки в Лондоне в Гайд-парке
               p.project-description.main-text Вид проектных работ: международный конкурс
@@ -233,11 +233,11 @@ html(lang='ru')
               .project__photo.photo-slider
                 ul.photo-slider__list
                   li.photo-slider__item.photo-slide
-                    a(href='./img/office-sukharevskaya_1.jpg' target='_blank')
-                      img(src='./img/office-sukharevskaya_1.jpg' width='795' height='440' alt='Визуализация фасада здания на фото.')
-                button.photo-slider__button.photo-slider__button--next(type='button' name='photo-slider__button--next')
+                    a(href="./img/office-sukharevskaya_1.jpg", target="_blank")
+                      img(src="./img/office-sukharevskaya_1.jpg", width="795", height="440", alt="Визуализация фасада здания на фото.")
+                button.photo-slider__button.photo-slider__button--next(type="button", name="photo-slider__button--next")
                   span.visuallyhidden Следующее фото
-                button.photo-slider__button.photo-slider__button--previous(type='button' name='photo-slider__button--previous')
+                button.photo-slider__button.photo-slider__button--previous(type="button", name="photo-slider__button--previous")
                   span.visuallyhidden Предыдущее фото
               h3.project-title.title3 Фасад офисного здания на Сухаревской
               p.project-description.main-text Вид проектных работ: архитектурное решение
@@ -246,11 +246,11 @@ html(lang='ru')
               .project__photo.photo-slider
                 ul.photo-slider__list
                   li.photo-slider__item.photo-slide
-                    a(href='./img/airport-savino_1.jpg' target='_blank')
-                      img(src='./img/airport-savino_1.jpg' width='795' height='440' alt='Визуализация интерьера аэропорта в 3D редакторе.')
-                button.photo-slider__button.photo-slider__button--next(type='button' name='photo-slider__button--next')
+                    a(href="./img/airport-savino_1.jpg", target="_blank")
+                      img(src="./img/airport-savino_1.jpg", width="795", height="440", alt="Визуализация интерьера аэропорта в 3D редакторе.")
+                button.photo-slider__button.photo-slider__button--next(type="button", name="photo-slider__button--next")
                   span.visuallyhidden Следующее фото
-                button.photo-slider__button.photo-slider__button--previous(type='button' name='photo-slider__button--previous')
+                button.photo-slider__button.photo-slider__button--previous(type="button", name="photo-slider__button--previous")
                   span.visuallyhidden Предыдущее фото
               h3.project-title.title3
                 | Аэропорт Большое Савино
@@ -262,16 +262,16 @@ html(lang='ru')
               .project__photo.photo-slider
                 ul.photo-slider__list
                   li.photo-slider__item.photo-slide
-                    a(href='./img/pavilion-cosmos_1.jpg' target='_blank')
-                      img(src='./img/pavilion-cosmos_1.jpg' width='795' height='440' alt='Визуализация интерьера павильона в 3D редакторе.')
-                button.photo-slider__button.photo-slider__button--next(type='button' name='photo-slider__button--next')
+                    a(href="./img/pavilion-cosmos_1.jpg", target="_blank")
+                      img(src="./img/pavilion-cosmos_1.jpg", width="795", height="440", alt="Визуализация интерьера павильона в 3D редакторе.")
+                button.photo-slider__button.photo-slider__button--next(type="button", name="photo-slider__button--next")
                   span.visuallyhidden Следующее фото
-                button.photo-slider__button.photo-slider__button--previous(type='button' name='photo-slider__button--previous')
+                button.photo-slider__button.photo-slider__button--previous(type="button", name="photo-slider__button--previous")
                   span.visuallyhidden Предыдущее фото
               h3.project-title.title3 Павильон Космос на ВДНХ
               p.project-description.main-text Вид проектных работ: дизайн интерьеров
               p.project-description.main-text Тип проекта: концепция музейного павильона
-          a.section__link.links-text.animated-appearance(href='##' onclick='return false') Все проекты
+          a.section__link.links-text.animated-appearance(href="##", onclick="return false") Все проекты
       section.our-specialists.animated-appearance
         .wrapper
           .title-container
@@ -280,76 +280,76 @@ html(lang='ru')
           .our-specialists__slider.employees-slider
             ul.employee__list.employee__list--right-shift
               li.employee
-                a.employee__card-link.animated-appearance(href='./employee_mikhail-khoroshavtsev.pug')
+                a.employee__card-link.animated-appearance(href="./employee_mikhail-khoroshavtsev.pug")
                   h3.employee__name.title3
                     | Михаил
                     br
                     | Хорошавцев
-                  img.employee__photo(src='./img/portrait_mikhail-khoroshavtsev.jpg' width='221' height='278' alt='портрет Михаила Хорошавцева.')
+                  img.employee__photo(src="./img/portrait_mikhail-khoroshavtsev.jpg", width="221", height="278", alt="портрет Михаила Хорошавцева.")
                   p.employee__position.main-text Генеральный директор
                   p.employee__link.links-text подробнее
               li.employee
-                a.employee__card-link.animated-appearance(href='##' onclick='return false')
+                a.employee__card-link.animated-appearance(href="##", onclick="return false")
                   h3.employee__name.title3
                     | Василий
                     br
                     | Бирюков
-                  img.employee__photo(src='./img/portrait_vasily-biryukov.jpg' width='221' height='278' alt='портрет Василия Бирюкова.')
+                  img.employee__photo(src="./img/portrait_vasily-biryukov.jpg", width="221", height="278", alt="портрет Василия Бирюкова.")
                   p.employee__position.main-text Заместитель генерального директора
                   p.employee__link.links-text подробнее
               li.employee
-                a.employee__card-link.animated-appearance(href='##' onclick='return false')
+                a.employee__card-link.animated-appearance(href="##", onclick="return false")
                   h3.employee__name.title3
                     | Татьяна
                     br
                     | Хозиева
-                  img.employee__photo(src='./img/portrait_khozieva-tatyana.jpg' width='221' height='278' alt='портрет Татьяны Хозиевой.')
+                  img.employee__photo(src="./img/portrait_khozieva-tatyana.jpg", width="221", height="278", alt="портрет Татьяны Хозиевой.")
                   p.employee__position.main-text Главный дизайнер
                   p.employee__link.links-text подробнее
-          a.section__link.links-text.animated-appearance(href='./team.pug') Все сотрудники
+          a.section__link.links-text.animated-appearance(href="./team.pug") Все сотрудники
       section.bottom.advice
         .wrapper
           .title-container
             h2.section__title.title2 Нужен совет?
           p.advice__text.cta-text
             | Подробно расскажем о наших услугах, видах работ, дадим полезный совет, рассчитаем стоимость и подготовим индивидуальное предложение!
-          a.button.button--bottom.callback-button(href='#') Заказать звонок
+          a.button.button--bottom.callback-button(href="#") Заказать звонок
     footer.footer
       .wrapper
         .footer__box
           a.footer__logo
-            img.ms-logo(src='./img/ms-architects_logo.png' width='232' height='75' alt='логотип MS Architects.')
+            img.ms-logo(src="./img/ms-architects_logo.png", width="232", height="75", alt="логотип MS Architects.")
           .footer__feedback
-            a.footer__tel.main-text(href='tel:+7') +7 (499) 346-70-56
+            a.footer__tel.main-text(href="tel:+7") +7 (499) 346-70-56
             p.footer__address.main-text Москва, Нижняя Красносельская, д. 35, стр. 48
-            a.footer__email.main-text(href='mailto:msarchitects') msarchitects@mail.ru
+            a.footer__email.main-text(href="mailto:msarchitects") msarchitects@mail.ru
             ul.footer__socials.socials__list
               li
-                a.socials__item.socials__link--fb(href='##' onclick='return false')
+                a.socials__item.socials__link--fb(href="##", onclick="return false")
                   span.visuallyhidden Facebook
               li
-                a.socials__item.socials__link--insta(href='##' onclick='return false')
+                a.socials__item.socials__link--insta(href="##", onclick="return false")
                   span.visuallyhidden Instagram
               li
-                a.socials__item.socials__link--vk(href='##' onclick='return false')
+                a.socials__item.socials__link--vk(href="##", onclick="return false")
                   span.visuallyhidden Вконтакте
           ul.footer__nav.footer-nav
             li.footer-nav__item.menu-text
               a.footer-nav__link Архитектурное бюро
             li.footer-nav__item.menu-text
-              a.footer-nav__link(href='./contacts.pug') Контакты
+              a.footer-nav__link(href="./contacts.pug") Контакты
             li.footer-nav__item.menu-text
-              a.footer-nav__link(href='./services.pug') Услуги
+              a.footer-nav__link(href="./services.pug") Услуги
             li.footer-nav__item.menu-text
-              a.footer-nav__link(href='##' onclick='return false') Скачать презентацию
+              a.footer-nav__link(href="##", onclick="return false") Скачать презентацию
             li.footer-nav__item.menu-text
-              a.footer-nav__link(href='##' onclick='return false') Портфолио
+              a.footer-nav__link(href="##", onclick="return false") Портфолио
             li.footer-nav__item.menu-text
-              a.footer-nav__link(href='##' onclick='return false') Экспертные статьи
+              a.footer-nav__link(href="##", onclick="return false") Экспертные статьи
             li.footer-nav__item.menu-text
-              a.footer-nav__link(href='##' onclick='return false') Цены и акции
+              a.footer-nav__link(href="##", onclick="return false") Цены и акции
             li.footer-nav__item.menu-text
-              a.footer-nav__link(href='##' onclick='return false') For foreigners
+              a.footer-nav__link(href="##", onclick="return false") For foreigners
         p.footer__copyrights.extra-text
           | © Design: Alisa Melnichenko
           br
@@ -367,21 +367,21 @@ html(lang='ru')
             | и мы с удовольствием
             br
             | вам ответим
-          button.popup-close(type='button' name='popupClose')
+          button.popup-close(type="button", name="popupClose")
             span.visuallyhidden Закрыть
-        form.writeus-form.callback-form(action='https://echo.htmlacademy.ru' method='post')
-          label.visuallyhidden(for='callback-form__name') имя
-          input#callback-form__name(type='text' name='callbackForm_Name' placeholder='Имя:*' required='')
-          label.visuallyhidden(for='callback-form__email') e-mail
-          input#callback-form__email(type='email' name='callbackForm_Email' placeholder='E-mail*' required='')
-          label.visuallyhidden(for='callback-form__phone') телефон
-          input#callback-form__phone(type='tel' name='callbackForm_Phone' placeholder='Телефон')
-          label.visuallyhidden(for='callback-form__message') Сообщение
-          textarea#callback-form__message(name='callbackForm_Message' cols='57' rows='8' placeholder='Сообщение*' required='')
+        form.writeus-form.callback-form(action="https://echo.htmlacademy.ru", method="post")
+          label.visuallyhidden(for="callback-form__name") имя
+          input#callback-form__name(type="text", name="callbackForm_Name", placeholder="Имя:*", required="")
+          label.visuallyhidden(for="callback-form__email") e-mail
+          input#callback-form__email(type="email", name="callbackForm_Email", placeholder="E-mail*", required="")
+          label.visuallyhidden(for="callback-form__phone") телефон
+          input#callback-form__phone(type="tel", name="callbackForm_Phone", placeholder="Телефон")
+          label.visuallyhidden(for="callback-form__message") Сообщение
+          textarea#callback-form__message(name="callbackForm_Message", cols="57", rows="8", placeholder="Сообщение*", required="")
           .writeus-form__check-n-submit
-            input#callback-checkbox.writeus-form__privacy-checkbox.visuallyhidden(type='checkbox' name='callbackForm_CallbackCheckbox' required='')
-            label.writeus-form__privacy-label(for='callback-checkbox')
+            input.writeus-form__privacy-checkbox.visuallyhidden#callback-checkbox(type="checkbox", name="callbackForm_CallbackCheckbox", required="")
+            label.writeus-form__privacy-label(for="callback-checkbox")
               | я согласен с
-              a.writeus-form__privacy-link(href='##' onclick='return false') политикой конфиденциальности
-            input.button.noa(type='submit' name='callbackForm_Submit' value='Отправить')
-    script(type='module' src='js/script.js')
+              a.writeus-form__privacy-link(href="##", onclick="return false") политикой конфиденциальности
+            input.button.noa(type="submit", name="callbackForm_Submit", value="Отправить")
+    script(type="module", src="js/script.js")
