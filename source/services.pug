@@ -1,234 +1,231 @@
-doctype html
-html(lang="ru")
-  head
-    meta(charset="utf-8")
-    title Услуги MS Architects
-    link(rel="stylesheet", href="./css/normalize.css")
-    link(rel="stylesheet", href="./css/style.css")
-    link(rel="shortcut icon", href="./img/favicon.png", type="image/png")
-  body
-    header.header
+extends pug-blocks/page-layout.pug
+
+block variables
+  - const currentPage = 'services';
+  - const pageTitle = 'Услуги MS Architects';
+
+block main
+  header.header
+    .wrapper
+      a.header__logo(href="./index.pug")
+        img.ms-logo(src="./img/ms-architects_logo.png", width="249", height="81", alt="логотип MS Architects.")
+      nav.header__nav.site-nav
+        ul.site-nav__list
+          li.site-nav__item
+            a.menu-text(href="./index.pug")
+              span Архитектурное бюро
+            .site-nav__sub
+              ul.site-nav__sub-list
+                li.site-nav__sub-item
+                  a.menu-text.site-nav__sub-link(href="./company.pug") О компании
+                li.site-nav__sub-item
+                  a.menu-text.site-nav__sub-link(href="./team.pug") Команда
+                li.site-nav__sub-item
+                  a.menu-text.site-nav__sub-link(href="./employee_mikhail-khoroshavtsev.pug") Карточка сотрудника
+          li.site-nav__item.site-nav__item--active
+            a.menu-text
+              span Услуги
+          li.site-nav__item
+            a.menu-text(href="##", onclick="return false")
+              span Портфолио
+          li.site-nav__item
+            a.menu-text(href="##", onclick="return false")
+              span Экспертные статьи
+          li.site-nav__item
+            a.menu-text(href="./contacts.pug")
+              span Контакты
+  main.main
+    h1.visuallyhidden Услуги компании MS Architects.
+    .wrapper
+      .top-image
+        img(src="./img/library-london_1.jpg", width="967", height="628", alt="Визуализация на местности библиотеки в Гайд-парке Лондона.")
+    section.our-services
       .wrapper
-        a.header__logo(href="./index.pug")
-          img.ms-logo(src="./img/ms-architects_logo.png", width="249", height="81", alt="логотип MS Architects.")
-        nav.header__nav.site-nav
-          ul.site-nav__list
-            li.site-nav__item
-              a.menu-text(href="./index.pug")
-                span Архитектурное бюро
-              .site-nav__sub
-                ul.site-nav__sub-list
-                  li.site-nav__sub-item
-                    a.menu-text.site-nav__sub-link(href="./company.pug") О компании
-                  li.site-nav__sub-item
-                    a.menu-text.site-nav__sub-link(href="./team.pug") Команда
-                  li.site-nav__sub-item
-                    a.menu-text.site-nav__sub-link(href="./employee_mikhail-khoroshavtsev.pug") Карточка сотрудника
-            li.site-nav__item.site-nav__item--active
-              a.menu-text
-                span Услуги
-            li.site-nav__item
-              a.menu-text(href="##", onclick="return false")
-                span Портфолио
-            li.site-nav__item
-              a.menu-text(href="##", onclick="return false")
-                span Экспертные статьи
-            li.site-nav__item
-              a.menu-text(href="./contacts.pug")
-                span Контакты
-    main.main
-      h1.visuallyhidden Услуги компании MS Architects.
-      .wrapper
-        .top-image
-          img(src="./img/library-london_1.jpg", width="967", height="628", alt="Визуализация на местности библиотеки в Гайд-парке Лондона.")
-      section.our-services
-        .wrapper
-          .title-container.animated-appearance
-            h2.page__title.title2
-              | Более 11 лет мы успешно занимаемся проектированием зданий, дизайном офисов, коттеджей и ландшафтной архитектурой
-              br
-            a.button.callback-button(href="#") Заказать звонок
-          ul.our-services__list
-            li.our-services__item.our-services__item--offices.animated-appearance
-              .our-services__item-description
-                h3.our-services__item-title.title3 Дизайн офисов
-                p.our-services__item-text.main-text
-                  | При проектировании офисных пространств очень важно понять, с одной стороны, как работают организации, понять, как здания могут способствовать организациям в их трудовой деятельности, и выявить «соответствие» этих двух миров во времени.
-                a.our-services__item-link(href="##", onclick="return false")
-              img.our-services__item-illustration.animated-appearance(src="./img/services_offices.jpg", width="445", height="278", alt="Визуализация интерьера офиса.")
-            li.our-services__item.our-services__item--buildings.animated-appearance
-              .our-services__item-description
-                h3.our-services__item-title.title3 Проектирование зданий
-                p.our-services__item-text.main-text
-                  | Мы умеем разрабатывать качественные проекты больших объектов. В портфолио имеются проекты общественных и жилых зданий разной этажности, генпланов жилой многоэтажной и малоэтажной застройки, проекты торговых центров, гостиниц и промышленных зданий.
-                a.our-services__item-link(href="##", onclick="return false")
-              img.our-services__item-illustration.animated-appearance(src="./img/services_building.jpg", width="445", height="278", alt="Визуализация фасада здания.")
-            li.our-services__item.our-services__item--houses.animated-appearance
-              .our-services__item-description
-                h3.our-services__item-title.title3
-                  | Проектирование частных
-                  br
-                  | домов и дизайн интерьеров
-                p.our-services__item-text.main-text
-                  | Более одиннадцати лет мы успешно занимаемся проектированием частных загородных домов и коттеджей из дерева, кирпича, монолитного железобетона и пеноблока. Также мы создаем архитектурные проекты коттеджей, частных домов, бань, гостевых домов, гаражей, беседок и любых других малых архитектурных форм, вплоть до скамеек и навесных мостов.
-                a.our-services__item-link(href="##", onclick="return false")
-              img.our-services__item-illustration.animated-appearance(src="./img/services_houses.jpg", width="445", height="278", alt="Визуализация проекта жилого дома.")
-            li.our-services__item.our-services__item--landscapes.animated-appearance
-              .our-services__item-description
-                h3.our-services__item-title.title3 Ландшафтный дизайн
-                p.our-services__item-text.main-text
-                  | Закажите индивидуальный проект
-                  br
-                  | ландшафтного дизайна в нашей компании и наслаждайтесь прекрасным результатом!
-                a.our-services__item-link(href="##", onclick="return false")
-              img.our-services__item-illustration.animated-appearance(src="./img/services_landscape.jpg", width="445", height="278", alt="Фото японского сада.")
-      section.our-other-services
-        .wrapper
-          .title-container
-            h2.section__title.title3 Что еще мы делаем?
-          // слайдер дополнительных услуг
-          .our-other-services__slider.tabs-slider
-            ul.tabs-slider__list
-              li.tabs-slider__item.tabs-slider__item--public-interiors
-                button.tabs-slider__button.tabs-slider__button--active.menu-text(type="button", name="public-interiors") Дизайн общественных интерьеров
-              li.tabs-slider__item.tabs-slider__item--industrial
-                button.tabs-slider__button.menu-text(type="button", name="industrial") Проектирование промышленных зданий
-              li.tabs-slider__item.tabs-slider__item--wooden
-                button.tabs-slider__button.menu-text(type="button", name="wooden") Деревянное домостроение
-              li.tabs-slider__item.tabs-slider__item--cottages
-                button.tabs-slider__button.menu-text(type="button", name="cottages") Проектирование коттеджей
-              li.tabs-slider__item.tabs-slider__item--developers
-                button.tabs-slider__button.menu-text(type="button", name="developers") Архитектура для девелоперов
-              li.tabs-slider__item.tabs-slider__item--network-engineering
-                button.tabs-slider__button.menu-text(type="button", name="network-engineering") Инженерные сети
-            ul.tabs-slider__details-list
-              li.tabs-slider__details.tabs-slider__details--public-interiors.tabs-slider__details--active(data-topic="public-interiors")
-                p.tabs-slider__description.cta-text
-                  | Мы разработаем проект, используя ваш брендбук, как при создании более 200 проектов офисов для Сбербанка. Или мы можем создать ваш собственный брендбук и, используя его, спроектировать вам комфортный офис.
-                a.tabs-slider__link.links-text.section__link(href="##", onclick="return false") Наши работы
-              li.tabs-slider__details.tabs-slider__details--industrial(data-topic="industrial")
-                p.tabs-slider__description.cta-text
-                  | Проектирование промышленных зданий и сооружений, которые предназначены для размещения в них производств с обеспечением требуемых условий, для производственного процесса, а также среды для нормальной трудовой деятельности человека. Наша компания рада предложить строительным и девелоперским компаниям услуги по индивидуальному проектированию промышленных объектов.
-                a.tabs-slider__link.links-text.section__link(href="##", onclick="return false") Наши работы
-              li.tabs-slider__details.tabs-slider__details--wooden(data-topic="wooden")
-                p.tabs-slider__description.cta-text
-                  | MS Architects - эксперт в области деревянного домостроения. Мы предлагаем индивидуальные проекты - семейный дома из бревен ручной рубки, проектирование коммерческой недвижимости из дерева и проекты небольших деревянных домов.
-                a.tabs-slider__link.links-text.section__link(href="##", onclick="return false") Наши работы
-              li.tabs-slider__details.tabs-slider__details--cottages(data-topic="cottages")
-                p.tabs-slider__description.cta-text
-                  | Проектирование коттеджей – одно из приоритетных направлений нашей компании. Мы внимательно изучаем все особенности участка, выделенного под строительство, качество грунта, инсоляцию, инфраструктуру, ландшафтный рельеф и, исходя из всех данных, разрабатываем оптимальный проект. Наша цель – воспроизведение городского комфорта на природе. Все нюансы будут учтены и тщательно проработаны. И естественно мы не забудем о визуальной привлекательности!
-                a.tabs-slider__link.links-text.section__link(href="##", onclick="return false") Наши работы
-              li.tabs-slider__details.tabs-slider__details--developers(data-topic="developers")
-                p.tabs-slider__description.cta-text
-                  b
-                    | Архитектурное бюро MS Architects предлагает пакет услуг для девелоперских компаний:
-                ol
-                  li
-                    | Проектирование в соответствии с 87 постановлением.
-                    | Разработка архитектурных концепций и объемно-планировочных решений.
-                    | Проектирование многоквартирных домов, таунхаусов и общественных зданий.
-                    | Проектирование коттеджных поселков и жилых комплексов.
-                    | Проектирование офисов продаж, входных групп и малых архитектурных форм
-                    br
-                    br
-                  li
-                    | Дизайн интерьеров.
-                    | Дизайн и проектирование визуально привлекательных входных групп.
-                    | Дизайн интерьеров офисов и общественных пространств.
-                    | Дизайн типовых интерьеров квартир на продажу – Эконом/Комфорт/Бизнес-класса
-                    br
-                    br
-                  li
-                    | 3D-визуализация и моделирование
-                    | Создание архитектурных моделей и презентационных материалов.
-                    | Детализация, правильно подобранное освещение и продающий ракурс
-                    br
-                    br
-                  li
-                    | Проектирование объектов инфраструктуры города.
-                    | Наши опыт работы позволяет создать эффективные планировочные решения. Максимальная продажная площадь и удобная современная компоновка.
-                    br
-                    br
-                a.tabs-slider__link.links-text.section__link(href="##", onclick="return false") Наши работы
-              li.tabs-slider__details.tabs-slider__details--network-engineering(data-topic="network-engineering")
-                p.tabs-slider__description.cta-text
-                  | Архитектурное бюро MS Architects выполняет работы по инженерному проектированию инженерных сетей любой сложности.
-                a.tabs-slider__link.links-text.section__link(href="##", onclick="return false") Наши работы
-      section.bottom.advice
-        .wrapper
-          .title-container
-            h2.section__title.title2 Нужен совет?
-          p.advice__text.cta-text
-            | Подробно расскажем о наших услугах, видах работ, дадим полезный совет, рассчитаем стоимость и подготовим индивидуальное предложение!
-          a.button.button--bottom.callback-button(href="#") Заказать звонок
-    footer.footer
-      .wrapper
-        .footer__box
-          a.footer__logo(href="./index.pug")
-            img.ms-logo(src="./img/ms-architects_logo.png", width="232", height="75", alt="логотип MS Architects.")
-          .footer__feedback
-            a.footer__tel.main-text(href="tel:+7") +7 (499) 346-70-56
-            p.footer__address.main-text Москва, Нижняя Красносельская, д. 35, стр. 48
-            a.footer__email.main-text(href="mailto:msarchitects") msarchitects@mail.ru
-            ul.footer__socials.socials__list
-              li
-                a.socials__item.socials__link--fb(href="##", onclick="return false")
-                  span.visuallyhidden Facebook
-              li
-                a.socials__item.socials__link--insta(href="##", onclick="return false")
-                  span.visuallyhidden Instagram
-              li
-                a.socials__item.socials__link--vk(href="##", onclick="return false")
-                  span.visuallyhidden Вконтакте
-          ul.footer__nav.footer-nav
-            li.footer-nav__item.menu-text
-              a.footer-nav__link(href="./index.pug") Архитектурное бюро
-            li.footer-nav__item.menu-text
-              a.footer-nav__link(href="./contacts.pug") Контакты
-            li.footer-nav__item.menu-text
-              a.footer-nav__link Услуги
-            li.footer-nav__item.menu-text
-              a.footer-nav__link(href="##", onclick="return false") Скачать презентацию
-            li.footer-nav__item.menu-text
-              a.footer-nav__link(href="##", onclick="return false") Портфолио
-            li.footer-nav__item.menu-text
-              a.footer-nav__link(href="##", onclick="return false") Экспертные статьи
-            li.footer-nav__item.menu-text
-              a.footer-nav__link(href="##", onclick="return false") Цены и акции
-            li.footer-nav__item.menu-text
-              a.footer-nav__link(href="##", onclick="return false") For foreigners
-        p.footer__copyrights.extra-text
-          | © Design: Alisa Melnichenko
-          br
-          |           © Web-development: Pavel Sokolovskii
-          br
-          br
-          |           Данный сайт  является некоммерческим проектом, созданным в процессе обучения в школе UPROCK
-    section.popup.popup-callback
-      .popup__underlay
-      .popup__content
-        .popup-head
-          h2.popup-title.title2
-            | Напишите нам,
+        .title-container.animated-appearance
+          h2.page__title.title2
+            | Более 11 лет мы успешно занимаемся проектированием зданий, дизайном офисов, коттеджей и ландшафтной архитектурой
             br
-            | и мы с удовольствием
-            br
-            | вам ответим
-          button.popup-close(type="button", name="popupClose")
-            span.visuallyhidden Закрыть
-        form.writeus-form.callback-form(action="https://echo.htmlacademy.ru", method="post")
-          label.visuallyhidden(for="callback-form__name") имя
-          input#callback-form__name(type="text", name="callbackForm_Name", placeholder="Имя:*", required="")
-          label.visuallyhidden(for="callback-form__email") e-mail
-          input#callback-form__email(type="email", name="callbackForm_Email", placeholder="E-mail*", required="")
-          label.visuallyhidden(for="callback-form__phone") телефон
-          input#callback-form__phone(type="tel", name="callbackForm_Phone", placeholder="Телефон")
-          label.visuallyhidden(for="callback-form__message") Сообщение
-          textarea#callback-form__message(name="callbackForm_Message", cols="57", rows="8", placeholder="Сообщение*", required="")
-          .writeus-form__check-n-submit
-            input.writeus-form__privacy-checkbox.visuallyhidden#callback-checkbox(type="checkbox", name="callbackForm_CallbackCheckbox", required="")
-            label.writeus-form__privacy-label(for="callback-checkbox")
-              | я согласен с
-              a.writeus-form__privacy-link(href="##", onclick="return false") политикой конфиденциальности
-            input.button.noa(type="submit", name="callbackForm_Submit", value="Отправить")
-    script(type="module", src="js/script.js")
+          a.button.callback-button(href="#") Заказать звонок
+        ul.our-services__list
+          li.our-services__item.our-services__item--offices.animated-appearance
+            .our-services__item-description
+              h3.our-services__item-title.title3 Дизайн офисов
+              p.our-services__item-text.main-text
+                | При проектировании офисных пространств очень важно понять, с одной стороны, как работают организации, понять, как здания могут способствовать организациям в их трудовой деятельности, и выявить «соответствие» этих двух миров во времени.
+              a.our-services__item-link(href="##", onclick="return false")
+            img.our-services__item-illustration.animated-appearance(src="./img/services_offices.jpg", width="445", height="278", alt="Визуализация интерьера офиса.")
+          li.our-services__item.our-services__item--buildings.animated-appearance
+            .our-services__item-description
+              h3.our-services__item-title.title3 Проектирование зданий
+              p.our-services__item-text.main-text
+                | Мы умеем разрабатывать качественные проекты больших объектов. В портфолио имеются проекты общественных и жилых зданий разной этажности, генпланов жилой многоэтажной и малоэтажной застройки, проекты торговых центров, гостиниц и промышленных зданий.
+              a.our-services__item-link(href="##", onclick="return false")
+            img.our-services__item-illustration.animated-appearance(src="./img/services_building.jpg", width="445", height="278", alt="Визуализация фасада здания.")
+          li.our-services__item.our-services__item--houses.animated-appearance
+            .our-services__item-description
+              h3.our-services__item-title.title3
+                | Проектирование частных
+                br
+                | домов и дизайн интерьеров
+              p.our-services__item-text.main-text
+                | Более одиннадцати лет мы успешно занимаемся проектированием частных загородных домов и коттеджей из дерева, кирпича, монолитного железобетона и пеноблока. Также мы создаем архитектурные проекты коттеджей, частных домов, бань, гостевых домов, гаражей, беседок и любых других малых архитектурных форм, вплоть до скамеек и навесных мостов.
+              a.our-services__item-link(href="##", onclick="return false")
+            img.our-services__item-illustration.animated-appearance(src="./img/services_houses.jpg", width="445", height="278", alt="Визуализация проекта жилого дома.")
+          li.our-services__item.our-services__item--landscapes.animated-appearance
+            .our-services__item-description
+              h3.our-services__item-title.title3 Ландшафтный дизайн
+              p.our-services__item-text.main-text
+                | Закажите индивидуальный проект
+                br
+                | ландшафтного дизайна в нашей компании и наслаждайтесь прекрасным результатом!
+              a.our-services__item-link(href="##", onclick="return false")
+            img.our-services__item-illustration.animated-appearance(src="./img/services_landscape.jpg", width="445", height="278", alt="Фото японского сада.")
+    section.our-other-services
+      .wrapper
+        .title-container
+          h2.section__title.title3 Что еще мы делаем?
+        // слайдер дополнительных услуг
+        .our-other-services__slider.tabs-slider
+          ul.tabs-slider__list
+            li.tabs-slider__item.tabs-slider__item--public-interiors
+              button.tabs-slider__button.tabs-slider__button--active.menu-text(type="button", name="public-interiors") Дизайн общественных интерьеров
+            li.tabs-slider__item.tabs-slider__item--industrial
+              button.tabs-slider__button.menu-text(type="button", name="industrial") Проектирование промышленных зданий
+            li.tabs-slider__item.tabs-slider__item--wooden
+              button.tabs-slider__button.menu-text(type="button", name="wooden") Деревянное домостроение
+            li.tabs-slider__item.tabs-slider__item--cottages
+              button.tabs-slider__button.menu-text(type="button", name="cottages") Проектирование коттеджей
+            li.tabs-slider__item.tabs-slider__item--developers
+              button.tabs-slider__button.menu-text(type="button", name="developers") Архитектура для девелоперов
+            li.tabs-slider__item.tabs-slider__item--network-engineering
+              button.tabs-slider__button.menu-text(type="button", name="network-engineering") Инженерные сети
+          ul.tabs-slider__details-list
+            li.tabs-slider__details.tabs-slider__details--public-interiors.tabs-slider__details--active(data-topic="public-interiors")
+              p.tabs-slider__description.cta-text
+                | Мы разработаем проект, используя ваш брендбук, как при создании более 200 проектов офисов для Сбербанка. Или мы можем создать ваш собственный брендбук и, используя его, спроектировать вам комфортный офис.
+              a.tabs-slider__link.links-text.section__link(href="##", onclick="return false") Наши работы
+            li.tabs-slider__details.tabs-slider__details--industrial(data-topic="industrial")
+              p.tabs-slider__description.cta-text
+                | Проектирование промышленных зданий и сооружений, которые предназначены для размещения в них производств с обеспечением требуемых условий, для производственного процесса, а также среды для нормальной трудовой деятельности человека. Наша компания рада предложить строительным и девелоперским компаниям услуги по индивидуальному проектированию промышленных объектов.
+              a.tabs-slider__link.links-text.section__link(href="##", onclick="return false") Наши работы
+            li.tabs-slider__details.tabs-slider__details--wooden(data-topic="wooden")
+              p.tabs-slider__description.cta-text
+                | MS Architects - эксперт в области деревянного домостроения. Мы предлагаем индивидуальные проекты - семейный дома из бревен ручной рубки, проектирование коммерческой недвижимости из дерева и проекты небольших деревянных домов.
+              a.tabs-slider__link.links-text.section__link(href="##", onclick="return false") Наши работы
+            li.tabs-slider__details.tabs-slider__details--cottages(data-topic="cottages")
+              p.tabs-slider__description.cta-text
+                | Проектирование коттеджей – одно из приоритетных направлений нашей компании. Мы внимательно изучаем все особенности участка, выделенного под строительство, качество грунта, инсоляцию, инфраструктуру, ландшафтный рельеф и, исходя из всех данных, разрабатываем оптимальный проект. Наша цель – воспроизведение городского комфорта на природе. Все нюансы будут учтены и тщательно проработаны. И естественно мы не забудем о визуальной привлекательности!
+              a.tabs-slider__link.links-text.section__link(href="##", onclick="return false") Наши работы
+            li.tabs-slider__details.tabs-slider__details--developers(data-topic="developers")
+              p.tabs-slider__description.cta-text
+                b
+                  | Архитектурное бюро MS Architects предлагает пакет услуг для девелоперских компаний:
+              ol
+                li
+                  | Проектирование в соответствии с 87 постановлением.
+                  | Разработка архитектурных концепций и объемно-планировочных решений.
+                  | Проектирование многоквартирных домов, таунхаусов и общественных зданий.
+                  | Проектирование коттеджных поселков и жилых комплексов.
+                  | Проектирование офисов продаж, входных групп и малых архитектурных форм
+                  br
+                  br
+                li
+                  | Дизайн интерьеров.
+                  | Дизайн и проектирование визуально привлекательных входных групп.
+                  | Дизайн интерьеров офисов и общественных пространств.
+                  | Дизайн типовых интерьеров квартир на продажу – Эконом/Комфорт/Бизнес-класса
+                  br
+                  br
+                li
+                  | 3D-визуализация и моделирование
+                  | Создание архитектурных моделей и презентационных материалов.
+                  | Детализация, правильно подобранное освещение и продающий ракурс
+                  br
+                  br
+                li
+                  | Проектирование объектов инфраструктуры города.
+                  | Наши опыт работы позволяет создать эффективные планировочные решения. Максимальная продажная площадь и удобная современная компоновка.
+                  br
+                  br
+              a.tabs-slider__link.links-text.section__link(href="##", onclick="return false") Наши работы
+            li.tabs-slider__details.tabs-slider__details--network-engineering(data-topic="network-engineering")
+              p.tabs-slider__description.cta-text
+                | Архитектурное бюро MS Architects выполняет работы по инженерному проектированию инженерных сетей любой сложности.
+              a.tabs-slider__link.links-text.section__link(href="##", onclick="return false") Наши работы
+    section.bottom.advice
+      .wrapper
+        .title-container
+          h2.section__title.title2 Нужен совет?
+        p.advice__text.cta-text
+          | Подробно расскажем о наших услугах, видах работ, дадим полезный совет, рассчитаем стоимость и подготовим индивидуальное предложение!
+        a.button.button--bottom.callback-button(href="#") Заказать звонок
+  footer.footer
+    .wrapper
+      .footer__box
+        a.footer__logo(href="./index.pug")
+          img.ms-logo(src="./img/ms-architects_logo.png", width="232", height="75", alt="логотип MS Architects.")
+        .footer__feedback
+          a.footer__tel.main-text(href="tel:+7") +7 (499) 346-70-56
+          p.footer__address.main-text Москва, Нижняя Красносельская, д. 35, стр. 48
+          a.footer__email.main-text(href="mailto:msarchitects") msarchitects@mail.ru
+          ul.footer__socials.socials__list
+            li
+              a.socials__item.socials__link--fb(href="##", onclick="return false")
+                span.visuallyhidden Facebook
+            li
+              a.socials__item.socials__link--insta(href="##", onclick="return false")
+                span.visuallyhidden Instagram
+            li
+              a.socials__item.socials__link--vk(href="##", onclick="return false")
+                span.visuallyhidden Вконтакте
+        ul.footer__nav.footer-nav
+          li.footer-nav__item.menu-text
+            a.footer-nav__link(href="./index.pug") Архитектурное бюро
+          li.footer-nav__item.menu-text
+            a.footer-nav__link(href="./contacts.pug") Контакты
+          li.footer-nav__item.menu-text
+            a.footer-nav__link Услуги
+          li.footer-nav__item.menu-text
+            a.footer-nav__link(href="##", onclick="return false") Скачать презентацию
+          li.footer-nav__item.menu-text
+            a.footer-nav__link(href="##", onclick="return false") Портфолио
+          li.footer-nav__item.menu-text
+            a.footer-nav__link(href="##", onclick="return false") Экспертные статьи
+          li.footer-nav__item.menu-text
+            a.footer-nav__link(href="##", onclick="return false") Цены и акции
+          li.footer-nav__item.menu-text
+            a.footer-nav__link(href="##", onclick="return false") For foreigners
+      p.footer__copyrights.extra-text
+        | © Design: Alisa Melnichenko
+        br
+        |           © Web-development: Pavel Sokolovskii
+        br
+        br
+        |           Данный сайт  является некоммерческим проектом, созданным в процессе обучения в школе UPROCK
+  section.popup.popup-callback
+    .popup__underlay
+    .popup__content
+      .popup-head
+        h2.popup-title.title2
+          | Напишите нам,
+          br
+          | и мы с удовольствием
+          br
+          | вам ответим
+        button.popup-close(type="button", name="popupClose")
+          span.visuallyhidden Закрыть
+      form.writeus-form.callback-form(action="https://echo.htmlacademy.ru", method="post")
+        label.visuallyhidden(for="callback-form__name") имя
+        input#callback-form__name(type="text", name="callbackForm_Name", placeholder="Имя:*", required="")
+        label.visuallyhidden(for="callback-form__email") e-mail
+        input#callback-form__email(type="email", name="callbackForm_Email", placeholder="E-mail*", required="")
+        label.visuallyhidden(for="callback-form__phone") телефон
+        input#callback-form__phone(type="tel", name="callbackForm_Phone", placeholder="Телефон")
+        label.visuallyhidden(for="callback-form__message") Сообщение
+        textarea#callback-form__message(name="callbackForm_Message", cols="57", rows="8", placeholder="Сообщение*", required="")
+        .writeus-form__check-n-submit
+          input.writeus-form__privacy-checkbox.visuallyhidden#callback-checkbox(type="checkbox", name="callbackForm_CallbackCheckbox", required="")
+          label.writeus-form__privacy-label(for="callback-checkbox")
+            | я согласен с
+            a.writeus-form__privacy-link(href="##", onclick="return false") политикой конфиденциальности
+          input.button.noa(type="submit", name="callbackForm_Submit", value="Отправить")

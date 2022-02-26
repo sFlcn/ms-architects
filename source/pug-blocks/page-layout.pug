@@ -1,0 +1,33 @@
+-
+  const PAGES = [
+    { name: 'Архитектурное бюро', href: 'index', subPages: [
+      { name: 'О компании', href: 'company' },
+      { name: 'Команда', href: 'team' },
+      { name: 'Карточка сотрудника', href: 'employee_mikhail-khoroshavtsev' },
+    ]},
+    { name: 'Услуги', href: 'services' },
+    { name: 'Портфолио' },
+    { name: 'Экспертные статьи', href: 'services' },
+    { name: 'Контакты', href: 'contacts' }
+  ];
+
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    block head
+      meta(charset="utf-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1")
+      meta(name="description", content="Тренировочный проект: вёрстка корпоративного сайта по дизайну http://lisinica-port.tilda.ws")
+      title #{pageTitle}
+      link(rel="stylesheet", href="./css/normalize.css")
+      link(rel="stylesheet", href="./css/style.css")
+      link(rel="shortcut icon", href="./img/favicon.png", type="image/png")
+
+  body
+
+    block main
+
+    block scripts
+      script(type="module", src="./js/script.js")
