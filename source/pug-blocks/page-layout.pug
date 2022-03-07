@@ -1,5 +1,5 @@
 -
-  const PAGES = [
+  const MAIN_NAV_PAGES = [
     { name: 'Архитектурное бюро', href: 'index', subPages: [
       { name: 'О компании', href: 'company' },
       { name: 'Команда', href: 'team' },
@@ -7,7 +7,7 @@
     ]},
     { name: 'Услуги', href: 'services' },
     { name: 'Портфолио' },
-    { name: 'Экспертные статьи', href: 'services' },
+    { name: 'Экспертные статьи' },
     { name: 'Контакты', href: 'contacts' }
   ];
 
@@ -26,6 +26,7 @@ html(lang="ru")
       link(rel="shortcut icon", href="./img/favicon.png", type="image/png")
 
   body
+    include page-header.pug
 
     block main
 

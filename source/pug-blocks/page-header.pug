@@ -1,0 +1,43 @@
+mixin siteNavSubItem({name, href})
+
+  - let cssClass = 'site-nav__sub-item';
+  if href === currentPage
+    - cssClass += ' site-nav__sub-item--current';
+
+  li(class=cssClass)
+    a.menu-text.site-nav__sub-link(href=`./${href}.pug`)= name
+
+
+mixin siteNavItem({name, href, subPages})
+
+  - let cssClass = 'site-nav__item';
+  if href === currentPage
+    - cssClass += ' site-nav__item--active';
+
+  li(class=cssClass)
+    if href
+      a.menu-text(href=`./${href}.pug`)
+        span= name
+    else
+      a.menu-text(href="##", onclick="return false")
+        span= name
+    if subPages
+      .site-nav__sub
+        ul.site-nav__sub-list
+          each subItem in subPages
+            +siteNavSubItem(subItem)
+
+
+header.header
+  .wrapper
+
+    - let logoHref = false;
+    if currentPage !== 'index'
+      - logoHref = './index.pug';
+
+    a.header__logo(href=logoHref)
+      img.ms-logo(src="./img/ms-architects_logo.png", width="249", height="81", alt="логотип MS Architects.")
+    nav.header__nav.site-nav
+      ul.site-nav__list
+        each item in MAIN_NAV_PAGES
+          +siteNavItem(item)

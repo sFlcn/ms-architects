@@ -5,35 +5,6 @@ block variables
   - const pageTitle = 'MS Architects. Главная';
 
 block main
-  header.header
-    .wrapper
-      a.header__logo
-        img.ms-logo(src="./img/ms-architects_logo.png", width="249", height="81", alt="логотип MS Architects.")
-      nav.header__nav.site-nav
-        ul.site-nav__list
-          li.site-nav__item.site-nav__item--active
-            a.menu-text
-              span Архитектурное бюро
-            .site-nav__sub
-              ul.site-nav__sub-list
-                li.site-nav__sub-item
-                  a.menu-text.site-nav__sub-link(href="./company.pug") О компании
-                li.site-nav__sub-item
-                  a.menu-text.site-nav__sub-link(href="./team.pug") Команда
-                li.site-nav__sub-item
-                  a.menu-text.site-nav__sub-link(href="./employee_mikhail-khoroshavtsev.pug") Карточка сотрудника
-          li.site-nav__item
-            a.menu-text(href="./services.pug")
-              span Услуги
-          li.site-nav__item
-            a.menu-text(href="##", onclick="return false")
-              span Портфолио
-          li.site-nav__item
-            a.menu-text(href="##", onclick="return false")
-              span Экспертные статьи
-          li.site-nav__item
-            a.menu-text(href="./contacts.pug")
-              span Контакты
   main.main
     h1.visuallyhidden Архитектурное бюро MS Architects. Главная страница.
     .wrapper
