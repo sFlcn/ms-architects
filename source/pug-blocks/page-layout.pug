@@ -10,6 +10,21 @@
     { name: 'Экспертные статьи' },
     { name: 'Контакты', href: 'contacts' }
   ];
+  const FOOTER_NAV_PAGES = [
+    { name: 'Архитектурное бюро', href: 'company' },
+    { name: 'Контакты', href: 'contacts' },
+    { name: 'Услуги', href: 'services' },
+    { name: 'Скачать презентацию', },
+    { name: 'Портфолио', },
+    { name: 'Экспертные статьи', },
+    { name: 'Цены и акции', },
+    { name: 'For foreigners', },
+  ];
+  const SOCIAL_LINKS = [
+    { name: 'Facebook', cssClass: 'fb' },
+    { name: 'Instagram', cssClass: 'insta' },
+    { name: 'Вконтакте', cssClass: 'vk' },
+  ];
 
 block variables
 
@@ -29,6 +44,8 @@ html(lang="ru")
     include page-header.pug
 
     block main
+
+    include page-footer.pug
 
     block scripts
       script(type="module", src="./js/script.js")

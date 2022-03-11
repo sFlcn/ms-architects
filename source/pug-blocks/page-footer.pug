@@ -1,0 +1,35 @@
+mixin socialLinkItem({name, cssClass})
+  li
+    a(class=`socials__item socials__link--${cssClass}`, href="##", onclick="return false")
+      span.visuallyhidden= name
+
+mixin footerNavItem({name, href})
+  li.footer-nav__item.menu-text
+    if href
+      a.footer-nav__link(href=`./${href}.pug`)= name
+    else
+      a.footer-nav__link(href="##", onclick="return false")= name
+
+footer.footer
+  .wrapper
+    .footer__box
+      //- logoHref генерируется в page-header.pug
+      a.footer__logo(href=logoHref)
+        img.ms-logo(src="./img/ms-architects_logo.png", width="232", height="75", alt="логотип MS Architects.")
+      .footer__feedback
+        a.footer__tel.main-text(href="tel:+7") +7 (499) 346-70-56
+        p.footer__address.main-text Москва, Нижняя Красносельская, д. 35, стр. 48
+        a.footer__email.main-text(href="mailto:msarchitects") msarchitects@mail.ru
+        ul.footer__socials.socials__list
+          each item in SOCIAL_LINKS
+            +socialLinkItem(item)
+      ul.footer__nav.footer-nav
+        each item in FOOTER_NAV_PAGES
+          +footerNavItem(item)
+    p.footer__copyrights.extra-text
+      |© Design: Alisa Melnichenko
+      br
+      |© Web-development: Pavel Sokolovskii
+      br
+      br
+      |Данный сайт  является некоммерческим проектом, созданным в процессе обучения в школе UPROCK
