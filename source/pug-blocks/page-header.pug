@@ -30,11 +30,7 @@ mixin siteNavItem({name, href, subPages})
 
 header.header
   .wrapper
-
-    - let logoHref = false;
-    if currentPage !== 'index'
-      - logoHref = './index.pug';
-
+    //- logoHref генерируется в page-layout.pug
     a.header__logo(href=logoHref)
       img.ms-logo(src="./img/ms-architects_logo.png", width="249", height="81", alt="логотип MS Architects.")
     nav.header__nav.site-nav
