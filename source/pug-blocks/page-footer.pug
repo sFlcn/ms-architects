@@ -1,12 +1,12 @@
-mixin socialLinkItem({name, cssClass})
+mixin socialLinkItem({ name, cssClass })
   li
     a(class=`socials__item socials__link--${cssClass}`, href="##", onclick="return false")
       span.visuallyhidden= name
 
-mixin footerNavItem({name, href})
+mixin footerNavItem({ name, pageHref })
   li.footer-nav__item.menu-text
-    if href
-      a.footer-nav__link(href=`./${href}.pug`)= name
+    if pageHref
+      a.footer-nav__link(href=`./${pageHref}.pug`)= name
     else
       a.footer-nav__link(href="##", onclick="return false")= name
 

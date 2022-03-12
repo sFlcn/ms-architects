@@ -1,22 +1,12 @@
-mixin siteNavSubItem({name, href})
-
-  - let cssClass = 'site-nav__sub-item';
-  if href === currentPage
-    - cssClass += ' site-nav__sub-item--current';
-
-  li(class=cssClass)
-    a.menu-text.site-nav__sub-link(href=`./${href}.pug`)= name
+mixin siteNavSubItem({ name, pageHref })
+  li(class= pageHref !== currentPage ? 'site-nav__sub-item' : 'site-nav__sub-item site-nav__sub-item--current')
+    a.menu-text.site-nav__sub-link(href= pageHref === currentPage ? false : `./${pageHref}.pug`)= name
 
 
-mixin siteNavItem({name, href, subPages})
-
-  - let cssClass = 'site-nav__item';
-  if href === currentPage
-    - cssClass += ' site-nav__item--active';
-
-  li(class=cssClass)
-    if href
-      a.menu-text(href=`./${href}.pug`)
+mixin siteNavItem({ name, pageHref, subPages })
+  li(class= pageHref !== currentPage ? 'site-nav__item' : 'site-nav__item site-nav__item--active')
+    if pageHref
+      a.menu-text(href= pageHref === currentPage ? false : `./${pageHref}.pug`)
         span= name
     else
       a.menu-text(href="##", onclick="return false")
