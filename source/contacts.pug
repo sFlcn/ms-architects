@@ -126,16 +126,7 @@ block main
                     br
                     | Нажимая на кнопку, Вы даете согласие на обработку персональных данных
                   input.button.noa(type="submit", name="writeus-form__submit", value="Отправить")
-    section.bottom.something4you
-      .wrapper
-        .title-container
-          h2.section__title.title2 У нас есть кое-что для вас
-        .something4you__invitation
-          p.something4you__text.cta-text
-            | Вам интересны дизайн, проектирование, инженеринг?
-            br
-            | Вы студент или уже состоявшийся профи?
-          a.something4you__link.links-text.section__link(href="##", onclick="return false") Присоединяйтесь к нам!
+    include pug-blocks/section-bottom-something4you.pug
 
 block popups
   include pug-blocks/popup-callback.pug

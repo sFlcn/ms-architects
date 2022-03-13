@@ -132,13 +132,4 @@ block main
               img.employee__photo(src="./img/portrait_marina-lauter.jpg", width="221", height="278", alt="портрет Марины Ляутер.")
               p.employee__position.main-text Главный дизайнер
               p.employee__link.links-text биография и контакты
-    section.bottom.something4you
-      .wrapper
-        .title-container
-          h2.section__title.title2 У нас есть кое-что для вас
-        .something4you__invitation
-          p.something4you__text.cta-text
-            | Вам интересны дизайн, проектирование, инженеринг?
-            br
-            | Вы студент или уже состоявшийся профи?
-          a.something4you__link.links-text.section__link(href="##", onclick="return false") Присоединяйтесь к нам!
+    include pug-blocks/section-bottom-something4you.pug
