@@ -26,6 +26,8 @@
     { name: 'Вконтакте', cssClass: 'vk' },
   ];
 
+include global-mixins.pug
+
 block variables
   - let logoHref = currentPage === 'index' ? false : './index.pug';
 
@@ -47,6 +49,8 @@ html(lang="ru")
     block main
 
     include page-footer.pug
+
+    block popups
 
     block scripts
       script(type="module", src="./js/script.js")

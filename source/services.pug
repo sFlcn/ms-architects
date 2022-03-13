@@ -130,30 +130,6 @@ block main
         p.advice__text.cta-text
           | Подробно расскажем о наших услугах, видах работ, дадим полезный совет, рассчитаем стоимость и подготовим индивидуальное предложение!
         a.button.button--bottom.callback-button(href="#") Заказать звонок
-  section.popup.popup-callback
-    .popup__underlay
-    .popup__content
-      .popup-head
-        h2.popup-title.title2
-          | Напишите нам,
-          br
-          | и мы с удовольствием
-          br
-          | вам ответим
-        button.popup-close(type="button", name="popupClose")
-          span.visuallyhidden Закрыть
-      form.writeus-form.callback-form(action="https://echo.htmlacademy.ru", method="post")
-        label.visuallyhidden(for="callback-form__name") имя
-        input#callback-form__name(type="text", name="callbackForm_Name", placeholder="Имя:*", required="")
-        label.visuallyhidden(for="callback-form__email") e-mail
-        input#callback-form__email(type="email", name="callbackForm_Email", placeholder="E-mail*", required="")
-        label.visuallyhidden(for="callback-form__phone") телефон
-        input#callback-form__phone(type="tel", name="callbackForm_Phone", placeholder="Телефон")
-        label.visuallyhidden(for="callback-form__message") Сообщение
-        textarea#callback-form__message(name="callbackForm_Message", cols="57", rows="8", placeholder="Сообщение*", required="")
-        .writeus-form__check-n-submit
-          input.writeus-form__privacy-checkbox.visuallyhidden#callback-checkbox(type="checkbox", name="callbackForm_CallbackCheckbox", required="")
-          label.writeus-form__privacy-label(for="callback-checkbox")
-            | я согласен с
-            a.writeus-form__privacy-link(href="##", onclick="return false") политикой конфиденциальности
-          input.button.noa(type="submit", name="callbackForm_Submit", value="Отправить")
+
+block popups
+  include pug-blocks/popup-callback.pug
