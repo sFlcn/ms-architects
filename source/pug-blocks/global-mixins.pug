@@ -5,3 +5,8 @@ mixin formInput({ inputName, inputType, placeholder, label, cols, rows, isRequir
     input(id= inputName, type= inputType, name= inputName, placeholder= placeholder, required= isRequired, hidden= isHidden)
   else
     textarea(id= inputName, name= inputName, cols= cols, rows= rows, placeholder= placeholder, required= isRequired, hidden= isHidden)
+
+mixin simpleButton(text, additionalClassesArray, href)
+  - const cssClass = 'button ' + additionalClassesArray.join(' ');
+  - const linkHref = href ? href : '#';
+  a(class= cssClass, href= linkHref)= text
