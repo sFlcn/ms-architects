@@ -10,37 +10,7 @@ block main
     .wrapper
       .top-image
         include pug-blocks/page-slider-top.pug
-    section.about
-      .wrapper
-        .title-container.animated-appearance
-          h2.page__title.title2
-            | MS Architects.
-            br
-            | Архитектура
-            br
-            | для жизни
-          +simpleButton('Заказать звонок', ['callback-button'])
-        p.about__company.main-text.animated-appearance
-          | Архитектурное бюро МС Архитектс предоставляет полный спектр услуг по проектированию зданий любой сложности и дизайну интерьеров. Мы создаем уникальные архитектурно-планировочные решения и элитные дизайн-проекты. Сделав заказ в нашем бюро, вы получите индивидуальный проект и персональный подход.
-        .about__company-numbers.animated-appearance
-          .orange-numbers.orange-numbers--projects
-            p 750
-            p
-              | разработанных
-              br
-              | уникальных проектов
-          .orange-numbers.orange-numbers--age
-            p 11
-            p
-              | лет надежной
-              br
-              | работы
-          .orange-numbers.orange-numbers--area
-            p 650 000
-            p
-              | квадратных метров
-              br
-              | выполненных проектов
+    include pug-blocks/section-about.pug
     section.features.animated-appearance
       .wrapper
         h2.visuallyhidden Наши особенности.
