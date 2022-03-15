@@ -1,0 +1,71 @@
+-
+  const PROJECTS_NAV = [
+    { name: 'Новые проекты', hrefLink: '##', isCurrent: true, },
+    { name: 'Дизайн', hrefLink: '##', },
+    { name: 'Проектирование', hrefLink: '##', },
+    { name: 'Офисы', hrefLink: '##', },
+    { name: 'Ландшафт', hrefLink: '##', },
+    { name: 'Сети', hrefLink: '##', },
+  ]
+
+  const PROJECT_CARDS = [
+    {
+      title: 'Проект библиотеки в Лондоне в Гайд-парке',
+      work: 'международный конкурс',
+      type: 'библиотека',
+      imagesArray: [{hrefLink: 'library-london_1.jpg', altText: 'Визуализация библиотеки на местности в 3D редакторе.'}],
+    },
+    {
+      title: 'Фасад офисного здания на Сухаревской',
+      work: 'архитектурное решение',
+      type: 'многофункциональный торгово-офисный центр',
+      imagesArray: [{hrefLink: 'office-sukharevskaya_1.jpg', altText: 'Визуализация фасада здания на фото.'}],
+    },
+    {
+      title: 'Аэропорт Большое Савино <br>г. Пермь',
+      work: 'архитектурная концепция',
+      type: 'аэропорт',
+      imagesArray: [{hrefLink: 'airport-savino_1.jpg', altText: 'Визуализация интерьера аэропорта в 3D редакторе.'}],
+    },
+    {
+      title: 'Павильон Космос на ВДНХ',
+      work: 'дизайн интерьеров',
+      type: 'концепция музейного павильона',
+      imagesArray: [{hrefLink: 'pavilion-cosmos_1.jpg', altText: 'Визуализация интерьера павильона в 3D редакторе.'}],
+    },
+  ]
+
+mixin projectsNavItem({ name, hrefLink, isCurrent })
+  li(class= isCurrent ? 'proj-nav__item proj-nav__item--current' : 'proj-nav__item')
+    a.proj-nav__link(href= hrefLink)= name
+
+mixin photoSliderItem({ hrefLink, altText })
+  li.photo-slider__item.photo-slide
+    a(href= `./img/${hrefLink}`, target="_blank")
+      img(src= `./img/${hrefLink}`, width="795", height="440", alt= altText)
+
+mixin projectCard({ title, work, type, imagesArray})
+  li.projects__item.project.animated-appearance
+    .project__photo.photo-slider
+      ul.photo-slider__list
+        each item in imagesArray
+          +photoSliderItem(item)
+      button.photo-slider__button.photo-slider__button--next(type="button", name="photo-slider__button--next")
+        span.visuallyhidden Следующее фото
+      button.photo-slider__button.photo-slider__button--previous(type="button", name="photo-slider__button--previous")
+        span.visuallyhidden Предыдущее фото
+    h3.project-title.title3!= title
+    p.project-description.main-text= `Вид проектных работ: ${work}`
+    p.project-description.main-text= `Тип проекта: ${type}`
+
+section.projects
+  .wrapper
+    .title-container.animated-appearance
+      h2.section__title.title3 Наши проекты
+    ul.projects__navigation.proj-nav__list.animated-appearance
+      each item in PROJECTS_NAV
+        +projectsNavItem(item)
+    ul.projects__list
+      each item in PROJECT_CARDS
+        +projectCard(item)
+    a.section__link.links-text.animated-appearance(href="##", onclick="return false") Все проекты
