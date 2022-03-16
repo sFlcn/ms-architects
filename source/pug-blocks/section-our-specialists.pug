@@ -1,0 +1,49 @@
+-
+  const SPECIALISTS_LIST = [
+    {
+      firstname: 'Михаил',
+      surname: 'Хорошавцев',
+      hrefLink: './employee_mikhail-khoroshavtsev.pug',
+      photoURL: 'portrait_mikhail-khoroshavtsev.jpg',
+      position: 'Генеральный директор',
+    },
+    {
+      firstname: 'Василий',
+      surname: 'Бирюков',
+      photoURL: 'portrait_vasily-biryukov.jpg',
+      position: 'Заместитель генерального директора',
+    },
+    {
+      firstname: 'Татьяна',
+      surname: 'Хозиева',
+      photoURL: 'portrait_khozieva-tatyana.jpg',
+      position: 'Главный дизайнер',
+    },
+  ]
+
+mixin employeeCard({ firstname, surname, hrefLink, photoURL, position })
+  li.employee
+    -
+      let cardAttributes = {};
+      if (hrefLink) {
+        cardAttributes.href = hrefLink;
+      } else {
+        cardAttributes.href = '##';
+        cardAttributes.onclick = 'return false';
+      }
+    a.employee__card-link.animated-appearance&attributes(cardAttributes)
+      h3.employee__name.title3!= `${firstname} <br>${surname}`
+      img.employee__photo(src= `./img/${photoURL}`, width="221", height="278", alt=`${surname}, портрет`)
+      p.employee__position.main-text= position
+      p.employee__link.links-text подробнее
+
+section.our-specialists.animated-appearance
+  .wrapper
+    .title-container
+      h2.section__title.title3.animated-appearance Наши специалисты
+    // Слайдер сотрудников
+    .our-specialists__slider.employees-slider
+      ul.employee__list.employee__list--right-shift
+        each item in SPECIALISTS_LIST
+          +employeeCard(item)
+    a.section__link.links-text.animated-appearance(href="./team.pug") Все сотрудники

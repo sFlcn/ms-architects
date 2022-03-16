@@ -13,41 +13,7 @@ block main
     include pug-blocks/section-about.pug
     include pug-blocks/section-features.pug
     include pug-blocks/section-projects.pug
-    section.our-specialists.animated-appearance
-      .wrapper
-        .title-container
-          h2.section__title.title3.animated-appearance Наши специалисты
-        // Слайдер сотрудников
-        .our-specialists__slider.employees-slider
-          ul.employee__list.employee__list--right-shift
-            li.employee
-              a.employee__card-link.animated-appearance(href="./employee_mikhail-khoroshavtsev.pug")
-                h3.employee__name.title3
-                  | Михаил
-                  br
-                  | Хорошавцев
-                img.employee__photo(src="./img/portrait_mikhail-khoroshavtsev.jpg", width="221", height="278", alt="портрет Михаила Хорошавцева.")
-                p.employee__position.main-text Генеральный директор
-                p.employee__link.links-text подробнее
-            li.employee
-              a.employee__card-link.animated-appearance(href="##", onclick="return false")
-                h3.employee__name.title3
-                  | Василий
-                  br
-                  | Бирюков
-                img.employee__photo(src="./img/portrait_vasily-biryukov.jpg", width="221", height="278", alt="портрет Василия Бирюкова.")
-                p.employee__position.main-text Заместитель генерального директора
-                p.employee__link.links-text подробнее
-            li.employee
-              a.employee__card-link.animated-appearance(href="##", onclick="return false")
-                h3.employee__name.title3
-                  | Татьяна
-                  br
-                  | Хозиева
-                img.employee__photo(src="./img/portrait_khozieva-tatyana.jpg", width="221", height="278", alt="портрет Татьяны Хозиевой.")
-                p.employee__position.main-text Главный дизайнер
-                p.employee__link.links-text подробнее
-        a.section__link.links-text.animated-appearance(href="./team.pug") Все сотрудники
+    include pug-blocks/section-our-specialists.pug
     include pug-blocks/section-bottom-advice.pug
 
 block popups
