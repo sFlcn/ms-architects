@@ -37,7 +37,7 @@
 
 mixin projectsNavItem({ name, hrefLink, isCurrent })
   li(class= isCurrent ? 'proj-nav__item proj-nav__item--current' : 'proj-nav__item')
-    a.proj-nav__link(href= hrefLink)= name
+    a.proj-nav__link(href= isCurrent ? false : hrefLink)= name
 
 mixin photoSliderItem({ hrefLink, altText })
   li.photo-slider__item.photo-slide
