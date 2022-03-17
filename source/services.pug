@@ -10,47 +10,7 @@ block main
     .wrapper
       .top-image
         img(src="./img/library-london_1.jpg", width="967", height="628", alt="Визуализация на местности библиотеки в Гайд-парке Лондона.")
-    section.our-services
-      .wrapper
-        .title-container.animated-appearance
-          h2.page__title.title2
-            | Более 11 лет мы успешно занимаемся проектированием зданий, дизайном офисов, коттеджей и ландшафтной архитектурой
-            br
-          +simpleButton('Заказать звонок', ['callback-button'])
-        ul.our-services__list
-          li.our-services__item.our-services__item--offices.animated-appearance
-            .our-services__item-description
-              h3.our-services__item-title.title3 Дизайн офисов
-              p.our-services__item-text.main-text
-                | При проектировании офисных пространств очень важно понять, с одной стороны, как работают организации, понять, как здания могут способствовать организациям в их трудовой деятельности, и выявить «соответствие» этих двух миров во времени.
-              a.our-services__item-link(href="##", onclick="return false")
-            img.our-services__item-illustration.animated-appearance(src="./img/services_offices.jpg", width="445", height="278", alt="Визуализация интерьера офиса.")
-          li.our-services__item.our-services__item--buildings.animated-appearance
-            .our-services__item-description
-              h3.our-services__item-title.title3 Проектирование зданий
-              p.our-services__item-text.main-text
-                | Мы умеем разрабатывать качественные проекты больших объектов. В портфолио имеются проекты общественных и жилых зданий разной этажности, генпланов жилой многоэтажной и малоэтажной застройки, проекты торговых центров, гостиниц и промышленных зданий.
-              a.our-services__item-link(href="##", onclick="return false")
-            img.our-services__item-illustration.animated-appearance(src="./img/services_building.jpg", width="445", height="278", alt="Визуализация фасада здания.")
-          li.our-services__item.our-services__item--houses.animated-appearance
-            .our-services__item-description
-              h3.our-services__item-title.title3
-                | Проектирование частных
-                br
-                | домов и дизайн интерьеров
-              p.our-services__item-text.main-text
-                | Более одиннадцати лет мы успешно занимаемся проектированием частных загородных домов и коттеджей из дерева, кирпича, монолитного железобетона и пеноблока. Также мы создаем архитектурные проекты коттеджей, частных домов, бань, гостевых домов, гаражей, беседок и любых других малых архитектурных форм, вплоть до скамеек и навесных мостов.
-              a.our-services__item-link(href="##", onclick="return false")
-            img.our-services__item-illustration.animated-appearance(src="./img/services_houses.jpg", width="445", height="278", alt="Визуализация проекта жилого дома.")
-          li.our-services__item.our-services__item--landscapes.animated-appearance
-            .our-services__item-description
-              h3.our-services__item-title.title3 Ландшафтный дизайн
-              p.our-services__item-text.main-text
-                | Закажите индивидуальный проект
-                br
-                | ландшафтного дизайна в нашей компании и наслаждайтесь прекрасным результатом!
-              a.our-services__item-link(href="##", onclick="return false")
-            img.our-services__item-illustration.animated-appearance(src="./img/services_landscape.jpg", width="445", height="278", alt="Фото японского сада.")
+    include pug-blocks/section-our-services.pug
     section.our-other-services
       .wrapper
         .title-container

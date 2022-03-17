@@ -1,0 +1,52 @@
+-
+  const OUR_SERVICES = [
+    {
+      title: 'Дизайн офисов',
+      description: 'При проектировании офисных пространств очень важно понять, с одной стороны, как работают организации, понять, как здания могут способствовать организациям в их трудовой деятельности, и выявить «соответствие» этих двух миров во времени.',
+      image: 'services_offices.jpg',
+      altText: 'Визуализация интерьера офиса.',
+    },
+    {
+      title: 'Проектирование зданий',
+      description: 'Мы умеем разрабатывать качественные проекты больших объектов. В портфолио имеются проекты общественных и жилых зданий разной этажности, генпланов жилой многоэтажной и малоэтажной застройки, проекты торговых центров, гостиниц и промышленных зданий.',
+      image: 'services_building.jpg',
+      altText: 'Визуализация фасада здания.',
+    },
+    {
+      title: 'Проектирование частных <br>домов и дизайн интерьеров',
+      description: 'Более одиннадцати лет мы успешно занимаемся проектированием частных загородных домов и коттеджей из дерева, кирпича, монолитного железобетона и пеноблока. Также мы создаем архитектурные проекты коттеджей, частных домов, бань, гостевых домов, гаражей, беседок и любых других малых архитектурных форм, вплоть до скамеек и навесных мостов.',
+      image: 'services_houses.jpg',
+      altText: 'Визуализация проекта жилого дома.',
+    },
+    {
+      title: 'Ландшафтный дизайн',
+      description: 'Закажите индивидуальный проект <br> ландшафтного дизайна в нашей компании и наслаждайтесь прекрасным результатом!',
+      image: 'services_landscape.jpg',
+      altText: 'Фото японского сада.',
+    },
+  ]
+
+mixin ourServicesItem({ title, description, hrefLink, image, altText })
+  li.our-services__item.our-services__item--offices.animated-appearance
+    .our-services__item-description
+      h3.our-services__item-title.title3!= title
+      p.our-services__item-text.main-text!= description
+      -
+        let linkAttributes = {};
+        if (hrefLink) {
+          linkAttributes.href = hrefLink;
+        } else {
+          linkAttributes.href = '##';
+          linkAttributes.onclick = 'return false';
+        }
+      a.our-services__item-link&attributes(linkAttributes)
+    img.our-services__item-illustration.animated-appearance(src= `./img/${image}`, width="445", height="278", alt= altText)
+
+section.our-services
+  .wrapper
+    .title-container.animated-appearance
+      h2.page__title.title2 Более 11 лет мы успешно занимаемся проектированием зданий, дизайном офисов, коттеджей и ландшафтной архитектурой
+      +simpleButton('Заказать звонок', ['callback-button'])
+    ul.our-services__list
+      each item in OUR_SERVICES
+        +ourServicesItem(item)
