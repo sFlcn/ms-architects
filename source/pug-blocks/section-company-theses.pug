@@ -1,0 +1,48 @@
+-
+  const THESES = [
+    {
+      title: 'Специализация',
+      description: 'Мы отлично разрабатываем  дизайн офисов и коворкингов, эскизные, архитектурные и рабочие  проекты зданий, проектирование общественных пространств и интерьеров',
+    }, {
+      title: 'Доступность',
+      description: 'Наш производимый продукт — это сочетание научных методов разработки, современных технологий и искусства.',
+    }, {
+      title: 'Актуальность проектирования',
+      description: 'Мы понимаем тенденцию, моду и актуальность в нашей',
+    }, {
+      title: 'Исследования',
+      description: 'У нас есть отдельный отдел который подготавливает, собирает и структурирует информацию по нашим объектам проектирования',
+    },
+  ];
+
+mixin thesesItem({ title, description })
+  li.theses__item
+    h3.theses__title.title3= title
+    p.theses__text.main-text= description
+
+section.company-theses
+  .wrapper
+    .title-container.animated-appearance
+      h2.page__title.title2 МС Архитектс — креативная команда архитекторов, конструкторов и&nbsp;дизайнеров
+      +simpleButton('Заказать звонок', ['callback-button'])
+    ul.company-theses__theses.theses__list.animated-appearance
+      each item in THESES
+        +thesesItem(item)
+    // видео-фрейм
+    .company-theses__video.animated-appearance
+      a(href="##", onclick="return false")
+        img(src="./img/pavilion-cosmos_1.jpg", width="720", height="473", alt="Превью видео о павильоне «Космос».")
+      .company-theses__video-button
+        .video-button__base
+          svg.video-button__image.video-button__image--play(width="20%", height="20%", viewBox="0 0 2 2", preserveAspectRatio="none")
+            polygon(fill="red", points="0,0 2,1 0,2")
+    .company-theses__company-numbers.animated-appearance
+      .orange-numbers.orange-numbers--projects
+        p 750
+        p разработанных <br>уникальных проектов
+      .orange-numbers.orange-numbers--age
+        p 11
+        p лет надежной <br>работы
+      .orange-numbers.orange-numbers--area
+        p 650 000
+        p квадратных метров <br>выполненных проектов

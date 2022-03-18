@@ -662,6 +662,10 @@ a[href="##"],
   flex-flow: row wrap;
 }
 
+.company-theses .title-container {
+  max-width: 310px;
+}
+
 .theses__list {
   display: flex;
   flex-flow: column wrap;

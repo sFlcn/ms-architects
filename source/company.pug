@@ -10,68 +10,7 @@ block main
     .wrapper
       .top-image
         img(src="./img/company-office.jpg", width="967", height="628", alt="Интерьер офиса MS Architects.")
-    section.company-theses
-      .wrapper
-        .title-container.animated-appearance
-          h2.page__title.title2
-            | МС Архитектс —
-            br
-            | креативная команда
-            br
-            | архитекторов,
-            br
-            | конструкторов
-            br
-            | и дизайнеров
-          +simpleButton('Заказать звонок', ['callback-button'])
-        ul.company-theses__theses.theses__list.animated-appearance
-          li.theses__item
-            h3.theses__title.title3 Специализация
-            p.theses__text.main-text
-              | Мы отлично разрабатываем  дизайн офисов и коворкингов, эскизные, архитектурные и рабочие  проекты зданий, проектирование общественных пространств и интерьеров
-          li.theses__item
-            h3.theses__title.title3 Доступность
-            p.theses__text.main-text
-              | Наш производимый продукт — это сочетание научных методов разработки, современных технологий и искусства.
-              br
-              | И мы всегда открыты к встрече!
-          li.theses__item
-            h3.theses__title.title3 Актуальность проектирования
-            p.theses__text.main-text
-              | Мы понимаем тенденцию, моду и актуальность в нашей
-              br
-              | предметной области.
-          li.theses__item
-            h3.theses__title.title3 Исследования
-            p.theses__text.main-text
-              | У нас есть отдельный отдел который подготавливает, собирает и структурирует информацию по нашим объектам проектирования
-        // видео-фрейм
-        .company-theses__video.animated-appearance
-          a(href="##", onclick="return false")
-            img(src="./img/pavilion-cosmos_1.jpg", width="720", height="473", alt="Превью видео о павильоне «Космос».")
-          .company-theses__video-button
-            .video-button__base
-              svg.video-button__image.video-button__image--play(width="20%", height="20%", viewBox="0 0 2 2", preserveAspectRatio="none")
-                polygon(fill="red", points="0,0 2,1 0,2")
-        .company-theses__company-numbers.animated-appearance
-          .orange-numbers.orange-numbers--projects
-            p 750
-            p
-              | разработанных
-              br
-              | уникальных проектов
-          .orange-numbers.orange-numbers--age
-            p 11
-            p
-              | лет надежной
-              br
-              | работы
-          .orange-numbers.orange-numbers--area
-            p 650 000
-            p
-              | квадратных метров
-              br
-              | выполненных проектов
+    include pug-blocks/section-company-theses.pug
     section.clients
       .wrapper
         .title-container.animated-appearance
