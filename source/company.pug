@@ -12,27 +12,7 @@ block main
         img(src="./img/company-office.jpg", width="967", height="628", alt="Интерьер офиса MS Architects.")
     include pug-blocks/section-company-theses.pug
     include pug-blocks/section-clients.pug
-    section.proud-of-work.animated-appearance
-      .wrapper
-        .title-container.animated-appearance
-          h2.section__title.title3
-            | Мы гордимся
-            br
-            | своей работой
-        // слайдер работ
-        .proud-of-work__slider.works-slider.animated-appearance
-          ul.works-slider__list
-            li.works-slider__item.works-slider__item--prev
-              a(href="##", onclick="return false")
-                img(src="./img/photo-2.jpg", width="423", height="244", alt="Интерьеры отделений Сбербанка России.")
-            li.works-slider__item.works-slider__item--central
-              a(href="##", onclick="return false")
-                img(src="./img/airport-savino_1.jpg", width="460", height="315", alt="Аэропорт Большое Савино город Пермь.")
-            li.works-slider__item.works-slider__item--next
-              a(href="##", onclick="return false")
-                img(src="./img/photo-1.jpg", width="423", height="244", alt="Жилой комплекс в Лангепасе.")
-          .works-slider__marker
-            .works-slider__pointer
+    include pug-blocks/section-proud-of-work.pug
     include pug-blocks/section-bottom-advice.pug
 
 block popups
