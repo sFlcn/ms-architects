@@ -1,0 +1,31 @@
+-
+  const CLIENTS = [
+    { name: 'SOK', cssClass: 'sok', hrefLink: 'https://sok.works' },
+    { name: 'Стройтранснефтегаз', cssClass: 'stroitransgaz', hrefLink: 'https://stng.ru' },
+    { name: 'IKEA', cssClass: 'ikea', hrefLink: 'https://www.ikea.com' },
+    { name: 'Accenture', cssClass: 'accenture', hrefLink: 'https://www.accenture.com' },
+    { name: 'Алиум', cssClass: 'alium', hrefLink: 'http://obolensk.ru' },
+    { name: 'МТС Банк', cssClass: 'mtsbank', hrefLink: 'https://www.mtsbank.ru' },
+    { name: 'Норникель', cssClass: 'nornickel', hrefLink: 'https://www.nornickel.ru' },
+    { name: 'Открытие', cssClass: 'otkrytie', hrefLink: 'https://mgm.open.ru' },
+    { name: 'Сбербанк', cssClass: 'sberbank', hrefLink: 'https://www.sberbank.ru' },
+    { name: 'Газпром-медиа', cssClass: 'gazprommedia', hrefLink: 'http://www.gazprom-media.com' },
+    { name: 'Huawei', cssClass: 'huawei', hrefLink: 'https://www.huawei.com' },
+    { name: 'Simple', cssClass: 'simple', hrefLink: 'http://simple.ru' },
+    { name: 'JLL', cssClass: 'jll', hrefLink: 'https://www.jll.ru' },
+    { name: 'Окна Столицы', cssClass: 'oknastolicy', hrefLink: 'http://www.okna-stolicy.ru' },
+    { name: 'Ростелеком', cssClass: 'rostelecom', hrefLink: 'https://rt.ru' },
+  ]
+
+mixin clientsItem({ name, cssClass, hrefLink })
+  li.clients__item.animated-appearance(class= `clients__item--${cssClass}`)
+    a.clients__link(href= hrefLink, target="_blank")
+      span.visuallyhidden= name
+
+section.clients
+  .wrapper
+    .title-container.animated-appearance
+      h2.section__title.title3 Нашему качеству <br>доверяют
+    ul.clients__list.animated-appearance
+      each item in CLIENTS
+        +clientsItem(item)
