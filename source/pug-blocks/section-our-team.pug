@@ -1,0 +1,75 @@
+-
+  const OUR_TEAM = [
+    {
+      firstname: 'Михаил',
+      surname: 'Хорошавцев',
+      hrefLink: './employee_mikhail-khoroshavtsev.pug',
+      photoURL: 'portrait_mikhail-khoroshavtsev.jpg',
+      position: 'Генеральный директор',
+    }, {
+      firstname: 'Василий',
+      surname: 'Бирюков',
+      photoURL: 'portrait_vasily-biryukov.jpg',
+      position: 'Заместитель генерального директора',
+    }, {
+      firstname: 'Татьяна',
+      surname: 'Хозиева',
+      photoURL: 'portrait_khozieva-tatyana.jpg',
+      position: 'Главный дизайнер',
+    }, {
+      firstname: 'Полина',
+      surname: 'Черкашина',
+      photoURL: 'portrait_polina-cherkashina.jpg',
+      position: 'Коммерческий директор',
+    }, {
+      firstname: 'Евгения',
+      surname: 'Базанова',
+      photoURL: 'portrait_evgenia-bazanova.jpg',
+      position: 'Дизайнер',
+    }, {
+      firstname: 'Анна',
+      surname: 'Нашкорян',
+      photoURL: 'portrait_anna-nashkoryan.jpg',
+      position: 'Архитектор',
+    }, {
+      firstname: 'Татьяна',
+      surname: 'Ерасова',
+      photoURL: 'portrait_tatyana-erasova.jpg',
+      position: 'Архитектор',
+    }, {
+      firstname: 'Олеся',
+      surname: 'Яровая',
+      photoURL: 'portrait_olesya-yarovaya.jpg',
+      position: 'Архитектор',
+    }, {
+      firstname: 'Виктор',
+      surname: 'Борисов',
+      photoURL: 'portrait_victor-borisov.jpg',
+      position: 'Архитектор-конструктор',
+    }, {
+      firstname: 'Дмитрий',
+      surname: 'Николаев',
+      photoURL: 'portrait_dmitry-nikolaev.jpg',
+      position: 'Инженер-архитектор',
+    }, {
+      firstname: 'Евгений',
+      surname: 'Матюшкин',
+      photoURL: 'portrait_evgeny-matyushkin.jpg',
+      position: 'Ведущий архитектор',
+    }, {
+      firstname: 'Марина',
+      surname: 'Ляутер',
+      photoURL: 'portrait_marina-lauter.jpg',
+      position: 'Главный дизайнер',
+    },
+  ];
+
+section.our-team
+  .wrapper
+    .title-container.animated-appearance
+      h2.page__title.title2 Команда, <br>которой мы <br>гордимся
+    p.our-team__thesis.main-text.animated-appearance Наша команда состоит исключительно из опытных специалистов, имеющих высшее архитектурное образование. Процессом работы руководит непосредственно автор проекта — главный архитектор, которого дополняют конструкторы, инженеры и визуализаторы.
+  .our-team__catalog.animated-appearance
+    ul.employee__list
+      each item in OUR_TEAM
+        +employeeCard(item, 'биография и контакты')
