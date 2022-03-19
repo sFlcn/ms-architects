@@ -10,3 +10,11 @@ mixin simpleButton(text, additionalClassesArray, href)
   - const cssClass = 'button ' + additionalClassesArray.join(' ');
   - const linkHref = href ? href : '#';
   a(class= cssClass, href= linkHref)= text
+
+mixin employeeCard({ firstname, surname, hrefLink, photoURL, position }, linkText)
+  li.employee
+    a.employee__card-link.animated-appearance(href= hrefLink ? hrefLink : '##', onclick= hrefLink ? false : 'return false')
+      h3.employee__name.title3!= `${firstname} <br>${surname}`
+      img.employee__photo(src= `./img/${photoURL}`, width="221", height="278", alt=`${surname}, портрет`)
+      p.employee__position.main-text= position
+      p.employee__link.links-text= linkText ? linkText : 'подробнее'

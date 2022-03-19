@@ -21,22 +21,6 @@
     },
   ]
 
-mixin employeeCard({ firstname, surname, hrefLink, photoURL, position })
-  li.employee
-    -
-      let cardAttributes = {};
-      if (hrefLink) {
-        cardAttributes.href = hrefLink;
-      } else {
-        cardAttributes.href = '##';
-        cardAttributes.onclick = 'return false';
-      }
-    a.employee__card-link.animated-appearance&attributes(cardAttributes)
-      h3.employee__name.title3!= `${firstname} <br>${surname}`
-      img.employee__photo(src= `./img/${photoURL}`, width="221", height="278", alt=`${surname}, портрет`)
-      p.employee__position.main-text= position
-      p.employee__link.links-text подробнее
-
 section.our-specialists.animated-appearance
   .wrapper
     .title-container
