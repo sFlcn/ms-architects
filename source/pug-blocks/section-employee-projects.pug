@@ -1,0 +1,43 @@
+-
+  const PROJECTS_SLIDER_DATA = [
+    {
+      title: 'Аэропорт Большое Савино <br>г. Пермь',
+      photoURL: 'airport-savino_1.jpg',
+      altText: 'Визуализация интерьера аэропорта.',
+      work: 'архитектурная концепция',
+      type: 'аэропорт',
+    },{
+      title: 'Проект библиотеки в Лондоне в Гайд-парке',
+      photoURL: 'library-london_1.jpg',
+      altText: 'Визуализация проекта библиотеки.',
+      work: 'международный конкурс',
+      type: 'библиотека',
+    },{
+      title: 'Павильон Космос на ВДНХ',
+      photoURL: 'pavilion-cosmos_1.jpg',
+      altText: 'Интерьер павильона «Космос».',
+      work: 'дизайн интерьеров',
+      type: 'концепция музейного павильона',
+    },
+  ];
+
+mixin projectsSliderItems ({ title, photoURL, altText, work, type }, index)
+  unless index > 2
+    li.works-slider__item(class= index === 0 ? 'works-slider__item--prev' : index === 1 ? 'works-slider__item--central' : 'works-slider__item--next')
+      h4.works-slider__slide-title.title3!= title
+      a.works-slider__slide-image(href= hrefLink ? hrefLink : "##", onclick= hrefLink ? false : 'return false')
+        img(src= `./img/${photoURL}`, width= index === 0 ? 326 : index === 1 ? 429 : 374, height= index === 0 ? 210 : index === 1 ? 278 : 214, alt= altText)
+      p.works-slider__slide-text.main-text= `Вид проектных работ: ${work}`
+      p.works-slider__slide-text.main-text= `Тип проекта: ${type}`
+
+section.employee-projects
+  .wrapper
+    .title-container.animated-appearance
+      h3.section__title.title3 Мои проекты
+    // слайдер работ
+    .employee-projects__slider.works-slider.animated-appearance
+      ul.works-slider__list
+        each item, index in PROJECTS_SLIDER_DATA
+          +projectsSliderItems (item, index)
+      .works-slider__marker
+        .works-slider__pointer
