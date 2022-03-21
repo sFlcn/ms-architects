@@ -1,3 +1,23 @@
+-
+  const PROJECTS_SLIDER_DATA =[
+    {
+      altText: 'Интерьеры отделений Сбербанка России.',
+      photoURL: 'photo-2.jpg',
+    },{
+      altText: 'Аэропорт Большое Савино город Пермь.',
+      photoURL: 'airport-savino_1.jpg',
+    },{
+      altText: 'Жилой комплекс в Лангепасе.',
+      photoURL: 'photo-1.jpg',
+    },
+  ];
+
+mixin projectsSliderItems ({ photoURL, altText }, index)
+  unless index > 2
+    li.works-slider__item(class= index === 0 ? 'works-slider__item--prev' : index === 1 ? 'works-slider__item--central' : 'works-slider__item--next')
+      a(href= hrefLink ? hrefLink : "##", onclick= hrefLink ? false : 'return false')
+        img(src= `./img/${photoURL}`, width= index === 1 ? 460 : 423, height= index === 1 ? 315 : 244, alt= altText)
+
 section.proud-of-work.animated-appearance
   .wrapper
     .title-container.animated-appearance
@@ -5,14 +25,7 @@ section.proud-of-work.animated-appearance
     // слайдер работ
     .proud-of-work__slider.works-slider.animated-appearance
       ul.works-slider__list
-        li.works-slider__item.works-slider__item--prev
-          a(href="##", onclick="return false")
-            img(src="./img/photo-2.jpg", width="423", height="244", alt="Интерьеры отделений Сбербанка России.")
-        li.works-slider__item.works-slider__item--central
-          a(href="##", onclick="return false")
-            img(src="./img/airport-savino_1.jpg", width="460", height="315", alt="Аэропорт Большое Савино город Пермь.")
-        li.works-slider__item.works-slider__item--next
-          a(href="##", onclick="return false")
-            img(src="./img/photo-1.jpg", width="423", height="244", alt="Жилой комплекс в Лангепасе.")
+        each item, index in PROJECTS_SLIDER_DATA
+          +projectsSliderItems(item, index)
       .works-slider__marker
         .works-slider__pointer
