@@ -1,10 +1,15 @@
-mixin formInput({ inputName, inputType, placeholder, label, cols, rows, isRequired, isHidden })
+mixin formInput({ inputName, inputType, placeholder, label, cols, rows, optionsArray, isRequired, isHidden })
   if isHidden !== true
     label.visuallyhidden(for= inputName)= label
-  if inputType !== 'textarea'
-    input(id= inputName, type= inputType, name= inputName, placeholder= placeholder, required= isRequired, hidden= isHidden)
-  else
+  if inputType === 'textarea'
     textarea(id= inputName, name= inputName, cols= cols, rows= rows, placeholder= placeholder, required= isRequired, hidden= isHidden)
+  else if inputType === 'select'
+    select(id= inputName, name= inputName, required= isRequired)
+      option(label= placeholder)
+      each optionItem in optionsArray
+        option= optionItem
+  else
+    input(id= inputName, type= inputType, name= inputName, placeholder= placeholder, required= isRequired, hidden= isHidden)
 
 mixin simpleButton(text, additionalClassesArray, href)
   - const cssClass = 'button ' + additionalClassesArray.join(' ');
