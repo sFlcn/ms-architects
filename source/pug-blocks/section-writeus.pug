@@ -1,0 +1,235 @@
+-
+  const WRITEUS_FORMS = [
+    {
+      name: 'design-project',
+      subject: 'Дизайн-проект',
+      isCurrent: true,
+    }, {
+      name: 'commercial-offer',
+      subject: 'Коммерческое предложение',
+    }, {
+      name: 'job',
+      subject: 'Работа у нас',
+      formData: [
+        {
+        },
+      ],
+      isCurrent: true,
+    },
+  ];
+  const DESIGN_PROJECT_FORM = [
+    {
+      inputName: 'writeus-form__design-subject',
+      inputType: 'text',
+      isHidden: 'true',
+      value: 'Дизайн-проект',
+    }, {
+      inputName: 'writeus-form__design-name',
+      label: 'Ваше имя',
+      inputType: 'text',
+      placeholder: 'Имя*',
+      isRequired: true,
+    }, {
+      inputName: 'writeus-form__design-company',
+      label: 'Название вашей компании',
+      inputType: 'text',
+      placeholder: 'Компания',
+    }, {
+      inputName: 'writeus-form__design-phone',
+      label: 'Контактный телефон',
+      inputType: 'tel',
+      placeholder: 'Телефон',
+    }, {
+      inputName: 'writeus-form__design-email',
+      label: 'E-mail для связи',
+      inputType: 'email',
+      placeholder: 'E-mail*',
+      isRequired: true,
+    }, {
+      inputName: 'writeus-form__design-comment',
+      label: 'Комментарий',
+      inputType: 'textarea',
+      placeholder: 'Комментарий*',
+      cols: 57,
+      rows: 8,
+      isRequired: true,
+    },
+  ];
+  const COMMERCIAL_OFFER_FORM = [
+    {
+      inputName: 'writeus-form__offer-subject',
+      inputType: 'text',
+      isHidden: 'true',
+      value: 'Коммерческое предложение',
+    }, {
+      inputName: 'writeus-form__offer-company',
+      label: 'Название компании',
+      inputType: 'text',
+      placeholder: 'Название компании*',
+      isRequired: true,
+    }, {
+      inputName: 'writeus-form__offer-category',
+      label: 'Категория',
+      inputType: 'select',
+      placeholder: 'Выберите категорию',
+      isRequired: true,
+      optionsArray: [
+        'Офисные товары, канцелярия',
+        'Акустические, стеновые, потолочные панели',
+        'Мебель кухонная',
+        'Проектирование инженерных систем',
+        'Строительные материалы',
+        'Мебель и оборудование для офисов',
+        'Аутсорс, частные услуги проектирования, визуализации',
+        'Мебель, шкафы и столярные изделия',
+        'Подрядные услуги',
+        'Уличное/специализированное оборудование, детские/спортивные площадки',
+        'Курьерские, потовые услуги, доставка',
+        'Экспертиза проектной документации',
+        'Декор, камень, лепнина, гипсовые изделия, молдинги и карнизы',
+        'Другое (укажите категорию в описании)',
+        'IT, услуги сис админа, продажа hardware, картриджей и периферии',
+        'Свет, производство/продажа',
+        'Маркетинг, реклама, SEO, рассылки, базы',
+        'Паркет, деревянные изделия',
+        'Софт, программное обеспечение',
+        'Потолочные системы',
+        'Аудио и видео системы, мультимедиа',
+        'Напольные покрытия',
+      ],
+    }, {
+      inputName: 'writeus-form__offer-phone',
+      label: 'Контактный телефон',
+      inputType: 'tel',
+      placeholder: 'Телефон*',
+      isRequired: true,
+    }, {
+      inputName: 'writeus-form__offer-email',
+      label: 'E-mail для связи',
+      inputType: 'email',
+      placeholder: 'E-mail*',
+      isRequired: true,
+    }, {
+      inputName: 'writeus-form__offer-name',
+      label: 'Контактное лицо',
+      inputType: 'text',
+      placeholder: 'Контактное лицо*',
+      isRequired: true,
+    }, {
+      inputName: 'writeus-form__offer-description',
+      label: 'Описание компании',
+      inputType: 'textarea',
+      placeholder: 'Описание компании*',
+      cols: 57,
+      rows: 8,
+      isRequired: true,
+    },
+  ];
+  const JOB_FORM =[
+    {
+      inputName: 'writeus-form__job-subject',
+      inputType: 'text',
+      isHidden: 'true',
+      value: 'Отправка резюме',
+    }, {
+      inputName: 'writeus-form__job-name',
+      label: 'Ваше имя',
+      inputType: 'text',
+      placeholder: 'Ваше имя:*',
+      isRequired: true,
+    }, {
+      inputName: 'writeus-form__job-phone',
+      label: 'телефон',
+      inputType: 'tel',
+      placeholder: 'Телефон*',
+      isRequired: true,
+    }, {
+      inputName: 'writeus-form__job-email',
+      label: 'E-mail',
+      inputType: 'email',
+      placeholder: 'E-mail',
+    }, {
+      inputName: 'writeus-form__job-categor',
+      label: 'Должность',
+      inputType: 'select',
+      placeholder: 'Желаемая должность',
+      isRequired: true,
+      optionsArray: [
+        'Архитектор',
+        'Визуализатор',
+        'Стажёр',
+      ],
+    }, {
+      inputName: 'writeus-form__job-info',
+      label: 'Дополнительная информация:',
+      inputType: 'textarea',
+      placeholder: 'Дополнительная информация:',
+      cols: 57,
+      rows: 8,
+    },
+  ]
+
+mixin writeUsFormsButtons({ name, subject, isCurrent })
+  li.tabs-slider__item.tabs-slider__item--design-project
+    button.tabs-slider__button.menu-text(type="button", name= name, class= isCurrent ? 'tabs-slider__button--active' : false)= subject
+
+section.writeus
+  .wrapper
+    .title-container
+      h2.page__title.title2 Свяжитесь с нами
+    .writeus__slider.tabs-slider
+      .writeus__slider-leftbox
+        ul.tabs-slider__list
+          each item in WRITEUS_FORMS
+            +writeUsFormsButtons(item)
+        .writeus__contacts-in-slider
+          h3.visuallyhidden Наши адрес и телефон
+          .writeus__contact.writeus__contact--address
+            p.writeus__contact-type.main-text Офис
+            p.writeus__contact-text.main-text
+              | Москва,
+              br
+              | Нижняя Красносельская, д. 35, стр. 48
+            a.writeus__contact-link.map-button.links-text(href="https://yandex.ru/maps/-/CCQxeXwCtC") посмотреть на карте
+          .writeus__contact.writeus__contact--tel
+            p.writeus__contact-type.main-text Телефон
+            a.writeus__contact-text.main-text(href="tel:+7") +7 (499) 346-70-56
+            a.writeus__contact-link.callback-button.links-text(href="#") заказать звонок
+      ul.tabs-slider__details-list
+        li.tabs-slider__details.tabs-slider__details--design-project.tabs-slider__details--active(data-topic="design-project")
+          form.tabs-slider__form.writeus-form(action="contacts.pug", method="post")
+            each item in DESIGN_PROJECT_FORM
+              +formInput(item)
+            .writeus-form__check-n-submit
+              input.writeus-form__privacy-checkbox.visuallyhidden#writeus-form__design-checkbox(type="checkbox", name="writeus-form__design-project-checkbox", required="")
+              label.writeus-form__privacy-label.animated-appearance(for="writeus-form__design-checkbox")
+                | я согласен с
+                |
+                a.writeus-form__privacy-link(href="##", onclick="return false") политикой конфиденциальности
+              input.button.noa(type="submit", name="writeus-form__submit", value="Отправить")
+        li.tabs-slider__details.tabs-slider__details--commercial-offer(data-topic="commercial-offer")
+          form.tabs-slider__form.writeus-form(action="contacts.html", method="post")
+            each item in COMMERCIAL_OFFER_FORM
+              +formInput(item)
+            input.writeus-form__fileupload#writeus-form__offer-fileupload(type="file", name="writeus-form__commercial-offer-fileupload")
+            .writeus-form__check-n-submit
+              input.writeus-form__privacy-checkbox.visuallyhidden#writeus-form__offer-checkbox(type="checkbox", name="writeus-form__commercial-offer-checkbox", required="")
+              label.writeus-form__privacy-label(for="writeus-form__offer-checkbox")
+                | согласен с
+                |
+                a.writeus-form__privacy-link(href="##", onclick="return false") политикой конфиденциальности
+              input.button.noa(type="submit", name="writeus-form__submit", value="Отправить")
+        li.tabs-slider__details.tabs-slider__details--job(data-topic="job")
+          form.tabs-slider__form.writeus-form(action="contacts.pug", method="post")
+            each item in JOB_FORM
+              +formInput(item)
+            label
+              | Файл с резюме:
+              |
+              input.writeus-form__fileupload#writeus-form__job-fileupload(type="file", name="writeus-form__job-fileupload", required="")
+            .writeus-form__check-n-submit
+              p
+                | Мы заботимся о Ваших данных!
+                br
+                | Нажимая на кнопку, Вы даете согласие на обработку персональных данных
+              input.button.noa(type="submit", name="writeus-form__submit", value="Отправить")
