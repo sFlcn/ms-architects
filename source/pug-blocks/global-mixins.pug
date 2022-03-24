@@ -8,6 +8,9 @@ mixin formInput({ inputName, inputType, placeholder, label, cols, rows, optionsA
       option(label= placeholder)
       each optionItem in optionsArray
         option= optionItem
+  else if inputType === 'file'
+    label= label
+      input(id= inputName, type= inputType, name= inputName, required= isRequired, hidden= isHidden)
   else
     input(id= inputName, type= inputType, name= inputName, placeholder= placeholder, required= isRequired, hidden= isHidden)
 
