@@ -10,11 +10,6 @@
     }, {
       name: 'job',
       subject: 'Работа у нас',
-      formData: [
-        {
-        },
-      ],
-      isCurrent: true,
     },
   ];
   const DESIGN_PROJECT_FORM = [
@@ -123,6 +118,11 @@
       cols: 57,
       rows: 8,
       isRequired: true,
+    }, {
+      inputName: 'writeus-form__offer-fileupload',
+      label: 'Документы: ',
+      inputType: 'file',
+      isRequired: true,
     },
   ];
   const JOB_FORM =[
@@ -166,6 +166,11 @@
       placeholder: 'Дополнительная информация:',
       cols: 57,
       rows: 8,
+    }, {
+      inputName: 'writeus-form__job-fileupload',
+      label: 'Файл с резюме: ',
+      inputType: 'file',
+      isRequired: true,
     },
   ]
 
@@ -186,10 +191,7 @@ section.writeus
           h3.visuallyhidden Наши адрес и телефон
           .writeus__contact.writeus__contact--address
             p.writeus__contact-type.main-text Офис
-            p.writeus__contact-text.main-text
-              | Москва,
-              br
-              | Нижняя Красносельская, д. 35, стр. 48
+            p.writeus__contact-text.main-text Москва, <br> Нижняя Красносельская, д. 35, стр. 48
             a.writeus__contact-link.map-button.links-text(href="https://yandex.ru/maps/-/CCQxeXwCtC") посмотреть на карте
           .writeus__contact.writeus__contact--tel
             p.writeus__contact-type.main-text Телефон
@@ -197,7 +199,7 @@ section.writeus
             a.writeus__contact-link.callback-button.links-text(href="#") заказать звонок
       ul.tabs-slider__details-list
         li.tabs-slider__details.tabs-slider__details--design-project.tabs-slider__details--active(data-topic="design-project")
-          form.tabs-slider__form.writeus-form(action="contacts.pug", method="post")
+          form.tabs-slider__form.writeus-form(action="contacts.html", method="post")
             each item in DESIGN_PROJECT_FORM
               +formInput(item)
             .writeus-form__check-n-submit
@@ -211,7 +213,6 @@ section.writeus
           form.tabs-slider__form.writeus-form(action="contacts.html", method="post")
             each item in COMMERCIAL_OFFER_FORM
               +formInput(item)
-            input.writeus-form__fileupload#writeus-form__offer-fileupload(type="file", name="writeus-form__commercial-offer-fileupload")
             .writeus-form__check-n-submit
               input.writeus-form__privacy-checkbox.visuallyhidden#writeus-form__offer-checkbox(type="checkbox", name="writeus-form__commercial-offer-checkbox", required="")
               label.writeus-form__privacy-label(for="writeus-form__offer-checkbox")
@@ -220,16 +221,9 @@ section.writeus
                 a.writeus-form__privacy-link(href="##", onclick="return false") политикой конфиденциальности
               input.button.noa(type="submit", name="writeus-form__submit", value="Отправить")
         li.tabs-slider__details.tabs-slider__details--job(data-topic="job")
-          form.tabs-slider__form.writeus-form(action="contacts.pug", method="post")
+          form.tabs-slider__form.writeus-form(action="contacts.html", method="post")
             each item in JOB_FORM
               +formInput(item)
-            label
-              | Файл с резюме:
-              |
-              input.writeus-form__fileupload#writeus-form__job-fileupload(type="file", name="writeus-form__job-fileupload", required="")
             .writeus-form__check-n-submit
-              p
-                | Мы заботимся о Ваших данных!
-                br
-                | Нажимая на кнопку, Вы даете согласие на обработку персональных данных
+              p Мы заботимся о Ваших данных! <br> Нажимая на кнопку, Вы даете согласие на обработку персональных данных
               input.button.noa(type="submit", name="writeus-form__submit", value="Отправить")

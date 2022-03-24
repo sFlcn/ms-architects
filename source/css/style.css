@@ -1081,7 +1081,7 @@ a[href="##"],
   letter-spacing: -0.02em;
 }
 
-.writeus-form__fileupload {
+.writeus-form input[type="file"] {
   margin-top: 16px;
   margin-bottom: 10px;
   font-size: 11px;
