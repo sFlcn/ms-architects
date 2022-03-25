@@ -1,3 +1,11 @@
+mixin topImage(filenameName, altText)
+  .wrapper
+    .top-image
+      if block
+        block
+      else
+        img(src= `./img/${filenameName}`, width="967", height="628", alt= altText)
+
 mixin formInput({ inputName, inputType, placeholder, label, cols, rows, optionsArray, isRequired, isHidden })
   if isHidden !== true
     label.visuallyhidden(for= inputName)= label

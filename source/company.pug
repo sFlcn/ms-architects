@@ -7,9 +7,7 @@ block prepend variables
 block main
   main.main
     h1.visuallyhidden О компании MS Architects.
-    .wrapper
-      .top-image
-        img(src="./img/company-office.jpg", width="967", height="628", alt="Интерьер офиса MS Architects.")
+    +topImage('company-office.jpg', 'Интерьер офиса MS Architects.')
     include pug-blocks/section-company-theses.pug
     include pug-blocks/section-clients.pug
     include pug-blocks/section-proud-of-work.pug

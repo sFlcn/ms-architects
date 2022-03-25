@@ -7,9 +7,8 @@ block prepend variables
 block main
   main.main
     h1.visuallyhidden Архитектурное бюро MS Architects. Главная страница.
-    .wrapper
-      .top-image
-        include pug-blocks/page-slider-top.pug
+    +topImage()
+      include pug-blocks/page-slider-top.pug
     include pug-blocks/section-about.pug
     include pug-blocks/section-features.pug
     include pug-blocks/section-projects.pug

@@ -7,8 +7,6 @@ block prepend variables
 block main
   main.main
     h1.visuallyhidden Команда компании MS Architects.
-    .wrapper
-      .top-image
-        img(src="./img/weare.jpg", width="967", height="628", alt="Коллективная фотография сотрудников.")
+    +topImage('weare.jpg', 'Коллективная фотография сотрудников.')
     include pug-blocks/section-our-team.pug
     include pug-blocks/section-bottom-something4you.pug
