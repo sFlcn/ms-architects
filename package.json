@@ -19,7 +19,7 @@
     "stylelint-config-standard": "^25.0.0"
   },
   "scripts": {
-    "test": "stylelint \"source/css/**/*.css\" && eslint source/js/",
+    "test": "pug-lint source/*.pug && pug-lint source/pug-blocks/*.pug && stylelint source/css/**/*.css && eslint source/js/",
     "clean": "rm -r dist/* && rm -r .parcel-cache/*",
     "start": "parcel source/*.pug source/js/*.js",
     "build": "parcel build source/index.pug --public-url ./"
