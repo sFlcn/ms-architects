@@ -157,6 +157,7 @@ a[href="##"],
   letter-spacing: -0.02em;
   text-decoration: none;
   color: #000000;
+  background-color: transparent;
   transition: all 0.55s ease-out;
   user-select: none;
 }
