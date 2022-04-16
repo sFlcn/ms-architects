@@ -1,10 +1,15 @@
+mixin pictureJpgWebp(file, width, height, altText, cssClass)
+  picture
+    source(type="image/webp", srcset= `./img/${file}?as=webp`)
+    img(class= cssClass, src= `./img/${file}`, width=width, height=height, alt= altText)
+
 mixin topImage(filenameName, altText)
   .wrapper
     .top-image
       if block
         block
       else
-        img(src= `./img/${filenameName}`, width="967", height="628", alt= altText)
+        +pictureJpgWebp(filenameName, 967, 628, altText)
 
 mixin formInput({ inputName, inputType, placeholder, label, cols, rows, optionsArray, isRequired, isHidden })
   if isHidden !== true
@@ -31,6 +36,6 @@ mixin employeeCard({ firstname, surname, hrefLink, photoURL, position }, linkTex
   li.employee
     a.employee__card-link.animated-appearance(href= hrefLink ? hrefLink : '##', onclick= hrefLink ? false : 'return false')
       h3.employee__name.title3!= `${firstname} <br>${surname}`
-      img.employee__photo(src= `./img/${photoURL}`, width="221", height="278", alt=`${surname}, портрет`)
+      +pictureJpgWebp(photoURL, 221, 278, `${surname}, портрет`, 'employee__photo')
       p.employee__position.main-text= position
       p.employee__link.links-text= linkText ? linkText : 'подробнее'

@@ -26,7 +26,7 @@ mixin projectsSliderItems ({ title, photoURL, altText, work, type }, index)
     li.works-slider__item(class= index === 0 ? 'works-slider__item--prev' : index === 1 ? 'works-slider__item--central' : 'works-slider__item--next')
       h4.works-slider__slide-title.title3!= title
       a.works-slider__slide-image(href= hrefLink ? hrefLink : "##", onclick= hrefLink ? false : 'return false')
-        img(src= `./img/${photoURL}`, width= index === 0 ? 326 : index === 1 ? 429 : 374, height= index === 0 ? 210 : index === 1 ? 278 : 214, alt= altText)
+        +pictureJpgWebp(photoURL, width= index === 0 ? 326 : index === 1 ? 429 : 374, height= index === 0 ? 210 : index === 1 ? 278 : 214, altText)
       p.works-slider__slide-text.main-text= `Вид проектных работ: ${work}`
       p.works-slider__slide-text.main-text= `Тип проекта: ${type}`
 

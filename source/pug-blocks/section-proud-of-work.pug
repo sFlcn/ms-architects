@@ -16,7 +16,7 @@ mixin projectsSliderItems ({ photoURL, altText }, index)
   unless index > 2
     li.works-slider__item(class= index === 0 ? 'works-slider__item--prev' : index === 1 ? 'works-slider__item--central' : 'works-slider__item--next')
       a(href= hrefLink ? hrefLink : "##", onclick= hrefLink ? false : 'return false')
-        img(src= `./img/${photoURL}`, width= index === 1 ? 460 : 423, height= index === 1 ? 315 : 244, alt= altText)
+        +pictureJpgWebp(photoURL, width= index === 1 ? 460 : 423, height= index === 1 ? 315 : 244, altText)
 
 section.proud-of-work.animated-appearance
   .wrapper

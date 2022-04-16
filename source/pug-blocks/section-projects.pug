@@ -42,7 +42,7 @@ mixin projectsNavItem({ name, hrefLink, isCurrent })
 mixin photoSliderItem({ hrefLink, altText })
   li.photo-slider__item.photo-slide
     a(href= `./img/${hrefLink}`, target="_blank")
-      img(src= `./img/${hrefLink}`, width="795", height="440", alt= altText)
+      +pictureJpgWebp(hrefLink, 795, 440, altText)
 
 mixin projectCard({ title, work, type, imagesArray})
   li.projects__item.project.animated-appearance

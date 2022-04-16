@@ -40,7 +40,7 @@ mixin ourServicesItem({ title, description, hrefLink, image, altText })
           linkAttributes.onclick = 'return false';
         }
       a.our-services__item-link&attributes(linkAttributes)
-    img.our-services__item-illustration.animated-appearance(src= `./img/${image}`, width="445", height="278", alt= altText)
+    +pictureJpgWebp(image, 445, 278, altText, 'our-services__item-illustration animated-appearance')
 
 section.our-services
   .wrapper
