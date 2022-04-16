@@ -21,7 +21,7 @@
   "scripts": {
     "test": "pug-lint source/*.pug && pug-lint source/pug-blocks/*.pug && stylelint source/css/**/*.css && eslint source/js/",
     "clean": "rm -r dist/* && rm -r .parcel-cache/*",
-    "start": "parcel source/*.pug source/js/*.js",
+    "start": "parcel source/*.pug source/js/*.js source/css/*.css",
     "build": "parcel build source/index.pug --public-url ./"
   },
   "staticFiles": {
