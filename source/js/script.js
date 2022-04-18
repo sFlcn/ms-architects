@@ -50,7 +50,10 @@ function generateSliderListString(sliderDataArray) {
   sliderDataArray.forEach((slideData) => {
     sliderListString += `
     <li class="slider__item">
-      <img src="${slideData.src}" width="967" height="628" alt="${slideData.alt}">
+      <picture>
+        <source type="image/webp" srcset="./slider/${slideData.fileName}.webp">
+        <img src="./slider/${slideData.fileName}.jpg" width="967" height="628" alt="${slideData.alt}">
+      </picture>
     </li>
     `;
   });
