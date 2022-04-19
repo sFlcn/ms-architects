@@ -3,7 +3,7 @@
     {
       firstname: 'Михаил',
       surname: 'Хорошавцев',
-      hrefLink: './employee_mikhail-khoroshavtsev.pug',
+      hrefLink: PAGES.employee.pageHref,
       photoURL: 'portrait_mikhail-khoroshavtsev.jpg',
       position: 'Генеральный директор',
     },
@@ -30,4 +30,4 @@ section.our-specialists.animated-appearance
       ul.employee__list.employee__list--right-shift
         each item in SPECIALISTS_LIST
           +employeeCard(item)
-    a.section__link.links-text.animated-appearance(href="./team.pug") Все сотрудники
+    a.section__link.links-text.animated-appearance(href= PAGES.team.pageHref) Все сотрудники
