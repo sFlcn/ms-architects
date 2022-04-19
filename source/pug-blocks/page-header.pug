@@ -1,20 +1,24 @@
+-
+  let mainNavPages = [ PAGES.company, PAGES.services, PAGES.portfolio, PAGES.articles, PAGES.contacts ];
+  PAGES.company.navSubPages = [ PAGES.team, PAGES.employee ];
+
 mixin siteNavSubItem({ name, pageHref })
   li(class= pageHref !== currentPage ? 'site-nav__sub-item' : 'site-nav__sub-item site-nav__sub-item--current')
-    a.menu-text.site-nav__sub-link(href= pageHref === currentPage ? false : `./${pageHref}.pug`)= name
+    a.menu-text.site-nav__sub-link(href= pageHref === currentPage ? false : pageHref)= name
 
 
-mixin siteNavItem({ name, pageHref, subPages })
+mixin siteNavItem({ name, pageHref, navSubPages })
   li(class= pageHref !== currentPage ? 'site-nav__item' : 'site-nav__item site-nav__item--active')
     if pageHref
-      a.menu-text(href= pageHref === currentPage ? false : `./${pageHref}.pug`)
+      a.menu-text(href= pageHref === currentPage ? false : pageHref)
         span= name
     else
       a.menu-text(href="##", onclick="return false")
         span= name
-    if subPages
+    if navSubPages
       .site-nav__sub
         ul.site-nav__sub-list
-          each subItem in subPages
+          each subItem in navSubPages
             +siteNavSubItem(subItem)
 
 
@@ -25,5 +29,5 @@ header.header
       img.ms-logo(src="./img/ms-architects_logo.png", width="249", height="81", alt="логотип MS Architects.")
     nav.header__nav.site-nav
       ul.site-nav__list
-        each item in MAIN_NAV_PAGES
+        each item in mainNavPages
           +siteNavItem(item)

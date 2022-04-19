@@ -1,25 +1,17 @@
 -
-  const MAIN_NAV_PAGES = [
-    { name: 'Архитектурное бюро', pageHref: 'index', subPages: [
-      { name: 'О компании', pageHref: 'company' },
-      { name: 'Команда', pageHref: 'team' },
-      { name: 'Карточка сотрудника', pageHref: 'employee_mikhail-khoroshavtsev' },
-    ]},
-    { name: 'Услуги', pageHref: 'services' },
-    { name: 'Портфолио' },
-    { name: 'Экспертные статьи' },
-    { name: 'Контакты', pageHref: 'contacts' }
-  ];
-  const FOOTER_NAV_PAGES = [
-    { name: 'Архитектурное бюро', pageHref: 'company' },
-    { name: 'Контакты', pageHref: 'contacts' },
-    { name: 'Услуги', pageHref: 'services' },
-    { name: 'Скачать презентацию', },
-    { name: 'Портфолио', },
-    { name: 'Экспертные статьи', },
-    { name: 'Цены и акции', },
-    { name: 'For foreigners', },
-  ];
+  const PAGES = {
+    'index': { name: 'Главная', pageHref: 'index.pug' },
+    'company': { name: 'Архитектурное бюро', pageHref: 'company.pug' },
+    'team': { name: 'Команда', pageHref: 'team.pug' },
+    'employee': { name: 'Карточка сотрудника', pageHref: 'employee_mikhail-khoroshavtsev.pug' },
+    'services': { name: 'Услуги', pageHref: 'services.pug' },
+    'contacts': { name: 'Контакты', pageHref: 'contacts.pug' },
+    'portfolio': { name: 'Портфолио' },
+    'articles': { name: 'Экспертные статьи' },
+    'presentation': { name: 'Скачать презентацию' },
+    'prices': { name: 'Цены и акции' },
+    'foreigners': { name: 'For foreigners' },
+  };
   const SOCIAL_LINKS = [
     { name: 'Facebook', cssClass: 'fb' },
     { name: 'Instagram', cssClass: 'insta' },

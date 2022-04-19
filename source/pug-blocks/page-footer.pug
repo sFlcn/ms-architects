@@ -1,3 +1,6 @@
+-
+  let footerNavPages = [ PAGES.company, PAGES.contacts, PAGES.services, PAGES.presentation, PAGES.portfolio, PAGES.articles, PAGES.prices, PAGES.foreigners ];
+
 mixin socialLinkItem({ name, cssClass })
   li
     a(class=`socials__item socials__link--${cssClass}`, href="##", onclick="return false")
@@ -6,7 +9,7 @@ mixin socialLinkItem({ name, cssClass })
 mixin footerNavItem({ name, pageHref })
   li.footer-nav__item.menu-text
     if pageHref
-      a.footer-nav__link(href=`./${pageHref}.pug`)= name
+      a.footer-nav__link(href=pageHref)= name
     else
       a.footer-nav__link(href="##", onclick="return false")= name
 
@@ -24,7 +27,7 @@ footer.footer
           each item in SOCIAL_LINKS
             +socialLinkItem(item)
       ul.footer__nav.footer-nav
-        each item in FOOTER_NAV_PAGES
+        each item in footerNavPages
           +footerNavItem(item)
     p.footer__copyrights.extra-text
       |© Design: Alisa Melnichenko
