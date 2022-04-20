@@ -1400,6 +1400,7 @@ a[href="##"],
   background-color: #cccccc;
 }
 
+.offer .wrapper,
 .something4you .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -1407,21 +1408,26 @@ a[href="##"],
   padding: 75px 110px 79px;
 }
 
+.offer .title-container,
 .something4you .title-container {
+  width: 430px;
   padding-bottom: 15px;
 }
 
+.offer__invitation,
 .something4you__invitation {
   max-width: 520px;
-  margin-left: 270px;
+  margin-left: 210px;
   padding-right: 10px;
 }
 
+.offer__text,
 .something4you__text {
   margin: 0 0 27px;
   color: inherit;
 }
 
+.offer__link,
 .something4you__link {
   padding-top: 10px;
   padding-bottom: 10px;
