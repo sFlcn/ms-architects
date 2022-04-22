@@ -1,18 +1,18 @@
 [
   {
-    "src": "./slider/index-slider-1.jpg",
+    "fileName": "index-slider-1",
     "alt": "Проект транспортного узла и досугового центра на архитектурном конкурсе eVOLO New-York 2013."
   },
   {
-    "src": "./slider/index-slider-2.jpg",
+    "fileName": "index-slider-2",
     "alt": "Наш проект 2"
   },
   {
-    "src": "./slider/index-slider-3.jpg",
+    "fileName": "index-slider-3",
     "alt": "Наш проект 3"
   },
   {
-    "src": "./slider/index-slider-4.jpg",
+    "fileName": "index-slider-4",
     "alt": "Наш проект 4"
   }
 ]
